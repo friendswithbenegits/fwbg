@@ -1,7 +1,7 @@
 from github import *
 import json
 
-def store_person(person, f_people): #nome, avatar, email, empresa, location, repos, n_followers
+def store_person(person, f_people): #nome, avatar, email, empresa, location, repos, n_followers, url
 	p_repos = []
 	for repo in person.get_repos():
 		p_repos.append({
@@ -36,7 +36,10 @@ def store_repo(repo, f_repos): #nome, n_contribuidores, linguagens, stars, url
 	f_repos.write(json.dumps(r_dict)+"\n")
 	return
 
-g = Github("colobas", "bIGxIZEtchLv1IH^%7cr")
+with open("login.key") as f:
+	lines = f.readlines()
+
+g = Github(lines[0], lines[1])
 pixels = g.get_organization("PixelsCamp")
 pixel_repos = pixels.get_repos()
 

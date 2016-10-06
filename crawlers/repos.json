@@ -1,0 +1,743 @@
+{"url": "https://github.com/celso/3d", "languages": {}, "stats": 0, "name": "3d"}
+{"url": "https://github.com/celso/arcade", "languages": {"Shell": 9849}, "stats": 8, "name": "arcade"}
+{"url": "https://github.com/celso/beautiful_lisbon", "languages": {}, "stats": 0, "name": "beautiful_lisbon"}
+{"url": "https://github.com/celso/ghink", "languages": {"Shell": 141, "JavaScript": 2365913, "CSS": 625442}, "stats": 20, "name": "ghink"}
+{"url": "https://github.com/celso/Ink", "languages": {}, "stats": 0, "name": "Ink"}
+{"url": "https://github.com/celso/inkmorse", "languages": {"JavaScript": 9194}, "stats": 8, "name": "inkmorse"}
+{"url": "https://github.com/celso/jekyll", "languages": {"CoffeeScript": 172, "Shell": 3951, "Ruby": 281732, "CSS": 43814}, "stats": 0, "name": "jekyll"}
+{"url": "https://github.com/celso/kanal", "languages": {"PHP": 32008}, "stats": 2, "name": "kanal"}
+{"url": "https://github.com/celso/projects", "languages": {}, "stats": 0, "name": "projects"}
+{"url": "https://github.com/celso/react-tutorial", "languages": {"Python": 1561, "JavaScript": 6806, "Perl": 1438, "HTML": 1019, "Go": 3538, "PHP": 1908, "Ruby": 1662, "CSS": 778}, "stats": 0, "name": "react-tutorial"}
+{"url": "https://github.com/celso/sapo", "languages": {"C": 201642, "HTML": 65546, "Makefile": 3195}, "stats": 43, "name": "sapo"}
+{"url": "https://github.com/celso/SimpleWifi", "languages": {"C": 2665, "C++": 20116}, "stats": 3, "name": "SimpleWifi"}
+{"url": "https://github.com/piresbruno/brunopires.github.io", "languages": {}, "stats": 0, "name": "brunopires.github.io"}
+{"url": "https://github.com/piresbruno/HMDiallingCode", "languages": {}, "stats": 0, "name": "HMDiallingCode"}
+{"url": "https://github.com/piresbruno/lanyon", "languages": {"HTML": 5808, "CSS": 23179}, "stats": 0, "name": "lanyon"}
+{"url": "https://github.com/piresbruno/Locksmith", "languages": {"Ruby": 1120, "Objective-C": 147, "Swift": 56226}, "stats": 0, "name": "Locksmith"}
+{"url": "https://github.com/piresbruno/LogKit", "languages": {"Objective-C": 479, "Swift": 5856}, "stats": 2, "name": "LogKit"}
+{"url": "https://github.com/piresbruno/ObjectMapper", "languages": {"Ruby": 589, "Objective-C": 1635, "Swift": 202633}, "stats": 0, "name": "ObjectMapper"}
+{"url": "https://github.com/piresbruno/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/piresbruno/ReactiveCocoa", "languages": {"C": 30543, "Shell": 6214, "DTrace": 412, "Objective-C": 835275, "Awk": 1112, "Swift": 458179}, "stats": 0, "name": "ReactiveCocoa"}
+{"url": "https://github.com/piresbruno/SwiftStore", "languages": {"C": 9875, "Objective-C++": 3569, "Swift": 133179, "C++": 53063, "Objective-C": 2481, "Ruby": 616}, "stats": 0, "name": "SwiftStore"}
+{"url": "https://github.com/piresbruno/uebersicht-jenkins", "languages": {"CoffeeScript": 6589}, "stats": 6, "name": "uebersicht-jenkins"}
+{"url": "https://github.com/piresbruno/Wrap", "languages": {"Ruby": 1043, "Swift": 40051}, "stats": 0, "name": "Wrap"}
+{"url": "https://github.com/pdimas/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/balgan/beef", "languages": {}, "stats": 0, "name": "beef"}
+{"url": "https://github.com/balgan/codeswarm", "languages": {"Python": 20477, "Batchfile": 2420, "Shell": 3123, "Java": 182361}, "stats": 0, "name": "codeswarm"}
+{"url": "https://github.com/balgan/courses", "languages": {"Shell": 478, "HTML": 4098364, "JavaScript": 2648646, "Makefile": 4607, "TeX": 24204, "R": 38952, "CSS": 571813}, "stats": 0, "name": "courses"}
+{"url": "https://github.com/balgan/DataClean", "languages": {"R": 2291}, "stats": 0, "name": "DataClean"}
+{"url": "https://github.com/balgan/datasciencecoursera", "languages": {}, "stats": 0, "name": "datasciencecoursera"}
+{"url": "https://github.com/balgan/datasharing", "languages": {}, "stats": 0, "name": "datasharing"}
+{"url": "https://github.com/balgan/dhtspider", "languages": {"JavaScript": 6924}, "stats": 0, "name": "dhtspider"}
+{"url": "https://github.com/balgan/docker_public", "languages": {}, "stats": 0, "name": "docker_public"}
+{"url": "https://github.com/balgan/dummy", "languages": {}, "stats": 0, "name": "dummy"}
+{"url": "https://github.com/balgan/etcd", "languages": {}, "stats": 0, "name": "etcd"}
+{"url": "https://github.com/balgan/ExData_Plotting1", "languages": {"R": 2978}, "stats": 0, "name": "ExData_Plotting1"}
+{"url": "https://github.com/balgan/Ferret", "languages": {}, "stats": 0, "name": "Ferret"}
+{"url": "https://github.com/balgan/FuzzOpen", "languages": {"C#": 60312}, "stats": 2, "name": "FuzzOpen"}
+{"url": "https://github.com/balgan/i-like-ponies", "languages": {}, "stats": 0, "name": "i-like-ponies"}
+{"url": "https://github.com/balgan/jscanner", "languages": {"Ruby": 6558}, "stats": 1, "name": "jscanner"}
+{"url": "https://github.com/balgan/MBE", "languages": {"C": 79281, "Shell": 18415, "CMake": 9217, "C++": 9688}, "stats": 0, "name": "MBE"}
+{"url": "https://github.com/balgan/metasploit-framework", "languages": {"C": 11724223, "Shell": 341416, "Java": 911160, "Python": 198203, "JavaScript": 65625, "C++": 1262768, "Perl": 102210, "Objective-C": 798768, "ActionScript": 77956, "Assembly": 1082444, "PHP": 80137, "Ruby": 18972784, "PowerShell": 12568, "Smalltalk": 20834}, "stats": 2, "name": "metasploit-framework"}
+{"url": "https://github.com/balgan/metasploit-modules", "languages": {}, "stats": 1, "name": "metasploit-modules"}
+{"url": "https://github.com/balgan/miranda-upnp", "languages": {"Python": 53687, "Shell": 1610}, "stats": 0, "name": "miranda-upnp"}
+{"url": "https://github.com/balgan/My-Metasploit-Modules", "languages": {"Ruby": 14240}, "stats": 1, "name": "My-Metasploit-Modules"}
+{"url": "https://github.com/balgan/netmap", "languages": {"Shell": 21346, "C": 753779, "Groff": 32819, "Makefile": 8043, "Perl": 3137}, "stats": 0, "name": "netmap"}
+{"url": "https://github.com/balgan/NINJA-PingU", "languages": {}, "stats": 0, "name": "NINJA-PingU"}
+{"url": "https://github.com/balgan/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/balgan/plcscan", "languages": {"Python": 22708}, "stats": 0, "name": "plcscan"}
+{"url": "https://github.com/balgan/portscan-ranges-obtain", "languages": {"Python": 7252, "Shell": 852}, "stats": 0, "name": "portscan-ranges-obtain"}
+{"url": "https://github.com/balgan/PortugalInfra", "languages": {"Java": 15071}, "stats": 1, "name": "PortugalInfra"}
+{"url": "https://github.com/balgan/ProgrammingAssignment2", "languages": {"R": 579}, "stats": 0, "name": "ProgrammingAssignment2"}
+{"url": "https://github.com/balgan/ptcoresec-scoreboard-ctf", "languages": {}, "stats": 23, "name": "ptcoresec-scoreboard-ctf"}
+{"url": "https://github.com/balgan/pydbg", "languages": {}, "stats": 0, "name": "pydbg"}
+{"url": "https://github.com/balgan/pythonlifx", "languages": {"Python": 63247}, "stats": 5, "name": "pythonlifx"}
+{"url": "https://github.com/balgan/q", "languages": {"Ruby": 21128}, "stats": 0, "name": "q"}
+{"url": "https://github.com/balgan/Randoms", "languages": {"Python": 2311}, "stats": 0, "name": "Randoms"}
+{"url": "https://github.com/balgan/RepData_PeerAssessment1", "languages": {"HTML": 44879}, "stats": 0, "name": "RepData_PeerAssessment1"}
+{"url": "https://github.com/balgan/scan-tools", "languages": {"Python": 647, "Lua": 7991, "C": 8828, "Ruby": 5958}, "stats": 5, "name": "scan-tools"}
+{"url": "https://github.com/balgan/selinux", "languages": {"HTML": 496, "Ruby": 9071}, "stats": 0, "name": "selinux"}
+{"url": "https://github.com/balgan/smod", "languages": {"Python": 1926424}, "stats": 0, "name": "smod"}
+{"url": "https://github.com/balgan/snoop-it", "languages": {}, "stats": 0, "name": "snoop-it"}
+{"url": "https://github.com/balgan/spiderfoot", "languages": {"Python": 1210452, "Groff": 747998, "JavaScript": 15756, "CSS": 606}, "stats": 0, "name": "spiderfoot"}
+{"url": "https://github.com/balgan/splash", "languages": {"Shell": 766}, "stats": 0, "name": "splash"}
+{"url": "https://github.com/balgan/SRRuleSync", "languages": {"Ruby": 779}, "stats": 0, "name": "SRRuleSync"}
+{"url": "https://github.com/balgan/TeamPass", "languages": {}, "stats": 0, "name": "TeamPass"}
+{"url": "https://github.com/balgan/trolling-portscanning", "languages": {"Python": 3122}, "stats": 0, "name": "trolling-portscanning"}
+{"url": "https://github.com/balgan/Web-funsies", "languages": {"JavaScript": 2472}, "stats": 1, "name": "Web-funsies"}
+{"url": "https://github.com/carlosefr/atmega", "languages": {}, "stats": 15, "name": "atmega"}
+{"url": "https://github.com/carlosefr/attiny", "languages": {"C": 5996}, "stats": 1, "name": "attiny"}
+{"url": "https://github.com/carlosefr/boron.tmtheme", "languages": {}, "stats": 0, "name": "boron.tmtheme"}
+{"url": "https://github.com/carlosefr/Brownian", "languages": {"Processing": 10286}, "stats": 0, "name": "Brownian"}
+{"url": "https://github.com/carlosefr/BrownianMask", "languages": {"Processing": 12533}, "stats": 0, "name": "BrownianMask"}
+{"url": "https://github.com/carlosefr/CardPersona", "languages": {"Processing": 13922}, "stats": 0, "name": "CardPersona"}
+{"url": "https://github.com/carlosefr/carlosefr.github.io", "languages": {"Processing": 3837, "HTML": 7013, "JavaScript": 429, "CSS": 1286}, "stats": 0, "name": "carlosefr.github.io"}
+{"url": "https://github.com/carlosefr/colorlib", "languages": {"Shell": 442, "Processing": 4257, "Java": 89444, "CSS": 5416}, "stats": 0, "name": "colorlib"}
+{"url": "https://github.com/carlosefr/DisKnobUI", "languages": {"Python": 5160, "Processing": 4256, "Arduino": 3271}, "stats": 2, "name": "DisKnobUI"}
+{"url": "https://github.com/carlosefr/Docker.tmbundle", "languages": {}, "stats": 0, "name": "Docker.tmbundle"}
+{"url": "https://github.com/carlosefr/geoip-api-python", "languages": {"Python": 9303, "C": 26284}, "stats": 0, "name": "geoip-api-python"}
+{"url": "https://github.com/carlosefr/kyoto", "languages": {"C": 103291, "Shell": 19995, "Python": 1597, "Makefile": 91271, "C++": 3417363, "Perl": 6551, "Lua": 54161, "Batchfile": 358, "HTML": 8424, "Awk": 4576, "Groff": 95463, "Ruby": 25179}, "stats": 0, "name": "kyoto"}
+{"url": "https://github.com/carlosefr/lua-upstream-cache-nginx-module", "languages": {"C": 20244, "Perl": 347}, "stats": 0, "name": "lua-upstream-cache-nginx-module"}
+{"url": "https://github.com/carlosefr/magstripelib", "languages": {"C++": 10256}, "stats": 6, "name": "magstripelib"}
+{"url": "https://github.com/carlosefr/mdns-publisher", "languages": {"Python": 14746, "Makefile": 127}, "stats": 0, "name": "mdns-publisher"}
+{"url": "https://github.com/carlosefr/nginx-log-zmq", "languages": {"C": 59457}, "stats": 0, "name": "nginx-log-zmq"}
+{"url": "https://github.com/carlosefr/nginx-lua-packages", "languages": {"Nginx": 2543, "Makefile": 2867}, "stats": 1, "name": "nginx-lua-packages"}
+{"url": "https://github.com/carlosefr/pcd8544", "languages": {"C++": 18875}, "stats": 34, "name": "pcd8544"}
+{"url": "https://github.com/carlosefr/pika", "languages": {"Python": 842302}, "stats": 0, "name": "pika"}
+{"url": "https://github.com/carlosefr/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/carlosefr/postalcodes", "languages": {"Python": 8983, "Processing": 33567}, "stats": 1, "name": "postalcodes"}
+{"url": "https://github.com/carlosefr/python-kyototycoon-ng", "languages": {"Python": 107640, "Lua": 1135, "Makefile": 149}, "stats": 0, "name": "python-kyototycoon-ng"}
+{"url": "https://github.com/carlosefr/quicklook", "languages": {"Python": 66460, "Shell": 1434, "Makefile": 1292}, "stats": 2, "name": "quicklook"}
+{"url": "https://github.com/carlosefr/sapo-broker", "languages": {"Java": 1660086, "JavaScript": 2540807, "Makefile": 5997, "Perl": 324607, "Lua": 35505, "Erlang": 5543, "Shell": 382951, "C#": 279272, "HTML": 50693, "Ruby": 18811, "Protocol Buffer": 2689, "Thrift": 2181, "C": 384536, "XSLT": 7732, "C++": 6253, "Objective-C": 12206, "XS": 814967, "CSS": 575313, "Groff": 643983, "Perl6": 7578, "SQLPL": 25013, "Python": 170918, "Puppet": 7667, "PHP": 2909}, "stats": 0, "name": "sapo-broker"}
+{"url": "https://github.com/carlosefr/ToxiRepulsion", "languages": {"Processing": 14178}, "stats": 0, "name": "ToxiRepulsion"}
+{"url": "https://github.com/carlosefr/vagrant", "languages": {"Shell": 11510, "Emacs Lisp": 420, "JavaScript": 9768, "VimL": 309, "Makefile": 108, "HTML": 77151, "Ruby": 2353029, "PowerShell": 31053, "CSS": 46593}, "stats": 0, "name": "vagrant"}
+{"url": "https://github.com/NeCkEr/beetlejuice", "languages": {"Clojure": 21116, "JavaScript": 2072, "HTML": 1190, "CSS": 9318}, "stats": 0, "name": "beetlejuice"}
+{"url": "https://github.com/NeCkEr/coffeekup", "languages": {}, "stats": 0, "name": "coffeekup"}
+{"url": "https://github.com/NeCkEr/CRUDGrid", "languages": {}, "stats": 1, "name": "CRUDGrid"}
+{"url": "https://github.com/NeCkEr/emitter-state-machine", "languages": {"JavaScript": 6640}, "stats": 0, "name": "emitter-state-machine"}
+{"url": "https://github.com/NeCkEr/federation", "languages": {}, "stats": 0, "name": "federation"}
+{"url": "https://github.com/NeCkEr/foosnet.io", "languages": {"CoffeeScript": 11051, "HTML": 17068, "CSS": 3284}, "stats": 0, "name": "foosnet.io"}
+{"url": "https://github.com/NeCkEr/greenStudioLabs", "languages": {"CoffeeScript": 213}, "stats": 1, "name": "greenStudioLabs"}
+{"url": "https://github.com/NeCkEr/jade-browser", "languages": {"JavaScript": 8415}, "stats": 0, "name": "jade-browser"}
+{"url": "https://github.com/NeCkEr/md.brunex.name", "languages": {}, "stats": 0, "name": "md.brunex.name"}
+{"url": "https://github.com/NeCkEr/mercury", "languages": {"JavaScript": 176550, "CSS": 31008}, "stats": 0, "name": "mercury"}
+{"url": "https://github.com/NeCkEr/nar", "languages": {"LiveScript": 112161, "Shell": 3413, "Ruby": 62, "PHP": 325}, "stats": 0, "name": "nar"}
+{"url": "https://github.com/NeCkEr/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/NeCkEr/qrcodejs", "languages": {}, "stats": 0, "name": "qrcodejs"}
+{"url": "https://github.com/NeCkEr/shmeck", "languages": {}, "stats": 0, "name": "shmeck"}
+{"url": "https://github.com/NeCkEr/stud-proxy", "languages": {}, "stats": 0, "name": "stud-proxy"}
+{"url": "https://github.com/NeCkEr/wmd", "languages": {}, "stats": 0, "name": "wmd"}
+{"url": "https://github.com/sashaafm/awesome-elixir", "languages": {"Elixir": 6950}, "stats": 0, "name": "awesome-elixir"}
+{"url": "https://github.com/sashaafm/cloudbridge", "languages": {"Python": 377961}, "stats": 0, "name": "cloudbridge"}
+{"url": "https://github.com/sashaafm/elixir", "languages": {"Shell": 7037, "HTML": 50, "Makefile": 9125, "Batchfile": 6005, "Elixir": 2745152, "Erlang": 389435, "PowerShell": 576}, "stats": 0, "name": "elixir"}
+{"url": "https://github.com/sashaafm/exads", "languages": {"Elixir": 40294}, "stats": 39, "name": "exads"}
+{"url": "https://github.com/sashaafm/exercises_for_programmers_in_elixir", "languages": {"Elixir": 4491}, "stats": 0, "name": "exercises_for_programmers_in_elixir"}
+{"url": "https://github.com/sashaafm/extwitter", "languages": {"Shell": 36, "Elixir": 109838}, "stats": 0, "name": "extwitter"}
+{"url": "https://github.com/sashaafm/ex_aws", "languages": {"Elixir": 196180}, "stats": 0, "name": "ex_aws"}
+{"url": "https://github.com/sashaafm/gcloudex", "languages": {"Elixir": 177165}, "stats": 20, "name": "gcloudex"}
+{"url": "https://github.com/sashaafm/jclouds", "languages": {"Shell": 122638, "Java": 21524188, "HTML": 6031, "Emacs Lisp": 852, "Batchfile": 12999, "Clojure": 99200}, "stats": 0, "name": "jclouds"}
+{"url": "https://github.com/sashaafm/jclouds-examples", "languages": {"Shell": 1184, "Java": 545036, "Scala": 6039, "HTML": 3212, "Clojure": 6742, "CSS": 811}, "stats": 0, "name": "jclouds-examples"}
+{"url": "https://github.com/sashaafm/musikki", "languages": {"Elixir": 20180}, "stats": 0, "name": "musikki"}
+{"url": "https://github.com/sashaafm/nomad", "languages": {"Elixir": 182234}, "stats": 34, "name": "nomad"}
+{"url": "https://github.com/sashaafm/phoenix", "languages": {"JavaScript": 74450, "HTML": 4553, "Elixir": 648527}, "stats": 0, "name": "phoenix"}
+{"url": "https://github.com/sashaafm/phoenix_guides", "languages": {"HTML": 26450, "CSS": 271364}, "stats": 0, "name": "phoenix_guides"}
+{"url": "https://github.com/sashaafm/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/sashaafm/spacemacs", "languages": {"Shell": 966, "Python": 12948, "Emacs Lisp": 1429784, "Makefile": 3354, "TeX": 3446, "Ruby": 391}, "stats": 0, "name": "spacemacs"}
+{"url": "https://github.com/sashaafm/tutorial-extensions", "languages": {}, "stats": 0, "name": "tutorial-extensions"}
+{"url": "https://github.com/xernobyl/codebits2012", "languages": {"Python": 2254, "C": 43119, "F#": 2606, "C++": 369344}, "stats": 9, "name": "codebits2012"}
+{"url": "https://github.com/xernobyl/cpp", "languages": {"C++": 22771}, "stats": 0, "name": "cpp"}
+{"url": "https://github.com/xernobyl/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/jaimerferreira/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/nmpereira/nmpereira.github.io", "languages": {"HTML": 4780, "CSS": 11626}, "stats": 0, "name": "nmpereira.github.io"}
+{"url": "https://github.com/ruiveloso/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/lukebond/blog-coreos-docker-2", "languages": {"Shell": 1782}, "stats": 0, "name": "blog-coreos-docker-2"}
+{"url": "https://github.com/lukebond/blog-etcd-service-discovery-3", "languages": {"JavaScript": 2458}, "stats": 4, "name": "blog-etcd-service-discovery-3"}
+{"url": "https://github.com/lukebond/coreos-fest-berlin-20160509", "languages": {"C": 98, "Shell": 208}, "stats": 1, "name": "coreos-fest-berlin-20160509"}
+{"url": "https://github.com/lukebond/coreos-london-2015-03-10", "languages": {}, "stats": 2, "name": "coreos-london-2015-03-10"}
+{"url": "https://github.com/lukebond/coreos-vagrant-weave", "languages": {"Ruby": 1643}, "stats": 11, "name": "coreos-vagrant-weave"}
+{"url": "https://github.com/lukebond/couchnode", "languages": {"Python": 2640, "C": 757, "JavaScript": 185993, "C++": 46236}, "stats": 0, "name": "couchnode"}
+{"url": "https://github.com/lukebond/demo-api", "languages": {"Shell": 1111, "JavaScript": 341}, "stats": 0, "name": "demo-api"}
+{"url": "https://github.com/lukebond/demo-api-redis", "languages": {"Shell": 1159, "JavaScript": 668}, "stats": 0, "name": "demo-api-redis"}
+{"url": "https://github.com/lukebond/docker-couchbase-server", "languages": {"Shell": 2851, "Ruby": 4567}, "stats": 1, "name": "docker-couchbase-server"}
+{"url": "https://github.com/lukebond/docker-london-talk-rkt-20160203", "languages": {}, "stats": 0, "name": "docker-london-talk-rkt-20160203"}
+{"url": "https://github.com/lukebond/dotfiles", "languages": {"Lua": 19942, "Shell": 2480, "VimL": 1192, "Haskell": 845}, "stats": 0, "name": "dotfiles"}
+{"url": "https://github.com/lukebond/drone.io-node-with-fig", "languages": {"Shell": 212}, "stats": 1, "name": "drone.io-node-with-fig"}
+{"url": "https://github.com/lukebond/errs", "languages": {"JavaScript": 18218}, "stats": 0, "name": "errs"}
+{"url": "https://github.com/lukebond/etcd-vagrant", "languages": {"Ruby": 2614}, "stats": 1, "name": "etcd-vagrant"}
+{"url": "https://github.com/lukebond/fleetctl-ssh", "languages": {"Shell": 1041, "JavaScript": 5960}, "stats": 13, "name": "fleetctl-ssh"}
+{"url": "https://github.com/lukebond/format-url", "languages": {"JavaScript": 1858}, "stats": 0, "name": "format-url"}
+{"url": "https://github.com/lukebond/gitreceive", "languages": {}, "stats": 0, "name": "gitreceive"}
+{"url": "https://github.com/lukebond/hapijs_example_tests", "languages": {"JavaScript": 7645}, "stats": 0, "name": "hapijs_example_tests"}
+{"url": "https://github.com/lukebond/hello-impl-RFC-424242", "languages": {"C": 6098, "Python": 3936, "JavaScript": 3939, "Makefile": 371, "Lua": 740, "Go": 1893, "Ruby": 570}, "stats": 0, "name": "hello-impl-RFC-424242"}
+{"url": "https://github.com/lukebond/hello-RFC-424242", "languages": {}, "stats": 0, "name": "hello-RFC-424242"}
+{"url": "https://github.com/lukebond/hl7-mock-server", "languages": {"JavaScript": 172}, "stats": 0, "name": "hl7-mock-server"}
+{"url": "https://github.com/lukebond/http-health-endpoint", "languages": {"JavaScript": 7798}, "stats": 2, "name": "http-health-endpoint"}
+{"url": "https://github.com/lukebond/hydra", "languages": {"C": 139287, "Shell": 20077, "Java": 49310, "Makefile": 1135, "C++": 31968, "Clojure": 19296, "Ruby": 27761, "Prolog": 3642}, "stats": 0, "name": "hydra"}
+{"url": "https://github.com/lukebond/json-override", "languages": {"JavaScript": 3645}, "stats": 3, "name": "json-override"}
+{"url": "https://github.com/lukebond/lnug-talk-2015-02-25", "languages": {}, "stats": 4, "name": "lnug-talk-2015-02-25"}
+{"url": "https://github.com/lukebond/mdp", "languages": {"C": 92227, "Groff": 4130, "Makefile": 2926}, "stats": 0, "name": "mdp"}
+{"url": "https://github.com/lukebond/mediterraneajs-talk-20150623", "languages": {}, "stats": 1, "name": "mediterraneajs-talk-20150623"}
+{"url": "https://github.com/lukebond/minigun", "languages": {"Shell": 598, "JavaScript": 13769, "Makefile": 74}, "stats": 0, "name": "minigun"}
+{"url": "https://github.com/lukebond/minigun-core", "languages": {"JavaScript": 35835}, "stats": 0, "name": "minigun-core"}
+{"url": "https://github.com/lukebond/node-fleetctl", "languages": {}, "stats": 0, "name": "node-fleetctl"}
+{"url": "https://github.com/lukebond/node-interactive-systemd-workshop", "languages": {}, "stats": 3, "name": "node-interactive-systemd-workshop"}
+{"url": "https://github.com/lukebond/nodeconf-oslo-20160604", "languages": {"Shell": 377}, "stats": 4, "name": "nodeconf-oslo-20160604"}
+{"url": "https://github.com/lukebond/nodejs-deployment-patterns-talk", "languages": {}, "stats": 6, "name": "nodejs-deployment-patterns-talk"}
+{"url": "https://github.com/lukebond/paz-service-directory-cli", "languages": {"JavaScript": 5944}, "stats": 1, "name": "paz-service-directory-cli"}
+{"url": "https://github.com/lukebond/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/lukebond/protractor-demo", "languages": {"JavaScript": 9603, "HTML": 1247}, "stats": 0, "name": "protractor-demo"}
+{"url": "https://github.com/lukebond/redis-queuesize-poller", "languages": {"JavaScript": 3198}, "stats": 2, "name": "redis-queuesize-poller"}
+{"url": "https://github.com/lukebond/requirelx-dockerlisbon-talk-2015-05", "languages": {"JavaScript": 224}, "stats": 4, "name": "requirelx-dockerlisbon-talk-2015-05"}
+{"url": "https://github.com/lukebond/rkt", "languages": {"C": 25902, "Shell": 63654, "Makefile": 138919, "M4": 37519, "Go": 1271802, "Protocol Buffer": 17868}, "stats": 0, "name": "rkt"}
+{"url": "https://github.com/lukebond/simple-redis-safe-work-queue", "languages": {"Lua": 1644, "JavaScript": 23974}, "stats": 0, "name": "simple-redis-safe-work-queue"}
+{"url": "https://github.com/lukebond/soda-social-devops-deployment-patterns-talk", "languages": {}, "stats": 0, "name": "soda-social-devops-deployment-patterns-talk"}
+{"url": "https://github.com/lukebond/tim-test", "languages": {}, "stats": 0, "name": "tim-test"}
+{"url": "https://github.com/lukebond/time-since", "languages": {"JavaScript": 1556}, "stats": 0, "name": "time-since"}
+{"url": "https://github.com/lukebond/todo-express", "languages": {}, "stats": 0, "name": "todo-express"}
+{"url": "https://github.com/lukebond/traefik", "languages": {"Shell": 10173, "JavaScript": 26102, "Makefile": 2889, "HTML": 7190, "Go": 332971, "CSS": 1504}, "stats": 0, "name": "traefik"}
+{"url": "https://github.com/lukebond/vagrant-coreos-kubernetes", "languages": {}, "stats": 0, "name": "vagrant-coreos-kubernetes"}
+{"url": "https://github.com/lukebond/version-incrementer", "languages": {"JavaScript": 3022}, "stats": 0, "name": "version-incrementer"}
+{"url": "https://github.com/lukebond/yldio", "languages": {"JavaScript": 418, "CSS": 770}, "stats": 0, "name": "yldio"}
+{"url": "https://github.com/lukebond/zeromq-lnug-slides-20140730", "languages": {}, "stats": 3, "name": "zeromq-lnug-slides-20140730"}
+{"url": "https://github.com/lukebond/zeromq-lpclient", "languages": {"JavaScript": 2137}, "stats": 1, "name": "zeromq-lpclient"}
+{"url": "https://github.com/lukebond/zeromq-lpserver", "languages": {"JavaScript": 1621}, "stats": 3, "name": "zeromq-lpserver"}
+{"url": "https://github.com/lukebond/zeromq-ppqueue", "languages": {"JavaScript": 8138}, "stats": 1, "name": "zeromq-ppqueue"}
+{"url": "https://github.com/lukebond/zeromq-ppworker", "languages": {"JavaScript": 4846}, "stats": 2, "name": "zeromq-ppworker"}
+{"url": "https://github.com/lukebond/_error", "languages": {"JavaScript": 959}, "stats": 0, "name": "_error"}
+{"url": "https://github.com/rGalrito/awesome", "languages": {}, "stats": 0, "name": "awesome"}
+{"url": "https://github.com/rGalrito/botomatic", "languages": {"Python": 9089}, "stats": 0, "name": "botomatic"}
+{"url": "https://github.com/rGalrito/comment-block", "languages": {"CoffeeScript": 3132, "JavaScript": 5012, "CSS": 246}, "stats": 1, "name": "comment-block"}
+{"url": "https://github.com/rGalrito/dot-files", "languages": {"Shell": 8245}, "stats": 0, "name": "dot-files"}
+{"url": "https://github.com/rGalrito/DPT-Board-UI", "languages": {"HTML": 221340, "JavaScript": 182894, "CSS": 31322}, "stats": 0, "name": "DPT-Board-UI"}
+{"url": "https://github.com/rGalrito/EverBlog", "languages": {"JavaScript": 19738, "HTML": 7443, "CSS": 33315}, "stats": 0, "name": "EverBlog"}
+{"url": "https://github.com/rGalrito/ezSQL", "languages": {"HTML": 204960, "PHP": 167911}, "stats": 0, "name": "ezSQL"}
+{"url": "https://github.com/rGalrito/illacceptanything", "languages": {"C": 688, "Shell": 2237, "Java": 835, "Python": 3071, "JavaScript": 2129, "Makefile": 279, "C++": 113, "Haskell": 100, "HTML": 718, "JSONiq": 536, "Go": 325, "Visual Basic": 110, "PHP": 522}, "stats": 0, "name": "illacceptanything"}
+{"url": "https://github.com/rGalrito/image-crawler", "languages": {"Python": 2140}, "stats": 3, "name": "image-crawler"}
+{"url": "https://github.com/rGalrito/language-salt", "languages": {"CoffeeScript": 1351}, "stats": 0, "name": "language-salt"}
+{"url": "https://github.com/rGalrito/linux-bash-scripts", "languages": {"Shell": 13376}, "stats": 0, "name": "linux-bash-scripts"}
+{"url": "https://github.com/rGalrito/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/rGalrito/Python-Twitter-Bot", "languages": {"Python": 56642, "OpenEdge ABL": 58}, "stats": 0, "name": "Python-Twitter-Bot"}
+{"url": "https://github.com/rGalrito/shell-popup", "languages": {"Shell": 96}, "stats": 0, "name": "shell-popup"}
+{"url": "https://github.com/rGalrito/tldr", "languages": {"Shell": 1441, "JavaScript": 995}, "stats": 0, "name": "tldr"}
+{"url": "https://github.com/daminufe/Ember-CLI-Tweetr", "languages": {"JavaScript": 8853, "CSS": 162759}, "stats": 0, "name": "Ember-CLI-Tweetr"}
+{"url": "https://github.com/daminufe/mean-cherry-pick", "languages": {"Shell": 685, "JavaScript": 335286, "HTML": 40690, "CSS": 1544}, "stats": 0, "name": "mean-cherry-pick"}
+{"url": "https://github.com/daminufe/ng-inspector", "languages": {"JavaScript": 62639, "HTML": 6933, "CSS": 7224}, "stats": 0, "name": "ng-inspector"}
+{"url": "https://github.com/daminufe/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/daminufe/rabob-assignment", "languages": {"JavaScript": 19230, "HTML": 4832, "CSS": 1032}, "stats": 0, "name": "rabob-assignment"}
+{"url": "https://github.com/daminufe/Rit-Now", "languages": {"JavaScript": 1098}, "stats": 0, "name": "Rit-Now"}
+{"url": "https://github.com/daminufe/selectToAutocomplete", "languages": {"HTML": 27604, "JavaScript": 11866}, "stats": 0, "name": "selectToAutocomplete"}
+{"url": "https://github.com/daminufe/simplest-node-server", "languages": {"JavaScript": 141}, "stats": 0, "name": "simplest-node-server"}
+{"url": "https://github.com/daminufe/tm-seed", "languages": {"Shell": 228, "JavaScript": 80125, "HTML": 23742, "CSS": 9758}, "stats": 0, "name": "tm-seed"}
+{"url": "https://github.com/daminufe/webcomponents-seed", "languages": {}, "stats": 0, "name": "webcomponents-seed"}
+{"url": "https://github.com/cmota/android-gpuimage", "languages": {"Python": 230, "C": 3934, "Java": 409510}, "stats": 0, "name": "android-gpuimage"}
+{"url": "https://github.com/cmota/android-workshop", "languages": {"Groovy": 1125, "Java": 23983}, "stats": 1, "name": "android-workshop"}
+{"url": "https://github.com/cmota/cmota.github.io", "languages": {"JavaScript": 536, "CSS": 7722}, "stats": 0, "name": "cmota.github.io"}
+{"url": "https://github.com/cmota/gdgcoimbra", "languages": {"Shell": 2316, "HTML": 29392, "JavaScript": 13705, "CSS": 656}, "stats": 0, "name": "gdgcoimbra"}
+{"url": "https://github.com/cmota/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/cmota/SpotifyStatusBar", "languages": {"Objective-C": 5562}, "stats": 1, "name": "SpotifyStatusBar"}
+{"url": "https://github.com/dreispt/anygrate", "languages": {"Python": 60016}, "stats": 3, "name": "anygrate"}
+{"url": "https://github.com/dreispt/awesome", "languages": {}, "stats": 0, "name": "awesome"}
+{"url": "https://github.com/dreispt/awesome-odoo", "languages": {}, "stats": 49, "name": "awesome-odoo"}
+{"url": "https://github.com/dreispt/awesome-python", "languages": {}, "stats": 1, "name": "awesome-python"}
+{"url": "https://github.com/dreispt/bash-git-prompt", "languages": {"Python": 3973, "Shell": 20995}, "stats": 0, "name": "bash-git-prompt"}
+{"url": "https://github.com/dreispt/business-requirement", "languages": {}, "stats": 0, "name": "business-requirement"}
+{"url": "https://github.com/dreispt/connector", "languages": {}, "stats": 0, "name": "connector"}
+{"url": "https://github.com/dreispt/contract", "languages": {}, "stats": 0, "name": "contract"}
+{"url": "https://github.com/dreispt/crm", "languages": {"Python": 123534, "JavaScript": 1551}, "stats": 0, "name": "crm"}
+{"url": "https://github.com/dreispt/demo", "languages": {"Python": 440}, "stats": 0, "name": "demo"}
+{"url": "https://github.com/dreispt/department", "languages": {"Python": 23572}, "stats": 0, "name": "department"}
+{"url": "https://github.com/dreispt/dotfiles", "languages": {"VimL": 2618}, "stats": 0, "name": "dotfiles"}
+{"url": "https://github.com/dreispt/geospatial", "languages": {"Shell": 752, "Python": 126140, "JavaScript": 3025733, "Makefile": 4634, "Batchfile": 4535, "CSS": 4671}, "stats": 0, "name": "geospatial"}
+{"url": "https://github.com/dreispt/hr", "languages": {}, "stats": 0, "name": "hr"}
+{"url": "https://github.com/dreispt/knowledge", "languages": {"Python": 109804, "JavaScript": 1263238, "Java": 297102, "HTML": 42005, "CSS": 2793}, "stats": 0, "name": "knowledge"}
+{"url": "https://github.com/dreispt/l10n-colombia", "languages": {}, "stats": 0, "name": "l10n-colombia"}
+{"url": "https://github.com/dreispt/l10n-portugal", "languages": {"Python": 14718}, "stats": 0, "name": "l10n-portugal"}
+{"url": "https://github.com/dreispt/l10n_pt_saft", "languages": {"Python": 49377}, "stats": 0, "name": "l10n_pt_saft"}
+{"url": "https://github.com/dreispt/l10n_pt_signature", "languages": {"Python": 11124}, "stats": 0, "name": "l10n_pt_signature"}
+{"url": "https://github.com/dreispt/maintainer-quality-tools", "languages": {"Python": 65874, "Shell": 3016}, "stats": 0, "name": "maintainer-quality-tools"}
+{"url": "https://github.com/dreispt/maintainer-tools", "languages": {"Python": 14623, "HTML": 4281, "JavaScript": 2200, "CSS": 141}, "stats": 0, "name": "maintainer-tools"}
+{"url": "https://github.com/dreispt/management-system", "languages": {}, "stats": 0, "name": "management-system"}
+{"url": "https://github.com/dreispt/odoo", "languages": {"Mako": 561, "Shell": 18747, "Java": 1840167, "XSLT": 11489, "Python": 8907390, "VimL": 406, "JavaScript": 5665763, "Makefile": 12757, "NSIS": 17239, "Batchfile": 9611, "HTML": 221986, "Ruby": 220, "CSS": 1140066}, "stats": 0, "name": "odoo"}
+{"url": "https://github.com/dreispt/odoo-addons", "languages": {"Python": 42121}, "stats": 4, "name": "odoo-addons"}
+{"url": "https://github.com/dreispt/odoo-eam", "languages": {"Python": 135260, "HTML": 12907, "CSS": 2058}, "stats": 0, "name": "odoo-eam"}
+{"url": "https://github.com/dreispt/odoo-extra", "languages": {"Python": 58341, "Gettext Catalog": 15263, "HTML": 1697}, "stats": 0, "name": "odoo-extra"}
+{"url": "https://github.com/dreispt/odooing", "languages": {"Python": 2917, "Shell": 91, "JavaScript": 8504, "CSS": 23010}, "stats": 0, "name": "odooing"}
+{"url": "https://github.com/dreispt/oeget", "languages": {}, "stats": 0, "name": "oeget"}
+{"url": "https://github.com/dreispt/oetor", "languages": {"Shell": 29644}, "stats": 25, "name": "oetor"}
+{"url": "https://github.com/dreispt/ooenv", "languages": {"Python": 10945, "Shell": 183}, "stats": 5, "name": "ooenv"}
+{"url": "https://github.com/dreispt/ooenv-index", "languages": {}, "stats": 0, "name": "ooenv-index"}
+{"url": "https://github.com/dreispt/openerp-write2many", "languages": {"Python": 2302}, "stats": 3, "name": "openerp-write2many"}
+{"url": "https://github.com/dreispt/openerpapps.github.io", "languages": {}, "stats": 0, "name": "openerpapps.github.io"}
+{"url": "https://github.com/dreispt/openshift-odoo-quickstart", "languages": {"Python": 4297, "Shell": 1231}, "stats": 6, "name": "openshift-odoo-quickstart"}
+{"url": "https://github.com/dreispt/openshift-openerp-quickstart", "languages": {"Python": 4448, "Shell": 626}, "stats": 0, "name": "openshift-openerp-quickstart"}
+{"url": "https://github.com/dreispt/OpenUpgrade", "languages": {}, "stats": 0, "name": "OpenUpgrade"}
+{"url": "https://github.com/dreispt/partner-contact", "languages": {"Python": 288636}, "stats": 0, "name": "partner-contact"}
+{"url": "https://github.com/dreispt/pipo", "languages": {"Python": 10930, "Shell": 176}, "stats": 5, "name": "pipo"}
+{"url": "https://github.com/dreispt/project", "languages": {"Python": 242240}, "stats": 1, "name": "project"}
+{"url": "https://github.com/dreispt/project-agile", "languages": {"Python": 117610, "Mako": 2509, "HTML": 16922, "CSS": 478}, "stats": 0, "name": "project-agile"}
+{"url": "https://github.com/dreispt/project-earned-value", "languages": {"Python": 51325}, "stats": 0, "name": "project-earned-value"}
+{"url": "https://github.com/dreispt/purchase-workflow", "languages": {}, "stats": 0, "name": "purchase-workflow"}
+{"url": "https://github.com/dreispt/PyPDF2", "languages": {"Python": 184115}, "stats": 0, "name": "PyPDF2"}
+{"url": "https://github.com/dreispt/reporting-engine", "languages": {"Python": 41630, "HTML": 3027}, "stats": 0, "name": "reporting-engine"}
+{"url": "https://github.com/dreispt/sale-workflow", "languages": {"Python": 344695}, "stats": 0, "name": "sale-workflow"}
+{"url": "https://github.com/dreispt/sale_api_create", "languages": {"Python": 6095}, "stats": 0, "name": "sale_api_create"}
+{"url": "https://github.com/dreispt/server-tools", "languages": {}, "stats": 4, "name": "server-tools"}
+{"url": "https://github.com/dreispt/social", "languages": {"Python": 31273, "JavaScript": 857, "CSS": 402}, "stats": 0, "name": "social"}
+{"url": "https://github.com/dreispt/SpiffWorkflow", "languages": {"Python": 493339, "Shell": 1462, "Makefile": 1845}, "stats": 0, "name": "SpiffWorkflow"}
+{"url": "https://github.com/dreispt/supergenpass", "languages": {}, "stats": 0, "name": "supergenpass"}
+{"url": "https://github.com/dreispt/survey", "languages": {}, "stats": 0, "name": "survey"}
+{"url": "https://github.com/dreispt/talks_2016", "languages": {}, "stats": 0, "name": "talks_2016"}
+{"url": "https://github.com/dreispt/Text-Format-Table", "languages": {}, "stats": 0, "name": "Text-Format-Table"}
+{"url": "https://github.com/dreispt/todo_app", "languages": {"Python": 11831, "Shell": 2002}, "stats": 16, "name": "todo_app"}
+{"url": "https://github.com/dreispt/web", "languages": {"Python": 160888, "JavaScript": 258206, "HTML": 24316, "CSS": 113254}, "stats": 0, "name": "web"}
+{"url": "https://github.com/davidgomes/.emacs.d", "languages": {"Emacs Lisp": 218394}, "stats": 0, "name": ".emacs.d"}
+{"url": "https://github.com/davidgomes/2dplatformer", "languages": {"C++": 10732}, "stats": 0, "name": "2dplatformer"}
+{"url": "https://github.com/davidgomes/a-choice-of-weapon", "languages": {"JavaScript": 23764, "HTML": 1134, "CSS": 420}, "stats": 1, "name": "a-choice-of-weapon"}
+{"url": "https://github.com/davidgomes/atowers", "languages": {}, "stats": 0, "name": "atowers"}
+{"url": "https://github.com/davidgomes/baseBot", "languages": {"Go": 3080}, "stats": 0, "name": "baseBot"}
+{"url": "https://github.com/davidgomes/ceres", "languages": {"JavaScript": 13494, "CSS": 2333}, "stats": 0, "name": "ceres"}
+{"url": "https://github.com/davidgomes/codebattles", "languages": {"Shell": 3201, "JavaScript": 402084, "CSS": 16277}, "stats": 3, "name": "codebattles"}
+{"url": "https://github.com/davidgomes/codebattles-gym", "languages": {"JavaScript": 409217, "HTML": 5187, "CSS": 24974}, "stats": 1, "name": "codebattles-gym"}
+{"url": "https://github.com/davidgomes/contributing-to-linux-slides", "languages": {"JavaScript": 166048, "HTML": 31521, "CSS": 190332}, "stats": 0, "name": "contributing-to-linux-slides"}
+{"url": "https://github.com/davidgomes/cubes-on-steroids", "languages": {"Vala": 1001875, "Shell": 534}, "stats": 1, "name": "cubes-on-steroids"}
+{"url": "https://github.com/davidgomes/desktop-files", "languages": {"Shell": 36}, "stats": 0, "name": "desktop-files"}
+{"url": "https://github.com/davidgomes/doodleIRC", "languages": {"Vala": 13331, "Perl": 265}, "stats": 0, "name": "doodleIRC"}
+{"url": "https://github.com/davidgomes/dotfiles", "languages": {"CoffeeScript": 2550, "CSS": 938}, "stats": 0, "name": "dotfiles"}
+{"url": "https://github.com/davidgomes/elementarybot", "languages": {"Ruby": 5221}, "stats": 0, "name": "elementarybot"}
+{"url": "https://github.com/davidgomes/elementaryos.org-translations", "languages": {"PHP": 195091}, "stats": 0, "name": "elementaryos.org-translations"}
+{"url": "https://github.com/davidgomes/elevator.js", "languages": {"HTML": 4654, "JavaScript": 3659, "CSS": 1451}, "stats": 0, "name": "elevator.js"}
+{"url": "https://github.com/davidgomes/equation-plot-webgl", "languages": {}, "stats": 0, "name": "equation-plot-webgl"}
+{"url": "https://github.com/davidgomes/flask-pygood", "languages": {"Python": 1056}, "stats": 2, "name": "flask-pygood"}
+{"url": "https://github.com/davidgomes/gnumaku", "languages": {"C": 68412, "Scheme": 56188, "C++": 2205}, "stats": 1, "name": "gnumaku"}
+{"url": "https://github.com/davidgomes/gwap-slides", "languages": {"JavaScript": 166048, "HTML": 32545, "CSS": 190249}, "stats": 0, "name": "gwap-slides"}
+{"url": "https://github.com/davidgomes/isometric-engine", "languages": {"C++": 12490}, "stats": 0, "name": "isometric-engine"}
+{"url": "https://github.com/davidgomes/javascript-patterns", "languages": {}, "stats": 0, "name": "javascript-patterns"}
+{"url": "https://github.com/davidgomes/jaws", "languages": {"JavaScript": 258728, "Ruby": 1382}, "stats": 1, "name": "jaws"}
+{"url": "https://github.com/davidgomes/jenga-engineer", "languages": {}, "stats": 0, "name": "jenga-engineer"}
+{"url": "https://github.com/davidgomes/LICK", "languages": {"Lua": 3670}, "stats": 1, "name": "LICK"}
+{"url": "https://github.com/davidgomes/love2d-workshop-game", "languages": {"Lua": 4389}, "stats": 2, "name": "love2d-workshop-game"}
+{"url": "https://github.com/davidgomes/mail-server", "languages": {"Python": 10042, "TeX": 3177}, "stats": 0, "name": "mail-server"}
+{"url": "https://github.com/davidgomes/mcc2", "languages": {"Yacc": 12292, "Lex": 7195, "C": 142803}, "stats": 0, "name": "mcc2"}
+{"url": "https://github.com/davidgomes/mccompiler", "languages": {"Yacc": 12292, "Lex": 7195, "C": 143170, "Shell": 461}, "stats": 1, "name": "mccompiler"}
+{"url": "https://github.com/davidgomes/meteor-codemirror", "languages": {"JavaScript": 5033}, "stats": 0, "name": "meteor-codemirror"}
+{"url": "https://github.com/davidgomes/meteor-pentagine", "languages": {"JavaScript": 17654, "CSS": 38}, "stats": 2, "name": "meteor-pentagine"}
+{"url": "https://github.com/davidgomes/meteor.sh", "languages": {"Shell": 2817}, "stats": 0, "name": "meteor.sh"}
+{"url": "https://github.com/davidgomes/multitaskor", "languages": {"JavaScript": 47699, "HTML": 1598, "CSS": 457}, "stats": 8, "name": "multitaskor"}
+{"url": "https://github.com/davidgomes/newton", "languages": {"JavaScript": 24046, "CSS": 2010}, "stats": 0, "name": "newton"}
+{"url": "https://github.com/davidgomes/node-webkit", "languages": {}, "stats": 1, "name": "node-webkit"}
+{"url": "https://github.com/davidgomes/not-space-invaders", "languages": {"Lua": 12952}, "stats": 0, "name": "not-space-invaders"}
+{"url": "https://github.com/davidgomes/openbox-config", "languages": {"Shell": 149, "Ruby": 379}, "stats": 1, "name": "openbox-config"}
+{"url": "https://github.com/davidgomes/party-build", "languages": {"JavaScript": 14074}, "stats": 1, "name": "party-build"}
+{"url": "https://github.com/davidgomes/paxlure", "languages": {"JavaScript": 15147}, "stats": 1, "name": "paxlure"}
+{"url": "https://github.com/davidgomes/pentagine.js", "languages": {"JavaScript": 69198, "HTML": 3953}, "stats": 13, "name": "pentagine.js"}
+{"url": "https://github.com/davidgomes/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/davidgomes/pollr", "languages": {"JavaScript": 34668, "HTML": 12155, "CSS": 6089}, "stats": 2, "name": "pollr"}
+{"url": "https://github.com/davidgomes/ppp-project", "languages": {"C": 40824}, "stats": 0, "name": "ppp-project"}
+{"url": "https://github.com/davidgomes/r2d2b2g", "languages": {"Python": 6566, "JavaScript": 152339}, "stats": 0, "name": "r2d2b2g"}
+{"url": "https://github.com/davidgomes/RabbitBot", "languages": {"JavaScript": 13671}, "stats": 0, "name": "RabbitBot"}
+{"url": "https://github.com/davidgomes/react-bower", "languages": {}, "stats": 0, "name": "react-bower"}
+{"url": "https://github.com/davidgomes/rgif.js", "languages": {"JavaScript": 1528}, "stats": 0, "name": "rgif.js"}
+{"url": "https://github.com/davidgomes/so-server", "languages": {"TeX": 4029, "C": 27826, "Shell": 35, "C++": 1954}, "stats": 0, "name": "so-server"}
+{"url": "https://github.com/davidgomes/stack-tile", "languages": {"Lua": 122122}, "stats": 0, "name": "stack-tile"}
+{"url": "https://github.com/davidgomes/tex-boilerplates", "languages": {"HTML": 6330, "JavaScript": 665, "CSS": 25573}, "stats": 0, "name": "tex-boilerplates"}
+{"url": "https://github.com/davidgomes/the-incredible-pixel", "languages": {"Shell": 350, "JavaScript": 31295}, "stats": 0, "name": "the-incredible-pixel"}
+{"url": "https://github.com/davidgomes/the-old-york-times", "languages": {"Shell": 411, "Java": 3830, "Python": 101300, "JavaScript": 31151, "Batchfile": 221, "HTML": 70861192, "CSS": 6075}, "stats": 1, "name": "the-old-york-times"}
+{"url": "https://github.com/davidgomes/tint2rc", "languages": {}, "stats": 0, "name": "tint2rc"}
+{"url": "https://github.com/davidgomes/tower-engineer", "languages": {"Lua": 4823}, "stats": 2, "name": "tower-engineer"}
+{"url": "https://github.com/davidgomes/unbabel-py", "languages": {"Python": 26306}, "stats": 0, "name": "unbabel-py"}
+{"url": "https://github.com/davidgomes/vimrc", "languages": {"VimL": 13137}, "stats": 0, "name": "vimrc"}
+{"url": "https://github.com/davidgomes/wolfram-matrix-editor", "languages": {"JavaScript": 1923}, "stats": 0, "name": "wolfram-matrix-editor"}
+{"url": "https://github.com/davidgomes/XSIRC", "languages": {"Python": 3429, "Vala": 208044, "Shell": 1232, "C": 865}, "stats": 2, "name": "XSIRC"}
+{"url": "https://github.com/kasia-kittel/a-b-test", "languages": {"Scala": 11838}, "stats": 0, "name": "a-b-test"}
+{"url": "https://github.com/kasia-kittel/dockerized-it", "languages": {}, "stats": 0, "name": "dockerized-it"}
+{"url": "https://github.com/kasia-kittel/ElasticSearchDemo", "languages": {"Java": 16911}, "stats": 0, "name": "ElasticSearchDemo"}
+{"url": "https://github.com/kasia-kittel/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/kasia-kittel/play-authorisation", "languages": {"Scala": 36654}, "stats": 0, "name": "play-authorisation"}
+{"url": "https://github.com/kasia-kittel/play-authorised-frontend", "languages": {"Scala": 141171}, "stats": 0, "name": "play-authorised-frontend"}
+{"url": "https://github.com/kasia-kittel/play-json-logger", "languages": {"Scala": 4501}, "stats": 0, "name": "play-json-logger"}
+{"url": "https://github.com/kasia-kittel/play-partials", "languages": {"Scala": 32876}, "stats": 0, "name": "play-partials"}
+{"url": "https://github.com/kasia-kittel/play-scheduling", "languages": {"Scala": 14762}, "stats": 0, "name": "play-scheduling"}
+{"url": "https://github.com/kasia-kittel/QuoteOfTheDay", "languages": {"Shell": 67216, "Java": 571, "HTML": 2482171, "XSLT": 41986, "JavaScript": 704949, "Scala": 16917, "Batchfile": 43679, "CSS": 76974}, "stats": 0, "name": "QuoteOfTheDay"}
+{"url": "https://github.com/kasia-kittel/spring-boot", "languages": {"Groovy": 39777, "Shell": 20227, "Java": 7767089, "FreeMarker": 2116, "XSLT": 33894, "JavaScript": 37789, "SQLPL": 20085, "Smarty": 3276, "Batchfile": 6954, "HTML": 69819, "Ruby": 1305, "CSS": 5769}, "stats": 0, "name": "spring-boot"}
+{"url": "https://github.com/luisfcorreia/ArduinoMidiDrums", "languages": {"Arduino": 6216}, "stats": 0, "name": "ArduinoMidiDrums"}
+{"url": "https://github.com/luisfcorreia/beautiful_lisbon", "languages": {}, "stats": 0, "name": "beautiful_lisbon"}
+{"url": "https://github.com/luisfcorreia/bi-copter-wii-remote", "languages": {"Java": 94795}, "stats": 3, "name": "bi-copter-wii-remote"}
+{"url": "https://github.com/luisfcorreia/diy", "languages": {}, "stats": 0, "name": "diy"}
+{"url": "https://github.com/luisfcorreia/EnergyMonitor", "languages": {"C": 1026, "C++": 16439, "Arduino": 2175}, "stats": 0, "name": "EnergyMonitor"}
+{"url": "https://github.com/luisfcorreia/epromreader", "languages": {"Python": 1066, "Arduino": 3607}, "stats": 0, "name": "epromreader"}
+{"url": "https://github.com/luisfcorreia/ESP8266", "languages": {"Arduino": 8308}, "stats": 0, "name": "ESP8266"}
+{"url": "https://github.com/luisfcorreia/ESP8266-Longterm-Sensor-Hourly", "languages": {"Arduino": 14036}, "stats": 0, "name": "ESP8266-Longterm-Sensor-Hourly"}
+{"url": "https://github.com/luisfcorreia/i2cdevlib", "languages": {"C": 402001, "Shell": 1389, "Arduino": 80771, "Processing": 11953, "Makefile": 19128, "C++": 1288166}, "stats": 0, "name": "i2cdevlib"}
+{"url": "https://github.com/luisfcorreia/ink-bottle", "languages": {"Python": 291725, "CSS": 455}, "stats": 0, "name": "ink-bottle"}
+{"url": "https://github.com/luisfcorreia/johnny-five", "languages": {"Python": 8729, "Shell": 182}, "stats": 0, "name": "johnny-five"}
+{"url": "https://github.com/luisfcorreia/luisfcorreia.github.io", "languages": {"HTML": 104}, "stats": 0, "name": "luisfcorreia.github.io"}
+{"url": "https://github.com/luisfcorreia/MacPass", "languages": {"Objective-C": 539163}, "stats": 0, "name": "MacPass"}
+{"url": "https://github.com/luisfcorreia/MakerFaire2015", "languages": {"C": 89296, "Shell": 4018, "Arduino": 53405, "Python": 11037, "Processing": 17134, "C++": 308384}, "stats": 0, "name": "MakerFaire2015"}
+{"url": "https://github.com/luisfcorreia/mamepanel", "languages": {"Makefile": 2295, "C": 97070, "Assembly": 11941, "C++": 38365}, "stats": 0, "name": "mamepanel"}
+{"url": "https://github.com/luisfcorreia/MFL2015_MISCTL", "languages": {"HTML": 4221, "JavaScript": 484, "CSS": 1228}, "stats": 0, "name": "MFL2015_MISCTL"}
+{"url": "https://github.com/luisfcorreia/moneybot", "languages": {"Python": 4031}, "stats": 0, "name": "moneybot"}
+{"url": "https://github.com/luisfcorreia/moodle", "languages": {"Shell": 305, "PHP": 223657}, "stats": 1, "name": "moodle"}
+{"url": "https://github.com/luisfcorreia/Nanode-RF", "languages": {"C": 2928, "Java": 1752, "CSS": 1307, "C++": 131788, "Arduino": 80400}, "stats": 0, "name": "Nanode-RF"}
+{"url": "https://github.com/luisfcorreia/pan101", "languages": {"C": 295, "C++": 3084}, "stats": 0, "name": "pan101"}
+{"url": "https://github.com/luisfcorreia/pas", "languages": {"Python": 5408, "Shell": 377, "JavaScript": 5810, "CSS": 559756}, "stats": 0, "name": "pas"}
+{"url": "https://github.com/luisfcorreia/piku", "languages": {"Python": 10860, "Shell": 4212}, "stats": 0, "name": "piku"}
+{"url": "https://github.com/luisfcorreia/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/luisfcorreia/project-1-batalha", "languages": {"Lua": 41254, "Shell": 195}, "stats": 1, "name": "project-1-batalha"}
+{"url": "https://github.com/luisfcorreia/project-1-fisga", "languages": {"Java": 29707}, "stats": 2, "name": "project-1-fisga"}
+{"url": "https://github.com/luisfcorreia/SolderingStation", "languages": {"C": 3713, "Processing": 2565, "C++": 51478, "Arduino": 40942}, "stats": 0, "name": "SolderingStation"}
+{"url": "https://github.com/naps62/action_mailer_provider", "languages": {"Ruby": 4911}, "stats": 0, "name": "action_mailer_provider"}
+{"url": "https://github.com/naps62/administrate", "languages": {"Shell": 1896, "HTML": 38086, "Ruby": 168235, "JavaScript": 2718, "CSS": 13053}, "stats": 0, "name": "administrate"}
+{"url": "https://github.com/naps62/api", "languages": {}, "stats": 0, "name": "api"}
+{"url": "https://github.com/naps62/auther", "languages": {"Ruby": 22318}, "stats": 2, "name": "auther"}
+{"url": "https://github.com/naps62/awesome-hacking-spots", "languages": {}, "stats": 0, "name": "awesome-hacking-spots"}
+{"url": "https://github.com/naps62/barneshut-galois", "languages": {"C": 126591, "Shell": 11651, "Python": 8638, "C++": 1126411, "Perl": 10658, "Objective-C": 147842, "R": 7745}, "stats": 2, "name": "barneshut-galois"}
+{"url": "https://github.com/naps62/beast", "languages": {"C": 3233, "C++": 29868}, "stats": 1, "name": "beast"}
+{"url": "https://github.com/naps62/blotter", "languages": {"Ruby": 5526, "C++": 1068}, "stats": 0, "name": "blotter"}
+{"url": "https://github.com/naps62/cadoo-presentation", "languages": {"HTML": 682388}, "stats": 0, "name": "cadoo-presentation"}
+{"url": "https://github.com/naps62/capistrano-compact-formatter", "languages": {"Ruby": 3099}, "stats": 1, "name": "capistrano-compact-formatter"}
+{"url": "https://github.com/naps62/capistrano3-env", "languages": {"Ruby": 3183}, "stats": 3, "name": "capistrano3-env"}
+{"url": "https://github.com/naps62/capistrano3-monit", "languages": {"Ruby": 1660}, "stats": 18, "name": "capistrano3-monit"}
+{"url": "https://github.com/naps62/captains_log", "languages": {}, "stats": 3, "name": "captains_log"}
+{"url": "https://github.com/naps62/cardstock", "languages": {"JavaScript": 365708, "HTML": 293852, "CSS": 47156}, "stats": 0, "name": "cardstock"}
+{"url": "https://github.com/naps62/Cesium.JOIN_PlanoActividades", "languages": {"TeX": 24990, "Shell": 176, "Perl": 1344}, "stats": 1, "name": "Cesium.JOIN_PlanoActividades"}
+{"url": "https://github.com/naps62/Cesium_Template_PlanoActividades", "languages": {"TeX": 276454, "Shell": 192, "Perl": 1344}, "stats": 3, "name": "Cesium_Template_PlanoActividades"}
+{"url": "https://github.com/naps62/chrome-extension-re-use-tabs", "languages": {"JavaScript": 821}, "stats": 0, "name": "chrome-extension-re-use-tabs"}
+{"url": "https://github.com/naps62/client_side_validations", "languages": {}, "stats": 0, "name": "client_side_validations"}
+{"url": "https://github.com/naps62/coinbase-ruby", "languages": {"Ruby": 15347}, "stats": 0, "name": "coinbase-ruby"}
+{"url": "https://github.com/naps62/component.js", "languages": {"JavaScript": 3869}, "stats": 0, "name": "component.js"}
+{"url": "https://github.com/naps62/copyright-updater", "languages": {"Shell": 821}, "stats": 0, "name": "copyright-updater"}
+{"url": "https://github.com/naps62/coursera-gamedev-box-shooter", "languages": {"GLSL": 306178, "C#": 236792}, "stats": 0, "name": "coursera-gamedev-box-shooter"}
+{"url": "https://github.com/naps62/coursera-gamedev-roller-madness", "languages": {"C#": 162058, "GLSL": 1013}, "stats": 0, "name": "coursera-gamedev-roller-madness"}
+{"url": "https://github.com/naps62/coursera-gamedev-solar-system", "languages": {"C#": 1967}, "stats": 0, "name": "coursera-gamedev-solar-system"}
+{"url": "https://github.com/naps62/cow", "languages": {"Shell": 1449, "JavaScript": 16298, "C++": 6025}, "stats": 1, "name": "cow"}
+{"url": "https://github.com/naps62/CPD_PAPI", "languages": {"C": 13438813, "Shell": 23667, "Java": 42709, "C++": 3613, "Python": 26475, "JavaScript": 1092, "Common Lisp": 6678, "FORTRAN": 118771, "Matlab": 17249, "Assembly": 9223, "Rust": 7584, "Prolog": 3986}, "stats": 3, "name": "CPD_PAPI"}
+{"url": "https://github.com/naps62/CPD_PI", "languages": {"C": 154280, "Shell": 12631, "JavaScript": 1241, "C++": 1106402, "Perl": 828, "Objective-C": 4856, "Matlab": 184}, "stats": 1, "name": "CPD_PI"}
+{"url": "https://github.com/naps62/crowdbits", "languages": {"Shell": 1406, "JavaScript": 2345702, "Ruby": 43201, "CSS": 582350}, "stats": 0, "name": "crowdbits"}
+{"url": "https://github.com/naps62/crystal", "languages": {"Crystal": 2065016, "Shell": 306, "Makefile": 851, "CSS": 1200}, "stats": 0, "name": "crystal"}
+{"url": "https://github.com/naps62/crystal-test-app", "languages": {"Crystal": 2743}, "stats": 0, "name": "crystal-test-app"}
+{"url": "https://github.com/naps62/cv", "languages": {"Shell": 187, "Ruby": 1278, "CSS": 176332}, "stats": 0, "name": "cv"}
+{"url": "https://github.com/naps62/docker-tests", "languages": {"Shell": 127, "JavaScript": 785, "Nginx": 349, "HTML": 6078, "Ruby": 22114, "CSS": 1893}, "stats": 0, "name": "docker-tests"}
+{"url": "https://github.com/naps62/dockerfiles", "languages": {"Shell": 4026, "Ruby": 15429, "JavaScript": 147, "CSS": 1960}, "stats": 0, "name": "dockerfiles"}
+{"url": "https://github.com/naps62/dotfiles", "languages": {"Shell": 38809, "Python": 2476, "JavaScript": 38379, "VimL": 160072, "Perl": 313588, "Lua": 162740, "Haskell": 11943, "Ruby": 13419}, "stats": 0, "name": "dotfiles"}
+{"url": "https://github.com/naps62/elixir_in_action", "languages": {"Elixir": 88792}, "stats": 0, "name": "elixir_in_action"}
+{"url": "https://github.com/naps62/exercism.io", "languages": {"Shell": 4651, "Python": 1847, "JavaScript": 1058178, "CoffeeScript": 5467, "Haskell": 2113, "Ruby": 234693, "CSS": 210670}, "stats": 0, "name": "exercism.io"}
+{"url": "https://github.com/naps62/frank", "languages": {"Crystal": 4250}, "stats": 0, "name": "frank"}
+{"url": "https://github.com/naps62/gb-status", "languages": {"Rust": 724}, "stats": 0, "name": "gb-status"}
+{"url": "https://github.com/naps62/github-nice-guy", "languages": {}, "stats": 0, "name": "github-nice-guy"}
+{"url": "https://github.com/naps62/gitready", "languages": {"Ruby": 705, "CSS": 4674}, "stats": 0, "name": "gitready"}
+{"url": "https://github.com/naps62/goinstant-chat", "languages": {"JavaScript": 844954, "CSS": 14606}, "stats": 0, "name": "goinstant-chat"}
+{"url": "https://github.com/naps62/hello_phoenix", "languages": {"HTML": 4558, "JavaScript": 4486, "CSS": 49, "Elixir": 32995}, "stats": 0, "name": "hello_phoenix"}
+{"url": "https://github.com/naps62/html5-curriculum-vitae-template", "languages": {}, "stats": 0, "name": "html5-curriculum-vitae-template"}
+{"url": "https://github.com/naps62/ipca-animations-class", "languages": {}, "stats": 0, "name": "ipca-animations-class"}
+{"url": "https://github.com/naps62/jquery-steps", "languages": {"JavaScript": 186474, "CSS": 25789}, "stats": 0, "name": "jquery-steps"}
+{"url": "https://github.com/naps62/js13kgames", "languages": {"CoffeeScript": 4963, "CSS": 547}, "stats": 0, "name": "js13kgames"}
+{"url": "https://github.com/naps62/livemark.js", "languages": {"CoffeeScript": 5301, "JavaScript": 1054, "CSS": 527}, "stats": 0, "name": "livemark.js"}
+{"url": "https://github.com/naps62/Management-Interface", "languages": {"JavaScript": 39203, "Ruby": 3557, "HTML": 3756}, "stats": 0, "name": "Management-Interface"}
+{"url": "https://github.com/naps62/md-preview", "languages": {"Shell": 292, "HTML": 26488, "JavaScript": 818}, "stats": 0, "name": "md-preview"}
+{"url": "https://github.com/naps62/meo_wallet", "languages": {"Ruby": 1640}, "stats": 1, "name": "meo_wallet"}
+{"url": "https://github.com/naps62/meteor-todos", "languages": {"JavaScript": 2516, "HTML": 1069, "CSS": 1714}, "stats": 0, "name": "meteor-todos"}
+{"url": "https://github.com/naps62/money", "languages": {"Ruby": 207459}, "stats": 0, "name": "money"}
+{"url": "https://github.com/naps62/msc-thesis", "languages": {"C": 1257365, "Shell": 3029, "C++": 6753704, "Objective-C": 7518, "Erlang": 10770, "Ruby": 11747}, "stats": 0, "name": "msc-thesis"}
+{"url": "https://github.com/naps62/naps62.github.io", "languages": {"HTML": 130094, "JavaScript": 27222}, "stats": 0, "name": "naps62.github.io"}
+{"url": "https://github.com/naps62/old_presentations", "languages": {"JavaScript": 1533118, "CSS": 786349}, "stats": 0, "name": "old_presentations"}
+{"url": "https://github.com/naps62/omniauth-coinbase", "languages": {"Ruby": 3104}, "stats": 1, "name": "omniauth-coinbase"}
+{"url": "https://github.com/naps62/papi-cuda", "languages": {"C": 24348, "Objective-C": 3890, "C++": 201149}, "stats": 2, "name": "papi-cuda"}
+{"url": "https://github.com/naps62/parallel-sort", "languages": {"Shell": 11617, "C++": 28324}, "stats": 7, "name": "parallel-sort"}
+{"url": "https://github.com/naps62/phaser-examples", "languages": {"HTML": 81601, "ApacheConf": 125, "JavaScript": 8143237, "PHP": 193666, "CSS": 54787}, "stats": 0, "name": "phaser-examples"}
+{"url": "https://github.com/naps62/pie", "languages": {"Ruby": 489}, "stats": 0, "name": "pie"}
+{"url": "https://github.com/naps62/pipes", "languages": {"C": 27926, "C++": 3413}, "stats": 0, "name": "pipes"}
+{"url": "https://github.com/naps62/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/naps62/placer", "languages": {"Perl": 2347}, "stats": 0, "name": "placer"}
+{"url": "https://github.com/naps62/plaidchat", "languages": {"Shell": 2851, "JavaScript": 70407, "HTML": 5881, "CSS": 2336}, "stats": 0, "name": "plaidchat"}
+{"url": "https://github.com/naps62/PlayAuth", "languages": {"JavaScript": 1429, "Ruby": 56109}, "stats": 0, "name": "PlayAuth"}
+{"url": "https://github.com/naps62/presentations", "languages": {"JavaScript": 213707, "Ruby": 7284, "CSS": 135083}, "stats": 0, "name": "presentations"}
+{"url": "https://github.com/naps62/puppet-rvm", "languages": {"Shell": 1500, "Puppet": 10278}, "stats": 0, "name": "puppet-rvm"}
+{"url": "https://github.com/naps62/qmk_firmware", "languages": {"Logos": 14382, "C": 74509057, "SourcePawn": 28684, "Assembly": 3044684, "Arduino": 181158, "Python": 573561, "Ruby": 240, "XSLT": 32057, "Makefile": 346558, "C++": 8094796, "C#": 16942, "Objective-C": 76501, "HTML": 486304, "Shell": 3339, "Batchfile": 1463, "JavaScript": 6041, "CSS": 2461}, "stats": 0, "name": "qmk_firmware"}
+{"url": "https://github.com/naps62/railsduino", "languages": {"HTML": 5394, "Ruby": 21507, "JavaScript": 2656, "CSS": 1305, "Arduino": 605}, "stats": 0, "name": "railsduino"}
+{"url": "https://github.com/naps62/react-fastclick", "languages": {"JavaScript": 3222}, "stats": 0, "name": "react-fastclick"}
+{"url": "https://github.com/naps62/regular-adder", "languages": {"Ruby": 1837}, "stats": 0, "name": "regular-adder"}
+{"url": "https://github.com/naps62/resque_exception_notification", "languages": {"Ruby": 1433}, "stats": 0, "name": "resque_exception_notification"}
+{"url": "https://github.com/naps62/retina_tag", "languages": {"JavaScript": 1368, "Ruby": 2288}, "stats": 0, "name": "retina_tag"}
+{"url": "https://github.com/naps62/rspec_issue", "languages": {"Ruby": 462}, "stats": 0, "name": "rspec_issue"}
+{"url": "https://github.com/naps62/running-free", "languages": {"C": 205265, "Objective-C": 16497, "C++": 190333, "Perl": 1368}, "stats": 0, "name": "running-free"}
+{"url": "https://github.com/naps62/rust-bitreserve", "languages": {"Shell": 13083, "Rust": 7732}, "stats": 0, "name": "rust-bitreserve"}
+{"url": "https://github.com/naps62/rust-browser", "languages": {"Rust": 2226}, "stats": 0, "name": "rust-browser"}
+{"url": "https://github.com/naps62/rust-chat", "languages": {"Rust": 4766}, "stats": 0, "name": "rust-chat"}
+{"url": "https://github.com/naps62/s3-upload", "languages": {"JavaScript": 2402, "HTML": 80}, "stats": 0, "name": "s3-upload"}
+{"url": "https://github.com/naps62/sandbox", "languages": {"C": 856, "R": 79, "C++": 7931}, "stats": 0, "name": "sandbox"}
+{"url": "https://github.com/naps62/sir-trevor-rails", "languages": {"JavaScript": 79251, "Ruby": 8574, "CSS": 8933}, "stats": 0, "name": "sir-trevor-rails"}
+{"url": "https://github.com/naps62/slides_latex", "languages": {}, "stats": 1, "name": "slides_latex"}
+{"url": "https://github.com/naps62/spencer-angular", "languages": {"JavaScript": 16403, "CSS": 1039}, "stats": 0, "name": "spencer-angular"}
+{"url": "https://github.com/naps62/spencer-api", "languages": {"Ruby": 42347}, "stats": 0, "name": "spencer-api"}
+{"url": "https://github.com/naps62/spencer-meteor", "languages": {"JavaScript": 1962, "HTML": 941}, "stats": 0, "name": "spencer-meteor"}
+{"url": "https://github.com/naps62/stalker", "languages": {"JavaScript": 4629, "HTML": 2019, "Elixir": 25482}, "stats": 0, "name": "stalker"}
+{"url": "https://github.com/naps62/stalker-zsh", "languages": {}, "stats": 0, "name": "stalker-zsh"}
+{"url": "https://github.com/naps62/svgo", "languages": {"JavaScript": 292759, "Makefile": 569}, "stats": 0, "name": "svgo"}
+{"url": "https://github.com/naps62/the_well_provisioned_test_app", "languages": {"JavaScript": 664, "Ruby": 17050, "CSS": 546}, "stats": 0, "name": "the_well_provisioned_test_app"}
+{"url": "https://github.com/naps62/tldr", "languages": {"Makefile": 873, "Shell": 1475, "Ruby": 1090}, "stats": 0, "name": "tldr"}
+{"url": "https://github.com/naps62/topdog", "languages": {"CoffeeScript": 213, "HTML": 45539, "Ruby": 52361, "JavaScript": 4907, "CSS": 25380}, "stats": 0, "name": "topdog"}
+{"url": "https://github.com/naps62/trappist", "languages": {"JavaScript": 5858, "HTML": 1131, "CSS": 1514}, "stats": 0, "name": "trappist"}
+{"url": "https://github.com/naps62/uminho-cup-2012", "languages": {"JavaScript": 641, "Ruby": 32657}, "stats": 0, "name": "uminho-cup-2012"}
+{"url": "https://github.com/naps62/unity-sidescroller", "languages": {"C#": 686, "C": 122, "JavaScript": 308}, "stats": 0, "name": "unity-sidescroller"}
+{"url": "https://github.com/naps62/unity3d-flappy-nyan", "languages": {"C#": 5433}, "stats": 1, "name": "unity3d-flappy-nyan"}
+{"url": "https://github.com/naps62/unity3d-roll-a-ball", "languages": {"C#": 1328}, "stats": 0, "name": "unity3d-roll-a-ball"}
+{"url": "https://github.com/naps62/unity3d-space-shooter", "languages": {"C#": 4249}, "stats": 1, "name": "unity3d-space-shooter"}
+{"url": "https://github.com/naps62/unix", "languages": {"C": 219, "Shell": 19297, "Python": 2526, "VimL": 227267, "Perl": 307823, "Ruby": 71536}, "stats": 1, "name": "unix"}
+{"url": "https://github.com/naps62/vim-cleanup", "languages": {"VimL": 703}, "stats": 1, "name": "vim-cleanup"}
+{"url": "https://github.com/naps62/vim-flavored-markdown", "languages": {}, "stats": 0, "name": "vim-flavored-markdown"}
+{"url": "https://github.com/naps62/vimdeck", "languages": {"Ruby": 10251}, "stats": 0, "name": "vimdeck"}
+{"url": "https://github.com/naps62/webrtc", "languages": {"JavaScript": 428132, "CSS": 29294}, "stats": 0, "name": "webrtc"}
+{"url": "https://github.com/naps62/webrtc-tests", "languages": {"JavaScript": 2102306, "CSS": 12990}, "stats": 0, "name": "webrtc-tests"}
+{"url": "https://github.com/naps62/what_have_i_done", "languages": {"HTML": 129, "Ruby": 6580}, "stats": 0, "name": "what_have_i_done"}
+{"url": "https://github.com/mmv/CefSharp", "languages": {"C#": 90588, "C": 37986, "Shell": 1034, "C++": 510586}, "stats": 0, "name": "CefSharp"}
+{"url": "https://github.com/mmv/cordova-plugin-android-permissions-camera", "languages": {"Objective-C": 2511, "JavaScript": 12534, "Java": 5354}, "stats": 0, "name": "cordova-plugin-android-permissions-camera"}
+{"url": "https://github.com/mmv/cordova-plugin-camera-preview-sample-app", "languages": {"JavaScript": 2018, "HTML": 1913, "CSS": 507}, "stats": 0, "name": "cordova-plugin-camera-preview-sample-app"}
+{"url": "https://github.com/mmv/django-imagekit", "languages": {"Python": 87937, "Shell": 168, "Perl": 1863}, "stats": 3, "name": "django-imagekit"}
+{"url": "https://github.com/mmv/fsharp-katas", "languages": {"F#": 1808}, "stats": 0, "name": "fsharp-katas"}
+{"url": "https://github.com/mmv/fsharpx", "languages": {"C#": 59190, "Shell": 475, "F#": 513254, "JavaScript": 805, "CSS": 3160}, "stats": 0, "name": "fsharpx"}
+{"url": "https://github.com/mmv/haskell-katas", "languages": {"Haskell": 3487}, "stats": 0, "name": "haskell-katas"}
+{"url": "https://github.com/mmv/jasmine", "languages": {"Shell": 516, "JavaScript": 377918, "Ruby": 2992, "CSS": 9298}, "stats": 0, "name": "jasmine"}
+{"url": "https://github.com/mmv/jasmine-node", "languages": {"Shell": 2751, "JavaScript": 145017, "CoffeeScript": 2198}, "stats": 0, "name": "jasmine-node"}
+{"url": "https://github.com/mmv/jotimoga", "languages": {"HTML": 5907}, "stats": 0, "name": "jotimoga"}
+{"url": "https://github.com/mmv/jsdifflib", "languages": {"JavaScript": 19160, "CSS": 2604}, "stats": 0, "name": "jsdifflib"}
+{"url": "https://github.com/mmv/pelican-themes", "languages": {"Python": 3240, "JavaScript": 80399, "Ruby": 245}, "stats": 0, "name": "pelican-themes"}
+{"url": "https://github.com/mmv/picasafetch", "languages": {}, "stats": 2, "name": "picasafetch"}
+{"url": "https://github.com/mmv/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/mmv/PreSharp", "languages": {"C#": 53474}, "stats": 0, "name": "PreSharp"}
+{"url": "https://github.com/mmv/python-lz4", "languages": {"Python": 2055, "C": 70830}, "stats": 0, "name": "python-lz4"}
+{"url": "https://github.com/mmv/RxJS", "languages": {"TypeScript": 3925, "Shell": 2082, "JavaScript": 3702104, "CSS": 16872}, "stats": 0, "name": "RxJS"}
+{"url": "https://github.com/mmv/rxjs-1", "languages": {"Shell": 421, "TypeScript": 1871522, "JavaScript": 184475, "HTML": 7798}, "stats": 0, "name": "rxjs-1"}
+{"url": "https://github.com/mmv/squirt", "languages": {}, "stats": 0, "name": "squirt"}
+{"url": "https://github.com/mmv/syntastic", "languages": {"Python": 1081, "Erlang": 2183, "VimL": 459781, "JavaScript": 1064}, "stats": 0, "name": "syntastic"}
+{"url": "https://github.com/mmv/tslint", "languages": {"Shell": 3667, "TypeScript": 314300, "JavaScript": 5212}, "stats": 0, "name": "tslint"}
+{"url": "https://github.com/mmv/tsviz", "languages": {"TypeScript": 20189, "JavaScript": 21975}, "stats": 0, "name": "tsviz"}
+{"url": "https://github.com/stanch/akka-http-spaces", "languages": {"Scala": 403}, "stats": 0, "name": "akka-http-spaces"}
+{"url": "https://github.com/stanch/Ammonite", "languages": {"Scala": 389072}, "stats": 0, "name": "Ammonite"}
+{"url": "https://github.com/stanch/applause-sdk-test", "languages": {"Scala": 2182}, "stats": 0, "name": "applause-sdk-test"}
+{"url": "https://github.com/stanch/codebits2014", "languages": {"JavaScript": 213881, "CSS": 129141}, "stats": 0, "name": "codebits2014"}
+{"url": "https://github.com/stanch/forecast", "languages": {"Scala": 6836}, "stats": 2, "name": "forecast"}
+{"url": "https://github.com/stanch/funlx-meetup-1", "languages": {"JavaScript": 213881, "CSS": 130076}, "stats": 0, "name": "funlx-meetup-1"}
+{"url": "https://github.com/stanch/funlx-meetup-2", "languages": {"JavaScript": 213646, "HTML": 48051, "CSS": 129141}, "stats": 2, "name": "funlx-meetup-2"}
+{"url": "https://github.com/stanch/guardbot", "languages": {"Java": 9070, "Scala": 11886}, "stats": 5, "name": "guardbot"}
+{"url": "https://github.com/stanch/jsonquote", "languages": {"Scala": 86322}, "stats": 0, "name": "jsonquote"}
+{"url": "https://github.com/stanch/jwt-scala", "languages": {"Shell": 2487, "Scala": 167043}, "stats": 0, "name": "jwt-scala"}
+{"url": "https://github.com/stanch/macro-bug", "languages": {"Scala": 850}, "stats": 0, "name": "macro-bug"}
+{"url": "https://github.com/stanch/macroid-scaladays-demo", "languages": {"Scala": 2630}, "stats": 7, "name": "macroid-scaladays-demo"}
+{"url": "https://github.com/stanch/msc-thesis", "languages": {}, "stats": 0, "name": "msc-thesis"}
+{"url": "https://github.com/stanch/mutate", "languages": {"Scala": 28813}, "stats": 1, "name": "mutate"}
+{"url": "https://github.com/stanch/observer-macros", "languages": {"Scala": 3900}, "stats": 2, "name": "observer-macros"}
+{"url": "https://github.com/stanch/paradise", "languages": {"Scala": 415292}, "stats": 0, "name": "paradise"}
+{"url": "https://github.com/stanch/pdb", "languages": {"Makefile": 216, "Java": 805681, "PLSQL": 841, "SQLPL": 377}, "stats": 0, "name": "pdb"}
+{"url": "https://github.com/stanch/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/stanch/play-json-zipper", "languages": {"Scala": 124496}, "stats": 0, "name": "play-json-zipper"}
+{"url": "https://github.com/stanch/quicklens", "languages": {"Scala": 32447}, "stats": 0, "name": "quicklens"}
+{"url": "https://github.com/stanch/reftree", "languages": {"Scala": 53264}, "stats": 182, "name": "reftree"}
+{"url": "https://github.com/stanch/scala-json-survey", "languages": {}, "stats": 1, "name": "scala-json-survey"}
+{"url": "https://github.com/stanch/scala-workflow", "languages": {"Scala": 49861}, "stats": 2, "name": "scala-workflow"}
+{"url": "https://github.com/stanch/scalatags-md", "languages": {"Scala": 11987}, "stats": 1, "name": "scalatags-md"}
+{"url": "https://github.com/stanch/stomp", "languages": {"HTML": 11422}, "stats": 0, "name": "stomp"}
+{"url": "https://github.com/stanch/unzimm", "languages": {}, "stats": 87, "name": "unzimm"}
+{"url": "https://github.com/stanch/zipper", "languages": {"Scala": 14802}, "stats": 9, "name": "zipper"}
+{"url": "https://github.com/wilsonmsalberto/cah-generator", "languages": {"JavaScript": 5923, "HTML": 1498, "CSS": 11471}, "stats": 0, "name": "cah-generator"}
+{"url": "https://github.com/wilsonmsalberto/gulp-sass-boilerplate", "languages": {"JavaScript": 6905, "HTML": 1000, "CSS": 721}, "stats": 2, "name": "gulp-sass-boilerplate"}
+{"url": "https://github.com/wilsonmsalberto/lp-bootstrap", "languages": {"JavaScript": 17952, "HTML": 13286, "CSS": 14870}, "stats": 0, "name": "lp-bootstrap"}
+{"url": "https://github.com/wilsonmsalberto/on-screen-keyboard", "languages": {"HTML": 13292, "JavaScript": 7904, "CSS": 7166}, "stats": 0, "name": "on-screen-keyboard"}
+{"url": "https://github.com/wilsonmsalberto/oscario", "languages": {"JavaScript": 34208, "CSS": 60}, "stats": 0, "name": "oscario"}
+{"url": "https://github.com/wilsonmsalberto/perceived-performance", "languages": {}, "stats": 0, "name": "perceived-performance"}
+{"url": "https://github.com/wilsonmsalberto/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/wilsonmsalberto/plyr", "languages": {"JavaScript": 145672, "HTML": 5542, "CSS": 56005}, "stats": 0, "name": "plyr"}
+{"url": "https://github.com/wilsonmsalberto/ultimate-seo-generator", "languages": {"JavaScript": 25630, "HTML": 6739, "CSS": 9816}, "stats": 0, "name": "ultimate-seo-generator"}
+{"url": "https://github.com/wilsonmsalberto/wmsa", "languages": {"JavaScript": 3545}, "stats": 0, "name": "wmsa"}
+{"url": "https://github.com/AdamModus/adammode.xyz", "languages": {"JavaScript": 16822, "HTML": 1890}, "stats": 0, "name": "adammode.xyz"}
+{"url": "https://github.com/AdamModus/AdamModus.github.io", "languages": {"JavaScript": 40148, "HTML": 4144, "CSS": 2576}, "stats": 0, "name": "AdamModus.github.io"}
+{"url": "https://github.com/AdamModus/AdamModus_pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "AdamModus_pixels_camp_2016_talks"}
+{"url": "https://github.com/AdamModus/gfk-assignment", "languages": {"JavaScript": 6678, "HTML": 5854, "CSS": 1341}, "stats": 0, "name": "gfk-assignment"}
+{"url": "https://github.com/AdamModus/gulp-angular-bootstrap-setup", "languages": {"JavaScript": 1159, "HTML": 281, "CSS": 129}, "stats": 0, "name": "gulp-angular-bootstrap-setup"}
+{"url": "https://github.com/AdamModus/ing-dutch-csv-utils", "languages": {"JavaScript": 8984, "HTML": 664, "CSS": 51}, "stats": 0, "name": "ing-dutch-csv-utils"}
+{"url": "https://github.com/AdamModus/offline-todo-list", "languages": {"JavaScript": 40202, "HTML": 4144, "CSS": 2645}, "stats": 1, "name": "offline-todo-list"}
+{"url": "https://github.com/AdamModus/rabobank-test", "languages": {"JavaScript": 9507, "HTML": 1885, "CSS": 2048}, "stats": 0, "name": "rabobank-test"}
+{"url": "https://github.com/AdamModus/surviving-offline-status-slides_03-08-2016", "languages": {"HTML": 42252, "JavaScript": 14304, "CSS": 8247}, "stats": 0, "name": "surviving-offline-status-slides_03-08-2016"}
+{"url": "https://github.com/AdamModus/ui-element-samples", "languages": {"Python": 1061, "JavaScript": 121394, "HTML": 28498, "CSS": 19429}, "stats": 0, "name": "ui-element-samples"}
+{"url": "https://github.com/AdamModus/web-component-hello-world", "languages": {"HTML": 2379}, "stats": 0, "name": "web-component-hello-world"}
+{"url": "https://github.com/rfelix/api_smith", "languages": {}, "stats": 1, "name": "api_smith"}
+{"url": "https://github.com/rfelix/CPmobile", "languages": {}, "stats": 1, "name": "CPmobile"}
+{"url": "https://github.com/rfelix/dotfiles", "languages": {"Python": 34387, "Ruby": 2416, "Shell": 36585, "VimL": 13231, "PHP": 1153}, "stats": 0, "name": "dotfiles"}
+{"url": "https://github.com/rfelix/dotfiles-1", "languages": {}, "stats": 0, "name": "dotfiles-1"}
+{"url": "https://github.com/rfelix/emacs.d", "languages": {"Emacs Lisp": 62093}, "stats": 4, "name": "emacs.d"}
+{"url": "https://github.com/rfelix/gist", "languages": {"Ruby": 10151}, "stats": 1, "name": "gist"}
+{"url": "https://github.com/rfelix/hostgitrb", "languages": {"Ruby": 2415}, "stats": 11, "name": "hostgitrb"}
+{"url": "https://github.com/rfelix/iwannareadit", "languages": {"JavaScript": 5998, "Ruby": 51048}, "stats": 6, "name": "iwannareadit"}
+{"url": "https://github.com/rfelix/jekyll", "languages": {"Ruby": 88228}, "stats": 2, "name": "jekyll"}
+{"url": "https://github.com/rfelix/jekyll_ext", "languages": {"Ruby": 11290}, "stats": 49, "name": "jekyll_ext"}
+{"url": "https://github.com/rfelix/learn.github.com", "languages": {"JavaScript": 43462}, "stats": 1, "name": "learn.github.com"}
+{"url": "https://github.com/rfelix/logging", "languages": {"Shell": 223, "Ruby": 291689}, "stats": 0, "name": "logging"}
+{"url": "https://github.com/rfelix/mendibot", "languages": {"Ruby": 2459}, "stats": 1, "name": "mendibot"}
+{"url": "https://github.com/rfelix/mongoid", "languages": {}, "stats": 1, "name": "mongoid"}
+{"url": "https://github.com/rfelix/my_jekyll_extensions", "languages": {"Ruby": 9186}, "stats": 53, "name": "my_jekyll_extensions"}
+{"url": "https://github.com/rfelix/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/rfelix/pusher-gem", "languages": {"Ruby": 25361}, "stats": 1, "name": "pusher-gem"}
+{"url": "https://github.com/rfelix/rbp-blog", "languages": {}, "stats": 1, "name": "rbp-blog"}
+{"url": "https://github.com/rfelix/robut", "languages": {}, "stats": 0, "name": "robut"}
+{"url": "https://github.com/rfelix/ruby_koans", "languages": {"Ruby": 58071}, "stats": 2, "name": "ruby_koans"}
+{"url": "https://github.com/rfelix/s4-e1", "languages": {"Ruby": 12663}, "stats": 1, "name": "s4-e1"}
+{"url": "https://github.com/rfelix/s4-e2", "languages": {}, "stats": 1, "name": "s4-e2"}
+{"url": "https://github.com/rfelix/s4-e3", "languages": {"Ruby": 6579}, "stats": 1, "name": "s4-e3"}
+{"url": "https://github.com/rfelix/stuff_api", "languages": {"Ruby": 36402}, "stats": 0, "name": "stuff_api"}
+{"url": "https://github.com/rfelix/thor", "languages": {"Ruby": 225183}, "stats": 1, "name": "thor"}
+{"url": "https://github.com/rfelix/ticketee", "languages": {"JavaScript": 6426, "Ruby": 46501}, "stats": 1, "name": "ticketee"}
+{"url": "https://github.com/rfelix/tinyrb", "languages": {"C": 60557, "Ruby": 10637}, "stats": 1, "name": "tinyrb"}
+{"url": "https://github.com/rfelix/university-web", "languages": {"JavaScript": 59640, "Ruby": 113217}, "stats": 2, "name": "university-web"}
+{"url": "https://github.com/rfelix/vcr", "languages": {"Cucumber": 174440, "Shell": 6099, "Ruby": 394865}, "stats": 0, "name": "vcr"}
+{"url": "https://github.com/Simpsonpt/AppSecEzine", "languages": {}, "stats": 54, "name": "AppSecEzine"}
+{"url": "https://github.com/Simpsonpt/django-acra", "languages": {"Python": 9744, "JavaScript": 103928, "HTML": 4323, "CSS": 67510}, "stats": 19, "name": "django-acra"}
+{"url": "https://github.com/Simpsonpt/dropship", "languages": {}, "stats": 1, "name": "dropship"}
+{"url": "https://github.com/Simpsonpt/EmentaSasuc-PyMT", "languages": {}, "stats": 1, "name": "EmentaSasuc-PyMT"}
+{"url": "https://github.com/Simpsonpt/getVidSatisfaction", "languages": {}, "stats": 1, "name": "getVidSatisfaction"}
+{"url": "https://github.com/Simpsonpt/Participants-Editor", "languages": {"Python": 39380, "JavaScript": 7773}, "stats": 1, "name": "Participants-Editor"}
+{"url": "https://github.com/Simpsonpt/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/Simpsonpt/Pong", "languages": {"Objective-C": 279071, "C": 21111, "C++": 23464, "Perl": 300}, "stats": 1, "name": "Pong"}
+{"url": "https://github.com/Simpsonpt/r0ket", "languages": {"C": 2851778, "Shell": 5936, "C++": 7173, "Perl": 5366}, "stats": 1, "name": "r0ket"}
+{"url": "https://github.com/Simpsonpt/R0ket-Stuff", "languages": {"C": 4767, "Shell": 833}, "stats": 5, "name": "R0ket-Stuff"}
+{"url": "https://github.com/Simpsonpt/Stuff", "languages": {"Python": 1418, "Java": 4328}, "stats": 0, "name": "Stuff"}
+{"url": "https://github.com/Simpsonpt/tinfoil-sms", "languages": {"Java": 377672, "CSS": 11139}, "stats": 0, "name": "tinfoil-sms"}
+{"url": "https://github.com/samaxes/angular-carousel", "languages": {"JavaScript": 130603, "Ruby": 636, "CSS": 105505}, "stats": 0, "name": "angular-carousel"}
+{"url": "https://github.com/samaxes/angular.js", "languages": {"Shell": 19797, "JavaScript": 5652623, "PostScript": 19551, "HTML": 35671, "PHP": 7222, "CSS": 3738}, "stats": 0, "name": "angular.js"}
+{"url": "https://github.com/samaxes/arquillian-core", "languages": {"Java": 1668635}, "stats": 0, "name": "arquillian-core"}
+{"url": "https://github.com/samaxes/arquillian-extension-jacoco", "languages": {"Java": 51609}, "stats": 0, "name": "arquillian-extension-jacoco"}
+{"url": "https://github.com/samaxes/cordova-icon", "languages": {"JavaScript": 10758}, "stats": 0, "name": "cordova-icon"}
+{"url": "https://github.com/samaxes/cordova-plugin-nativeaudio", "languages": {"Objective-C": 27094, "JavaScript": 9386, "Java": 16202, "HTML": 2180, "CSS": 2158}, "stats": 0, "name": "cordova-plugin-nativeaudio"}
+{"url": "https://github.com/samaxes/cordova-splash", "languages": {"JavaScript": 7823}, "stats": 0, "name": "cordova-splash"}
+{"url": "https://github.com/samaxes/Creative-Commons-Markdown", "languages": {}, "stats": 0, "name": "Creative-Commons-Markdown"}
+{"url": "https://github.com/samaxes/ddr-compare", "languages": {"Shell": 853, "Java": 19720}, "stats": 3, "name": "ddr-compare"}
+{"url": "https://github.com/samaxes/decks", "languages": {"Groovy": 13170, "Batchfile": 92, "HTML": 73736, "JavaScript": 34526, "CSS": 130120}, "stats": 0, "name": "decks"}
+{"url": "https://github.com/samaxes/dzslides", "languages": {"Groovy": 2244, "Shell": 30, "JavaScript": 13591}, "stats": 0, "name": "dzslides"}
+{"url": "https://github.com/samaxes/generator-angular", "languages": {"CoffeeScript": 7789, "JavaScript": 54714, "CSS": 3092}, "stats": 0, "name": "generator-angular"}
+{"url": "https://github.com/samaxes/java-ee-testing", "languages": {"Java": 9077}, "stats": 8, "name": "java-ee-testing"}
+{"url": "https://github.com/samaxes/javaee-cache-filter", "languages": {"Java": 20867}, "stats": 25, "name": "javaee-cache-filter"}
+{"url": "https://github.com/samaxes/javaee-secure-taglib", "languages": {"Java": 6973}, "stats": 1, "name": "javaee-secure-taglib"}
+{"url": "https://github.com/samaxes/jaxrs-beanvalidation-javaee6", "languages": {"Java": 13459}, "stats": 11, "name": "jaxrs-beanvalidation-javaee6"}
+{"url": "https://github.com/samaxes/jaxrs-beanvalidation-javaee7", "languages": {"Java": 55719}, "stats": 10, "name": "jaxrs-beanvalidation-javaee7"}
+{"url": "https://github.com/samaxes/lombok.maven", "languages": {"Java": 18995}, "stats": 0, "name": "lombok.maven"}
+{"url": "https://github.com/samaxes/minify-maven-plugin", "languages": {"HTML": 5454, "Java": 70873, "JavaScript": 3747, "CSS": 4664}, "stats": 160, "name": "minify-maven-plugin"}
+{"url": "https://github.com/samaxes/ng-cordova", "languages": {"Shell": 1699, "JavaScript": 3492614, "HTML": 36158, "CSS": 465838}, "stats": 0, "name": "ng-cordova"}
+{"url": "https://github.com/samaxes/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/samaxes/resolver", "languages": {"Java": 342661}, "stats": 0, "name": "resolver"}
+{"url": "https://github.com/samaxes/samaxes.com", "languages": {"HTML": 20579, "JavaScript": 733, "CSS": 25271}, "stats": 0, "name": "samaxes.com"}
+{"url": "https://github.com/samaxes/shrinkwrap", "languages": {"Java": 1263233}, "stats": 0, "name": "shrinkwrap"}
+{"url": "https://github.com/samaxes/sitemesh2", "languages": {"Java": 497338, "Perl": 1240}, "stats": 0, "name": "sitemesh2"}
+{"url": "https://github.com/samaxes/Socialite", "languages": {"JavaScript": 55064, "CSS": 1482}, "stats": 0, "name": "Socialite"}
+{"url": "https://github.com/samaxes/stripes", "languages": {}, "stats": 0, "name": "stripes"}
+{"url": "https://github.com/samaxes/stripes-injection-enricher", "languages": {"Java": 48706}, "stats": 0, "name": "stripes-injection-enricher"}
+{"url": "https://github.com/samaxes/stripes-stuff", "languages": {"Java": 292607}, "stats": 0, "name": "stripes-stuff"}
+{"url": "https://github.com/samaxes/stripes-xss", "languages": {"Java": 8704}, "stats": 0, "name": "stripes-xss"}
+{"url": "https://github.com/samaxes/testing-usemin-v2.0", "languages": {"JavaScript": 107727, "CSS": 1085}, "stats": 1, "name": "testing-usemin-v2.0"}
+{"url": "https://github.com/samaxes/vexflow-musicxml", "languages": {"JavaScript": 653734}, "stats": 0, "name": "vexflow-musicxml"}
+{"url": "https://github.com/CrowdHailer/ably-js", "languages": {"Shell": 2350, "JavaScript": 1406471, "HTML": 65407}, "stats": 0, "name": "ably-js"}
+{"url": "https://github.com/CrowdHailer/Ace", "languages": {"Shell": 385, "Elixir": 4157}, "stats": 3, "name": "Ace"}
+{"url": "https://github.com/CrowdHailer/Airport", "languages": {"Ruby": 8390}, "stats": 0, "name": "Airport"}
+{"url": "https://github.com/CrowdHailer/AllSystems", "languages": {"Ruby": 12934}, "stats": 8, "name": "AllSystems"}
+{"url": "https://github.com/CrowdHailer/Almighty", "languages": {"Shell": 18584, "Ruby": 2848, "Elixir": 2993}, "stats": 0, "name": "Almighty"}
+{"url": "https://github.com/CrowdHailer/Atheneum", "languages": {"Ruby": 9662}, "stats": 0, "name": "Atheneum"}
+{"url": "https://github.com/CrowdHailer/authware", "languages": {"Shell": 254, "Ruby": 12539, "CSS": 20}, "stats": 0, "name": "authware"}
+{"url": "https://github.com/CrowdHailer/baobab.ex", "languages": {"HTML": 575, "Elixir": 5045}, "stats": 0, "name": "baobab.ex"}
+{"url": "https://github.com/CrowdHailer/basalt", "languages": {"Elixir": 5024}, "stats": 0, "name": "basalt"}
+{"url": "https://github.com/CrowdHailer/Battle-ships", "languages": {"Ruby": 6234}, "stats": 0, "name": "Battle-ships"}
+{"url": "https://github.com/CrowdHailer/bbox", "languages": {"JavaScript": 7034}, "stats": 1, "name": "bbox"}
+{"url": "https://github.com/CrowdHailer/belfry.js", "languages": {"JavaScript": 4650}, "stats": 0, "name": "belfry.js"}
+{"url": "https://github.com/CrowdHailer/Book-Club", "languages": {}, "stats": 0, "name": "Book-Club"}
+{"url": "https://github.com/CrowdHailer/Boris-Bikes", "languages": {"Ruby": 5622}, "stats": 0, "name": "Boris-Bikes"}
+{"url": "https://github.com/CrowdHailer/carbide.js", "languages": {"JavaScript": 11552}, "stats": 3, "name": "carbide.js"}
+{"url": "https://github.com/CrowdHailer/chitter", "languages": {"Ruby": 12849}, "stats": 0, "name": "chitter"}
+{"url": "https://github.com/CrowdHailer/City-Visits", "languages": {"JavaScript": 2564, "CSS": 21004}, "stats": 0, "name": "City-Visits"}
+{"url": "https://github.com/CrowdHailer/claudia", "languages": {"Ruby": 5729}, "stats": 0, "name": "claudia"}
+{"url": "https://github.com/CrowdHailer/clint", "languages": {"VimL": 57, "Elixir": 6385}, "stats": 0, "name": "clint"}
+{"url": "https://github.com/CrowdHailer/command-line", "languages": {}, "stats": 0, "name": "command-line"}
+{"url": "https://github.com/CrowdHailer/Contract", "languages": {}, "stats": 0, "name": "Contract"}
+{"url": "https://github.com/CrowdHailer/CrowdHailer.github.io", "languages": {"HTML": 58439, "Ruby": 343, "CSS": 26610}, "stats": 0, "name": "CrowdHailer.github.io"}
+{"url": "https://github.com/CrowdHailer/css_menu", "languages": {"JavaScript": 39875, "CSS": 2722}, "stats": 0, "name": "css_menu"}
+{"url": "https://github.com/CrowdHailer/cumin-dot", "languages": {"JavaScript": 1269}, "stats": 0, "name": "cumin-dot"}
+{"url": "https://github.com/CrowdHailer/cuminjs", "languages": {"JavaScript": 65657}, "stats": 1, "name": "cuminjs"}
+{"url": "https://github.com/CrowdHailer/Curriculum-Vitae", "languages": {"TeX": 13132}, "stats": 1, "name": "Curriculum-Vitae"}
+{"url": "https://github.com/CrowdHailer/cut-the-mustard", "languages": {"JavaScript": 2390}, "stats": 1, "name": "cut-the-mustard"}
+{"url": "https://github.com/CrowdHailer/cv-service", "languages": {"JavaScript": 179, "Ruby": 4696}, "stats": 0, "name": "cv-service"}
+{"url": "https://github.com/CrowdHailer/device-orientation", "languages": {}, "stats": 0, "name": "device-orientation"}
+{"url": "https://github.com/CrowdHailer/device-tickle", "languages": {"JavaScript": 3962, "CSS": 778}, "stats": 0, "name": "device-tickle"}
+{"url": "https://github.com/CrowdHailer/diffy.js", "languages": {"JavaScript": 8896, "HTML": 1515, "CSS": 378}, "stats": 0, "name": "diffy.js"}
+{"url": "https://github.com/CrowdHailer/docs.geteventstore.com", "languages": {"Ruby": 49, "HTML": 10136, "JavaScript": 2577, "CSS": 323}, "stats": 0, "name": "docs.geteventstore.com"}
+{"url": "https://github.com/CrowdHailer/dotfiles", "languages": {"Python": 376554}, "stats": 0, "name": "dotfiles"}
+{"url": "https://github.com/CrowdHailer/Dugong", "languages": {}, "stats": 0, "name": "Dugong"}
+{"url": "https://github.com/CrowdHailer/echo-server.hs", "languages": {"Haskell": 1092}, "stats": 0, "name": "echo-server.hs"}
+{"url": "https://github.com/CrowdHailer/elixir", "languages": {"Shell": 5941, "Makefile": 9590, "Batchfile": 5097, "Elixir": 2496196, "Erlang": 337232, "PowerShell": 576}, "stats": 0, "name": "elixir"}
+{"url": "https://github.com/CrowdHailer/Errol", "languages": {"Ruby": 26628}, "stats": 0, "name": "Errol"}
+{"url": "https://github.com/CrowdHailer/event-sourcing.elixir", "languages": {"JavaScript": 30908, "HTML": 1616, "Elixir": 67055}, "stats": 6, "name": "event-sourcing.elixir"}
+{"url": "https://github.com/CrowdHailer/extreme", "languages": {"VimL": 28, "Protocol Buffer": 9236, "Elixir": 53608}, "stats": 0, "name": "extreme"}
+{"url": "https://github.com/CrowdHailer/eyg", "languages": {}, "stats": 1, "name": "eyg"}
+{"url": "https://github.com/CrowdHailer/fetch-files", "languages": {"Ruby": 273}, "stats": 0, "name": "fetch-files"}
+{"url": "https://github.com/CrowdHailer/FifteenPuzzle", "languages": {"JavaScript": 22454, "HTML": 951, "CSS": 261}, "stats": 0, "name": "FifteenPuzzle"}
+{"url": "https://github.com/CrowdHailer/functional-snake", "languages": {"JavaScript": 18596}, "stats": 0, "name": "functional-snake"}
+{"url": "https://github.com/CrowdHailer/gator", "languages": {"JavaScript": 13678}, "stats": 0, "name": "gator"}
+{"url": "https://github.com/CrowdHailer/geo-coordinates", "languages": {"JavaScript": 6491}, "stats": 0, "name": "geo-coordinates"}
+{"url": "https://github.com/CrowdHailer/github-vitals", "languages": {"Python": 112}, "stats": 0, "name": "github-vitals"}
+{"url": "https://github.com/CrowdHailer/Globe-Campaign", "languages": {}, "stats": 0, "name": "Globe-Campaign"}
+{"url": "https://github.com/CrowdHailer/Hammer-tickle", "languages": {"JavaScript": 5317, "PHP": 0, "CSS": 332}, "stats": 0, "name": "Hammer-tickle"}
+{"url": "https://github.com/CrowdHailer/HammerHead", "languages": {"JavaScript": 52312, "PHP": 36, "CSS": 749}, "stats": 1, "name": "HammerHead"}
+{"url": "https://github.com/CrowdHailer/hammerhead-pg", "languages": {"JavaScript": 58375, "CSS": 749}, "stats": 0, "name": "hammerhead-pg"}
+{"url": "https://github.com/CrowdHailer/Hammerhead2", "languages": {"JavaScript": 45011, "CSS": 1934}, "stats": 0, "name": "Hammerhead2"}
+{"url": "https://github.com/CrowdHailer/hangman", "languages": {"JavaScript": 7115, "HTML": 232}, "stats": 0, "name": "hangman"}
+{"url": "https://github.com/CrowdHailer/inspiration", "languages": {}, "stats": 0, "name": "inspiration"}
+{"url": "https://github.com/CrowdHailer/intention.js", "languages": {"JavaScript": 4053, "HTML": 402}, "stats": 5, "name": "intention.js"}
+{"url": "https://github.com/CrowdHailer/Interesting", "languages": {"Ruby": 2245}, "stats": 0, "name": "Interesting"}
+{"url": "https://github.com/CrowdHailer/interesting-js", "languages": {"JavaScript": 2556}, "stats": 0, "name": "interesting-js"}
+{"url": "https://github.com/CrowdHailer/IOC-example.js", "languages": {"JavaScript": 2219, "HTML": 571}, "stats": 0, "name": "IOC-example.js"}
+{"url": "https://github.com/CrowdHailer/IOC-todo.js", "languages": {}, "stats": 0, "name": "IOC-todo.js"}
+{"url": "https://github.com/CrowdHailer/iridescence", "languages": {"HTML": 896, "Ruby": 8509}, "stats": 0, "name": "iridescence"}
+{"url": "https://github.com/CrowdHailer/is-it-caterpillar", "languages": {}, "stats": 0, "name": "is-it-caterpillar"}
+{"url": "https://github.com/CrowdHailer/jasmine-unit", "languages": {"JavaScript": 114751, "HTML": 658}, "stats": 0, "name": "jasmine-unit"}
+{"url": "https://github.com/CrowdHailer/JSClosureTesting", "languages": {"JavaScript": 3118}, "stats": 0, "name": "JSClosureTesting"}
+{"url": "https://github.com/CrowdHailer/just-job", "languages": {"Ruby": 34797}, "stats": 1, "name": "just-job"}
+{"url": "https://github.com/CrowdHailer/karma-rollup-preprocessor", "languages": {"JavaScript": 4468}, "stats": 0, "name": "karma-rollup-preprocessor"}
+{"url": "https://github.com/CrowdHailer/karma-systemjs", "languages": {"JavaScript": 31436}, "stats": 0, "name": "karma-systemjs"}
+{"url": "https://github.com/CrowdHailer/key-value", "languages": {"Elixir": 7852}, "stats": 0, "name": "key-value"}
+{"url": "https://github.com/CrowdHailer/ladybird", "languages": {"JavaScript": 2331}, "stats": 0, "name": "ladybird"}
+{"url": "https://github.com/CrowdHailer/lambdajs", "languages": {}, "stats": 0, "name": "lambdajs"}
+{"url": "https://github.com/CrowdHailer/legit.js", "languages": {"JavaScript": 5196}, "stats": 0, "name": "legit.js"}
+{"url": "https://github.com/CrowdHailer/level", "languages": {"JavaScript": 14105, "HTML": 11892, "CSS": 5676}, "stats": 1, "name": "level"}
+{"url": "https://github.com/CrowdHailer/LL-icons", "languages": {"JavaScript": 1122, "CSS": 57}, "stats": 0, "name": "LL-icons"}
+{"url": "https://github.com/CrowdHailer/lob", "languages": {"JavaScript": 91119, "Ruby": 13588, "HTML": 16417, "CSS": 11084}, "stats": 1, "name": "lob"}
+{"url": "https://github.com/CrowdHailer/LondonLayout", "languages": {"HTML": 1595, "JavaScript": 474}, "stats": 0, "name": "LondonLayout"}
+{"url": "https://github.com/CrowdHailer/Loops", "languages": {}, "stats": 0, "name": "Loops"}
+{"url": "https://github.com/CrowdHailer/maybe-framework", "languages": {"Ruby": 15697}, "stats": 0, "name": "maybe-framework"}
+{"url": "https://github.com/CrowdHailer/me", "languages": {"HTML": 11608}, "stats": 0, "name": "me"}
+{"url": "https://github.com/CrowdHailer/microrb.com", "languages": {"Makefile": 236, "JavaScript": 2339, "Ruby": 3415, "Shell": 147}, "stats": 0, "name": "microrb.com"}
+{"url": "https://github.com/CrowdHailer/mixter", "languages": {}, "stats": 0, "name": "mixter"}
+{"url": "https://github.com/CrowdHailer/myelixirstatus", "languages": {}, "stats": 0, "name": "myelixirstatus"}
+{"url": "https://github.com/CrowdHailer/Notebook", "languages": {"HTML": 2153}, "stats": 0, "name": "Notebook"}
+{"url": "https://github.com/CrowdHailer/object-sinatra", "languages": {"Ruby": 1760}, "stats": 0, "name": "object-sinatra"}
+{"url": "https://github.com/CrowdHailer/Octocat-Test", "languages": {}, "stats": 0, "name": "Octocat-Test"}
+{"url": "https://github.com/CrowdHailer/OK", "languages": {"Elixir": 4673}, "stats": 12, "name": "OK"}
+{"url": "https://github.com/CrowdHailer/ordered-list.scala", "languages": {"Scala": 1864}, "stats": 0, "name": "ordered-list.scala"}
+{"url": "https://github.com/CrowdHailer/padrino-crud-example", "languages": {"Ruby": 10818}, "stats": 0, "name": "padrino-crud-example"}
+{"url": "https://github.com/CrowdHailer/padrino-database-example", "languages": {"Ruby": 12050}, "stats": 0, "name": "padrino-database-example"}
+{"url": "https://github.com/CrowdHailer/padrino-form-object-example", "languages": {"Ruby": 11399}, "stats": 0, "name": "padrino-form-object-example"}
+{"url": "https://github.com/CrowdHailer/padrino-framework", "languages": {"JavaScript": 4785, "Ruby": 1157986, "CSS": 235179}, "stats": 0, "name": "padrino-framework"}
+{"url": "https://github.com/CrowdHailer/PhoneGap-HelloWorld", "languages": {}, "stats": 0, "name": "PhoneGap-HelloWorld"}
+{"url": "https://github.com/CrowdHailer/phonegap-icon-set", "languages": {"JavaScript": 613}, "stats": 0, "name": "phonegap-icon-set"}
+{"url": "https://github.com/CrowdHailer/phonegap-screenshot-example", "languages": {"JavaScript": 839}, "stats": 1, "name": "phonegap-screenshot-example"}
+{"url": "https://github.com/CrowdHailer/phonegap-splashscreen-example", "languages": {"JavaScript": 573}, "stats": 0, "name": "phonegap-splashscreen-example"}
+{"url": "https://github.com/CrowdHailer/phonegap-vector-assets", "languages": {"JavaScript": 5662}, "stats": 2, "name": "phonegap-vector-assets"}
+{"url": "https://github.com/CrowdHailer/pixels_camp_2016_talks", "languages": {}, "stats": 0, "name": "pixels_camp_2016_talks"}
+{"url": "https://github.com/CrowdHailer/point", "languages": {"JavaScript": 3769}, "stats": 0, "name": "point"}
+{"url": "https://github.com/CrowdHailer/ranking", "languages": {"Ruby": 6164}, "stats": 0, "name": "ranking"}
+{"url": "https://github.com/CrowdHailer/raxx", "languages": {"HTML": 22982, "Elixir": 94016}, "stats": 16, "name": "raxx"}
+{"url": "https://github.com/CrowdHailer/revelr", "languages": {"Ruby": 24311}, "stats": 0, "name": "revelr"}
+{"url": "https://github.com/CrowdHailer/rollup-karma-jasmine-example", "languages": {"JavaScript": 2318}, "stats": 3, "name": "rollup-karma-jasmine-example"}
+{"url": "https://github.com/CrowdHailer/rollup-plugin-typescript", "languages": {"TypeScript": 226, "JavaScript": 2206}, "stats": 0, "name": "rollup-plugin-typescript"}
+{"url": "https://github.com/CrowdHailer/Roman-Numerals", "languages": {"Ruby": 4609}, "stats": 0, "name": "Roman-Numerals"}
+{"url": "https://github.com/CrowdHailer/round-decimal", "languages": {"JavaScript": 309}, "stats": 0, "name": "round-decimal"}
+{"url": "https://github.com/CrowdHailer/ruby-exercises", "languages": {"Ruby": 1758}, "stats": 0, "name": "ruby-exercises"}
+{"url": "https://github.com/CrowdHailer/ruby-revision", "languages": {"Ruby": 18563}, "stats": 0, "name": "ruby-revision"}
+{"url": "https://github.com/CrowdHailer/ruby-varieties", "languages": {"Ruby": 4120}, "stats": 0, "name": "ruby-varieties"}
+{"url": "https://github.com/CrowdHailer/Scorched", "languages": {"HTML": 92, "Ruby": 84984}, "stats": 0, "name": "Scorched"}
+{"url": "https://github.com/CrowdHailer/scorched-blog", "languages": {"HTML": 3769, "Ruby": 38582}, "stats": 0, "name": "scorched-blog"}
+{"url": "https://github.com/CrowdHailer/scorched-rest", "languages": {"Ruby": 6803}, "stats": 0, "name": "scorched-rest"}
+{"url": "https://github.com/CrowdHailer/shallot", "languages": {"Ruby": 18407}, "stats": 0, "name": "shallot"}
+{"url": "https://github.com/CrowdHailer/Sinatra-fetch-basic", "languages": {"Ruby": 775}, "stats": 0, "name": "Sinatra-fetch-basic"}
+{"url": "https://github.com/CrowdHailer/sinatra-into", "languages": {}, "stats": 0, "name": "sinatra-into"}
+{"url": "https://github.com/CrowdHailer/sinatra-login", "languages": {"Ruby": 11723}, "stats": 0, "name": "sinatra-login"}
+{"url": "https://github.com/CrowdHailer/sinatra-stack", "languages": {"JavaScript": 404, "Ruby": 2305}, "stats": 0, "name": "sinatra-stack"}
+{"url": "https://github.com/CrowdHailer/sizetwotravels.com", "languages": {}, "stats": 0, "name": "sizetwotravels.com"}
+{"url": "https://github.com/CrowdHailer/snake", "languages": {"JavaScript": 68855}, "stats": 0, "name": "snake"}
+{"url": "https://github.com/CrowdHailer/SoVeryGroovy", "languages": {"JavaScript": 20138}, "stats": 0, "name": "SoVeryGroovy"}
+{"url": "https://github.com/CrowdHailer/splashscreen-example-app", "languages": {"JavaScript": 1393}, "stats": 0, "name": "splashscreen-example-app"}
+{"url": "https://github.com/CrowdHailer/stack-overflow-vitals", "languages": {"JavaScript": 1241}, "stats": 0, "name": "stack-overflow-vitals"}
+{"url": "https://github.com/CrowdHailer/state-functions", "languages": {"JavaScript": 6196}, "stats": 0, "name": "state-functions"}
+{"url": "https://github.com/CrowdHailer/Student-Directory", "languages": {"Ruby": 3958}, "stats": 0, "name": "Student-Directory"}
+{"url": "https://github.com/CrowdHailer/sudoku", "languages": {"Ruby": 3602}, "stats": 0, "name": "sudoku"}
+{"url": "https://github.com/CrowdHailer/sudoku-web", "languages": {"Ruby": 8115, "CSS": 318}, "stats": 0, "name": "sudoku-web"}
+{"url": "https://github.com/CrowdHailer/super-simple-menu", "languages": {"JavaScript": 1002, "CSS": 2263}, "stats": 0, "name": "super-simple-menu"}
+{"url": "https://github.com/CrowdHailer/SVG-Agile", "languages": {"JavaScript": 17826, "CSS": 701}, "stats": 0, "name": "SVG-Agile"}
+{"url": "https://github.com/CrowdHailer/svg-crop", "languages": {"JavaScript": 3148}, "stats": 1, "name": "svg-crop"}
+{"url": "https://github.com/CrowdHailer/svg-symbol-example-app", "languages": {"JavaScript": 1130}, "stats": 0, "name": "svg-symbol-example-app"}
+{"url": "https://github.com/CrowdHailer/svgViewer", "languages": {}, "stats": 0, "name": "svgViewer"}
+{"url": "https://github.com/CrowdHailer/svg_agile", "languages": {"JavaScript": 11709, "CSS": 634}, "stats": 0, "name": "svg_agile"}
+{"url": "https://github.com/CrowdHailer/svg_maneuver", "languages": {"JavaScript": 33884, "CSS": 4530}, "stats": 0, "name": "svg_maneuver"}
