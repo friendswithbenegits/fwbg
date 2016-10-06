@@ -135,13 +135,6 @@ TEMPLATES[0]['OPTIONS']['loaders'] = [
         'django.template.loaders.filesystem.Loader', 'django.template.loaders.app_directories.Loader', ]),
 ]
 
-# DATABASE CONFIGURATION
-# ------------------------------------------------------------------------------
-
-# Use the Heroku-style specification
-# Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
-DATABASES['default'] = os.environ.get('DATABASE_URL')
-
 # CACHING
 # ------------------------------------------------------------------------------
 
