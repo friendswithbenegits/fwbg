@@ -2,7 +2,7 @@ from github import *
 import json
 import traceback
 
-def store_person(person, f_people): #nome, avatar, email, empresa, location, repos, n_followers, url
+def store_person(person, f_people): #nome, avatar, email, empresa, location, repos, n_followers, url, id
 	p_repos = []
 	for repo in person.get_repos():
 		if repo.owner.name == person.name:
@@ -20,6 +20,7 @@ def store_person(person, f_people): #nome, avatar, email, empresa, location, rep
 		"location" : person.location,
 		"repos" : p_repos,
 		"num_followers" : person.followers
+		"id" : person.id
 	}
 
 	f_people.write(json.dumps(p_dict)+"\n")
@@ -58,7 +59,7 @@ for repo in pixel_repos:
 			try:
 				store_person(person, f_people)
 				for rep in person.get_repos():
-					if repo.owner.name == person.name:
+					if rep.owner.name == person.name:
 						f_repos = open('repos.json', 'a')
 						try:
 							store_repo(rep, f_repos)
