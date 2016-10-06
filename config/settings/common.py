@@ -13,13 +13,8 @@ from __future__ import absolute_import, unicode_literals
 import dj_database_url
 
 import os
-from os.path import join, dirname
-from dotenv import load_dotenv
-
-dotenv_path = join(dirname(__file__), '.env')
-load_dotenv(dotenv_path)
-
 import environ
+
 
 ROOT_DIR = environ.Path(__file__) - 3  # (devtinder/config/settings/common.py - 3 = devtinder/)
 APPS_DIR = ROOT_DIR.path('devtinder')
