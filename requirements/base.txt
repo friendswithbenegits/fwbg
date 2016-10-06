@@ -4,6 +4,7 @@
 django==1.10.2
 
 # Configuration
+python-environ
 python-dotenv
 dj-database-url
 
