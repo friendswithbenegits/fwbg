@@ -203,7 +203,7 @@ LOGGING = {
 }
 
 # Custom Admin URL, use {% url 'admin:index' %}
-ADMIN_URL = os.environ.get('DJANGO_ADMIN_URL')
+ADMIN_URL = os.environ.get('DJANGO_ADMIN_URL', 'admin')
 
 # Your production stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
