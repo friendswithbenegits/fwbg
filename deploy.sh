@@ -1,5 +1,5 @@
 mv .env ..
 git pull
-pip install -r requirements/production.txt
+sudo pip install -r requirements/production.txt
 mv ../.env .
-supervisorctl restart all
+sudo supervisorctl restart all
