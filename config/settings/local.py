@@ -16,14 +16,14 @@ from .common import *  # noqa
 
 # DEBUG
 # ------------------------------------------------------------------------------
-DEBUG = env.bool('DJANGO_DEBUG', default=True)
+DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
 TEMPLATES[0]['OPTIONS']['debug'] = DEBUG
 
 # SECRET CONFIGURATION
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 # Note: This key only used for development and testing.
-SECRET_KEY = env('DJANGO_SECRET_KEY', default='h7zb(3p^go56po^&&2@r=rz=()0#xg-qf8_n06@ed+q(18eha0')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'h7zb(3p^go56po^&&2@r=rz=()0#xg-qf8_n06@ed+q(18eha0')
 
 # Mail settings
 # ------------------------------------------------------------------------------
@@ -31,8 +31,7 @@ SECRET_KEY = env('DJANGO_SECRET_KEY', default='h7zb(3p^go56po^&&2@r=rz=()0#xg-qf
 EMAIL_PORT = 1025
 
 EMAIL_HOST = 'localhost'
-EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND',
-                    default='django.core.mail.backends.console.EmailBackend')
+EMAIL_BACKEND = os.environ.get('DJANGO_EMAIL_BACKEND', 'django.core.mail.backends.console.EmailBackend')
 
 
 # CACHING

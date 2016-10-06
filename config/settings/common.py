@@ -10,12 +10,21 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 """
 from __future__ import absolute_import, unicode_literals
 
+import dj_database_url
+
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
 import environ
 
 ROOT_DIR = environ.Path(__file__) - 3  # (devtinder/config/settings/common.py - 3 = devtinder/)
 APPS_DIR = ROOT_DIR.path('devtinder')
 
-env = environ.Env()
+
 
 # APP CONFIGURATION
 # ------------------------------------------------------------------------------
@@ -72,7 +81,7 @@ MIGRATION_MODULES = {
 # DEBUG
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#debug
-DEBUG = env.bool('DJANGO_DEBUG', False)
+DEBUG = os.environ.get('DJANGO_DEBUG', 'False') != 'False'
 
 # FIXTURE CONFIGURATION
 # ------------------------------------------------------------------------------
@@ -83,7 +92,7 @@ FIXTURE_DIRS = (
 
 # EMAIL CONFIGURATION
 # ------------------------------------------------------------------------------
-EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND', default='django.core.mail.backends.smtp.EmailBackend')
+EMAIL_BACKEND = os.environ.get('DJANGO_EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')
 
 # MANAGER CONFIGURATION
 # ------------------------------------------------------------------------------
@@ -99,7 +108,7 @@ MANAGERS = ADMINS
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres:///devtinder'),
+    'default': dj_database_url.config(os.environ.get('DATABASE_URL'), default='postgres:///devtinder'),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
@@ -232,7 +241,7 @@ ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
-ACCOUNT_ALLOW_REGISTRATION = env.bool('DJANGO_ACCOUNT_ALLOW_REGISTRATION', True)
+ACCOUNT_ALLOW_REGISTRATION = os.environ.get('DJANGO_ACCOUNT_ALLOW_REGISTRATION', 'True') == 'True'
 ACCOUNT_ADAPTER = 'devtinder.users.adapters.AccountAdapter'
 SOCIALACCOUNT_ADAPTER = 'devtinder.users.adapters.SocialAccountAdapter'
 
