@@ -145,7 +145,7 @@ DATABASES['default'] = os.environ.get('DATABASE_URL')
 # CACHING
 # ------------------------------------------------------------------------------
 
-# REDIS_LOCATION = '{0}/{1}'.format(os.environ.get('REDIS_URL', default='redis://127.0.0.1:6379'), 0)
+REDIS_LOCATION = '{0}/{1}'.format(os.environ.get('REDIS_URL', 'redis://127.0.0.1:6379'), 0)
 # Heroku URL does not pass the DB number, so we parse it in
 CACHES = {
     'default': {
