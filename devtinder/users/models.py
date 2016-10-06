@@ -30,57 +30,57 @@ class User(AbstractUser):
         sa = SocialAccount.objects.get(user=self)
         return sa.extra_data
 
-    # region Actions
-    def give_like(self, to_user, repo):
-        """Method to give like to given user from "self" user.
-        This will create a new UserLike"""
-        like = UserLike.objects.create(
-            from_user=self, to_user=to_user, repo=repo)
-        return like
-    
-    def give_dislike(self, to_user, repo):
-        """Method to give like to given user from "self" user.
-        This will create a new UserLike"""
-        dislike = UserDislike.objects.create(
-            from_user=self, to_user=to_user, repo=repo)
-        return dislike
-
-    # endregion
-
-
-class UserMatch(models.Model):
-    """"""
-    user1 = models.ForeignKey(User)
-    user2 = models.ForeignKey(User)
-
-
-class UserLike(models.Model):
-    """"""
-    from_user = models.ForeignKey(User)
-    to_user = models.ForeignKey(User)
-    create_date = models.DateTimeField(_('creation date'),
-                                       default=timezone.now)
-
-    @classmethod
-    def get_likes_from(cls, user):
-        """Get all likes from give user"""
-        return cls.objects.filter(from_user=user)
-
-
-class UserDislike(models.Model):
-    """"""
-    from_user = models.ForeignKey(User)
-    to_user = models.ForeignKey(User)
-    create_date = models.DateTimeField(_('creation date'),
-                                       default=timezone.now)
-
-    @classmethod
-    def get_dislikes_from(cls, user):
-        """Get all dislikes from give user"""
-        return cls.objects.filter(from_user=user)
-
-
-class UserRepository(models.Model):
-    """"""
-    owner = models.ForeignKey(User)
-    language = models.CharField()
+    # # region Actions
+    # def give_like(self, to_user, repo):
+    #     """Method to give like to given user from "self" user.
+    #     This will create a new UserLike"""
+    #     like = UserLike.objects.create(
+    #         from_user=self, to_user=to_user, repo=repo)
+    #     return like
+    #
+    # def give_dislike(self, to_user, repo):
+    #     """Method to give like to given user from "self" user.
+    #     This will create a new UserLike"""
+    #     dislike = UserDislike.objects.create(
+    #         from_user=self, to_user=to_user, repo=repo)
+    #     return dislike
+    #
+    # # endregion
+#
+#
+# class UserMatch(models.Model):
+#     """"""
+#     user1 = models.ForeignKey(User)
+#     user2 = models.ForeignKey(User)
+#
+#
+# class UserLike(models.Model):
+#     """"""
+#     from_user = models.ForeignKey(User)
+#     to_user = models.ForeignKey(User)
+#     create_date = models.DateTimeField(_('creation date'),
+#                                        default=timezone.now)
+#
+#     @classmethod
+#     def get_likes_from(cls, user):
+#         """Get all likes from give user"""
+#         return cls.objects.filter(from_user=user)
+#
+#
+# class UserDislike(models.Model):
+#     """"""
+#     from_user = models.ForeignKey(User)
+#     to_user = models.ForeignKey(User)
+#     create_date = models.DateTimeField(_('creation date'),
+#                                        default=timezone.now)
+#
+#     @classmethod
+#     def get_dislikes_from(cls, user):
+#         """Get all dislikes from give user"""
+#         return cls.objects.filter(from_user=user)
+#
+#
+# class UserRepository(models.Model):
+#     """"""
+#     owner = models.ForeignKey(User)
+#     language = models.CharField()
