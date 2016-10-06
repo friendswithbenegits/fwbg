@@ -14,11 +14,8 @@ import dj_database_url
 
 import os
 import environ
-
-
 ROOT_DIR = environ.Path(__file__) - 3  # (devtinder/config/settings/common.py - 3 = devtinder/)
 APPS_DIR = ROOT_DIR.path('devtinder')
-
 
 
 # APP CONFIGURATION
@@ -103,7 +100,7 @@ MANAGERS = ADMINS
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
-    'default': dj_database_url.config(os.environ.get('DATABASE_URL'), default='postgres:///devtinder'),
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL')),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
