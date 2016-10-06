@@ -10,7 +10,9 @@ def store_person(person): #nome, avatar, email, empresa, location, repos, n_foll
 				p_repos.append({
 					"repo_name" : repo.name,
 					"repo_url" : repo.html_url
+					"repo_id" : repo.id
 				})
+				store_repo(repo)
 
 		p_dict = {
 			"name" : person.name,
@@ -76,9 +78,6 @@ for repo in pixel_repos: #all repos in PixelsCamp' GitHub organization...
 		store_person(person)
 		for rep in person.get_repos(): #each repo owned by each of those contributors...
 			if rep.owner.name == person.name:
-				store_repo(rep)
 				for pers in rep.get_contributors(): #each contributor on each of those repos...
 					store_person(pers)
 					for re in pers.get_repos(): #and each repo of each of those contributors!
-						if re.owner.name == pers.name:
-							store_repo(re)
