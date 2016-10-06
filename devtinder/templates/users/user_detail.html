@@ -4,33 +4,44 @@
 {% block title %}User: {{ object.username }}{% endblock %}
 
 {% block content %}
+{% with github=object.get_github_account %}
 <div class="container">
 
-  <div class="row">
-    <div class="col-sm-12">
-
-      <h2>{{ object.username }}</h2>
-      {% if object.name %}
-        <p>{{ object.name }}</p>
-      {% endif %}
+    <div class="row">
+        <div class="col-xs-8 col-sm-8 col-md-6 col-lg-4">
+            <img width="50%" src="{{ github.avatar_url }}"/>
+            <h2>{{ object.username }}</h2>
+            {% if object.name %}
+                <p>{{ object.name }}</p>
+            {% endif %}
+        </div>
     </div>
-  </div>
+    <div class="row">
+        <div class="col-md-4">
+            {% if object == request.user %}
+                <!-- Action buttons -->
+                <div class="row">
 
-{% if object == request.user %}
-<!-- Action buttons -->
-<div class="row">
-
-  <div class="col-sm-12">
-    <a class="btn btn-primary" href="{% url 'users:update' %}" role="button">My Info</a>
-    <a class="btn btn-primary" href="{% url 'account_email' %}" role="button">E-Mail</a>
-    <!-- Your Stuff: Custom user template urls -->
-  </div>
-
-</div>
-<!-- End Action buttons -->
-{% endif %}
-
-
+                    <div class="col-sm-12">
+                        <a class="btn btn-primary" href="{% url 'users:update' %}" role="button">My Info</a>
+                        <a class="btn btn-primary" href="{% url 'account_email' %}" role="button">E-Mail</a>
+                    <!-- Your Stuff: Custom user template urls -->
+                    </div>
+                </div>
+            <!-- End Action buttons -->
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul>
+                {% for k, v in github.iteritems %}
+                    <li><strong>{{ k }}: </strong>{{ v }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endwith %}
 </div>
 {% endblock content %}
 
