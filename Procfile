@@ -1,1 +1,0 @@
-web: gunicorn devtinder.wsgi
