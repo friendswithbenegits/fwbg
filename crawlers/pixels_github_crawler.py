@@ -23,7 +23,9 @@ def store_person(person, f_people): #nome, avatar, email, empresa, location, rep
 	}
 
 	f_people.write(json.dumps(p_dict)+"\n")
-	print "Stored person: {0}".format(p_dict["name"])
+	
+	print u"Stored person: {0}".format(p_dict["name"])
+	
 	return
 
 def store_repo(repo, f_repos): #nome, n_contribuidores, linguagens, stars, url
@@ -35,8 +37,11 @@ def store_repo(repo, f_repos): #nome, n_contribuidores, linguagens, stars, url
 		"languages" : langs,
 		"stats" : repo.stargazers_count
 	}
-	print "Stored repo: {0}".format(r_dict["name"])
+
 	f_repos.write(json.dumps(r_dict)+"\n")
+
+	print u"Stored repo: {0}".format(r_dict["name"])
+
 	return
 
 with open("login.key", "r") as f:
