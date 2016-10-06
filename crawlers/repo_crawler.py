@@ -1,3 +1,5 @@
+from github import Github
+
 langs = {
         "JavaScript" : ".js",
         "Java" : ".java",
@@ -36,7 +38,13 @@ def crawl_files(top_path, files, repo):
 			files.append(ls.path)
                         print "{0}".format(top_path)
 
-def crawl_repo(repo):
+def crawl_repo(repo_id):
+        with open("login.key", "r") as f:
+                lines = f.read().splitlines()
+        g = Github(lines[0], lines[1])
+
+        repo = g.get_repo(repo_id)
+
         files = []
         crawl_files("/", files, repo)
         return files
