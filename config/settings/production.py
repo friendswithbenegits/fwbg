@@ -39,13 +39,13 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = os.environ.get(
     'DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS', 'True') == 'True'
 SECURE_CONTENT_TYPE_NOSNIFF = os.environ.get(
     'DJANGO_SECURE_CONTENT_TYPE_NOSNIFF', 'True') == 'True'
-SECURE_BROWSER_XSS_FILTER = True
-SESSION_COOKIE_SECURE = True
-SESSION_COOKIE_HTTPONLY = True
+SECURE_BROWSER_XSS_FILTER = False
+SESSION_COOKIE_SECURE = False
+SESSION_COOKIE_HTTPONLY = False
 SECURE_SSL_REDIRECT = os.environ.get(
     'DJANGO_SECURE_SSL_REDIRECT', 'True') == 'True'
-CSRF_COOKIE_SECURE = True
-CSRF_COOKIE_HTTPONLY = True
+CSRF_COOKIE_SECURE = False
+CSRF_COOKIE_HTTPONLY = False
 X_FRAME_OPTIONS = 'DENY'
 
 # SITE CONFIGURATION
@@ -203,7 +203,7 @@ LOGGING = {
 }
 
 # Custom Admin URL, use {% url 'admin:index' %}
-ADMIN_URL = os.environ.get('DJANGO_ADMIN_URL')
+ADMIN_URL = os.environ.get('DJANGO_ADMIN_URL', 'admin')
 
 # Your production stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
