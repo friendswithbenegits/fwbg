@@ -90,22 +90,8 @@ AWS_HEADERS = {
 
 #  See:http://stackoverflow.com/questions/10390244/
 from storages.backends.s3boto import S3BotoStorage
-
-os.environ['S3_USE_SIGV4'] = 'True'
-
-
-class S3Storage(S3BotoStorage):
-    @property
-    def connection(self):
-        if self._connection is None:
-            self._connection = self.connection_class(
-                self.access_key, self.secret_key,
-                calling_format=self.calling_format, host='s3.eu-west-1.amazonaws.com')
-        return self._connection
-
-
-StaticRootS3BotoStorage = lambda: S3Storage(location='static')
-MediaRootS3BotoStorage = lambda: S3Storage(location='media')
+StaticRootS3BotoStorage = lambda: S3BotoStorage(location='static')
+MediaRootS3BotoStorage = lambda: S3BotoStorage(location='media')
 DEFAULT_FILE_STORAGE = 'config.settings.production.MediaRootS3BotoStorage'
 
 MEDIA_URL = 'https://s3.amazonaws.com/%s/media/' % AWS_STORAGE_BUCKET_NAME
@@ -122,7 +108,7 @@ AWS_PRELOAD_METADATA = True
 INSTALLED_APPS = ('collectfast', ) + INSTALLED_APPS
 # COMPRESSOR
 # ------------------------------------------------------------------------------
-COMPRESS_STORAGE = 'config.settings.production.S3Storage'
+COMPRESS_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 COMPRESS_URL = STATIC_URL
 COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', 'True') == 'True'
 # EMAIL
