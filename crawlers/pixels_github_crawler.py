@@ -9,7 +9,7 @@ def store_person(person): #nome, avatar, email, empresa, location, repos, n_foll
 			if repo.owner.name == person.name:
 				p_repos.append({
 					"repo_name" : repo.name,
-					"repo_url" : repo.html_url
+					"repo_url" : repo.html_url,
 					"repo_id" : repo.id
 				})
 				store_repo(repo)
