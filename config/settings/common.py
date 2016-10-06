@@ -16,8 +16,13 @@ import os
 from os.path import join, dirname
 from dotenv import load_dotenv
 
+
+print "HEY HEY HEY"
+print os.environ.get('DJANGO_SETTINGS_MODULE')
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
+print "HEY HEY HEY"
+print os.environ.get('DJANGO_SETTINGS_MODULE')
 
 import environ
 
