@@ -26,6 +26,7 @@ class UserDetailView(LoginRequiredMixin, DetailView):
         context = super(UserDetailView, self).get_context_data(**kwargs)
         return context
 
+
 class UserRedirectView(LoginRequiredMixin, RedirectView):
     permanent = False
 
@@ -79,7 +80,7 @@ class UserSelectSnippetView(LoginRequiredMixin, FormView):
         return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
-        ctx= super(UserSelectSnippetView, self).get_context_data(**kwargs)
+        ctx = super(UserSelectSnippetView, self).get_context_data(**kwargs)
         ctx['snippets'] = RepositorySnippet.objects.filter(owner=self.user)
         return ctx
 
@@ -100,3 +101,4 @@ class UserSelectSnippetView(LoginRequiredMixin, FormView):
         except Exception, e:
             messages.add_message(self.request, messages.WARNING, e.message)
         return super(UserSelectSnippetView, self).form_valid(form)
+

@@ -1,24 +1,32 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}{{ object.username }}{% endblock %}
-
 {% block content %}
 {% with github=object.get_github_account %}
 <div class="container">
     <div class="row">
-        <div class="center-form-container">
-            <h2>Add your repo url</h2>
-            <form action="." method="post">
-                {{ form.as_p }}
-                <p><input type="submit" value="Add Repo" /></p>
+        <div class="pm-container center-form-container">
+            <h2>Insert a code snippet of yours</h2>
+            <p style="margin-bottom:0;">show them your <span class="git">gits</span> 😎</p>
+            <img class="sn-gif img-fluid m-x-auto d-block" src="{% static 'images/getlines.gif' %}"/>
+            <div class="text-muted">(click -> shift+click)</div>
+            <br/>
+
+            <form action="." method="post" class="sn-form">
+                <div class="form-group">
+                    <label for="snippet">Snippet URL</label>
+                    <input type="url" class="form-control" id="snippet" aria-describedby="snippetHelp" placeholder="Don't forget to highlight lines!">
+                    <small id="snippetHelp" class="form-text text-muted">Example snippet: https://github.com/stiv15/arka/blob/master/component/Validador/Sql.class.php#L28-L33</small>
+                </div>
+
+                <input type="submit" class="btn btn-success btn-lg" value="Add Snippet" />
             </form>
         </div>
     </div>
     <div class="row">
-        <div class="">
+        <div class="pm-container center-form-container" style="margin-top: 30px;">
             {% if snippets|length == 0 %}
-                <h2>No Snippets. yoh</h2>
+                <h2>Add a snippet, yeah? 😙</h2>
             {% else %}
                 <h2>List of snippets</h2>
                 {% for snippet in snippets %}
