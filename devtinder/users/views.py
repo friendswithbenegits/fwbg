@@ -25,6 +25,7 @@ class UserDetailView(LoginRequiredMixin, DetailView):
         context = super(UserDetailView, self).get_context_data(**kwargs)
         return context
 
+
 class UserRedirectView(LoginRequiredMixin, RedirectView):
     permanent = False
 
@@ -73,29 +74,29 @@ class UserSelectSnippetView(LoginRequiredMixin, FormView):
     form_class = RepoUrlInputFrom
     success_url = "."
 
-    def dispatch(self, request, *args, **kwargs):
-        self.user = self.request.user
-        return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
+    # def dispatch(self, request, *args, **kwargs):
+    #     self.user = self.request.user
+    #     return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
 
-    def get_context_data(self, **kwargs):
-        ctx= super(UserSelectSnippetView, self).get_context_data(**kwargs)
-        ctx['repos'] = UserRepository.objects.filter(owner=self.user)
-        return ctx
+    # def get_context_data(self, **kwargs):
+    #     ctx = super(UserSelectSnippetView, self).get_context_data(**kwargs)
+    #     ctx['repos'] = UserRepository.objects.filter(owner=self.user)
+    #     return ctx
 
-    def form_invalid(self, form):
-        return super(UserSelectSnippetView, self).form_invalid(form)
+    # def form_invalid(self, form):
+    #     return super(UserSelectSnippetView, self).form_invalid(form)
 
-    def form_valid(self, form):
-        url = form.cleaned_data['url']
-        data = get_data(url)
+    # def form_valid(self, form):
+    #     url = form.cleaned_data['url']
+    #     data = get_data(url)
 
-        language = data.get('language')
-        stars = data.get('stars')
-        snippet = data.get('snippet')
+    #     language = data.get('language')
+    #     stars = data.get('stars')
+    #     snippet = data.get('snippet')
 
-        repo = UserRepository.get_or_create(self.user, language, stars)
-        repo.save()
+    #     repo = UserRepository.get_or_create(self.user, language, stars)
+    #     repo.save()
 
-        snippet = RepositorySnippet.create(repo, snippet)
-        snippet.save()
-        return super(UserSelectSnippetView, self).form_valid(form)
+    #     snippet = RepositorySnippet.create(repo, snippet)
+    #     snippet.save()
+    #     return super(UserSelectSnippetView, self).form_valid(form)

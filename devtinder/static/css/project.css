@@ -205,3 +205,15 @@ body {
   background-color: #f7f7f7;
   border-radius: 20px;
 }
+
+/* ADD SNIPPET */
+.sn-example-url {
+  font-size: 10px;
+}
+.sn-form #snippetHelp {
+  text-align: left;
+  font-size: 10px;
+}
+.sn-gif {
+  margin: 10px 0 5px 0;
+}
