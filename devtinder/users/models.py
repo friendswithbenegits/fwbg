@@ -201,6 +201,20 @@ class UserRepository(models.Model):
     language = models.CharField(max_length=124)
     stars = models.IntegerField(default=0)
 
+    def __str__(self):
+        return "<UserRepository {}: Owner {} | Language {}>".format(
+            self.name, self.owner, self.language)
+
+
+    @classmethod
+    def get_or_create(cls, owner, language, stars=0):
+        """"""
+        repo = cls.objects.filter(owner=owner, language=language).first()
+        if repo is None:
+            repo = cls.create(owner, language, stars)
+            repo.save()
+        return repo
+
     @classmethod
     def create(cls, owner, language, stars=0):
         """"""

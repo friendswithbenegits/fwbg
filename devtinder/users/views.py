@@ -7,8 +7,9 @@ from django.views.generic import (DetailView, ListView, RedirectView,
                                   UpdateView, View, FormView)
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-from .models import User
+from .models import User, RepositorySnippet, UserRepository
 from .forms import RepoUrlInputFrom
+from .services import get_data
 
 import logging
 logger = logging.getLogger(__name__)
@@ -67,19 +68,34 @@ class UserActionView(LoginRequiredMixin, View):
         return redirect(reverse('home'))
 
 
-
 class UserSelectSnippetView(LoginRequiredMixin, FormView):
     template_name = "users/user_snippet.html"
     form_class = RepoUrlInputFrom
+    success_url = "."
+
+    def dispatch(self, request, *args, **kwargs):
+        self.user = self.request.user
+        return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
-        context = super(UserSelectSnippetView, self).get_context_data(**kwargs)
-        return context
+        ctx= super(UserSelectSnippetView, self).get_context_data(**kwargs)
+        ctx['repos'] = UserRepository.objects.filter(owner=self.user)
+        return ctx
 
     def form_invalid(self, form):
         return super(UserSelectSnippetView, self).form_invalid(form)
 
     def form_valid(self, form):
         url = form.cleaned_data['url']
+        data = get_data(url)
 
+        language = data.get('language')
+        stars = data.get('stars')
+        snippet = data.get('snippet')
+
+        repo = UserRepository.get_or_create(self.user, language, stars)
+        repo.save()
+
+        snippet = RepositorySnippet.create(repo, snippet)
+        snippet.save()
         return super(UserSelectSnippetView, self).form_valid(form)

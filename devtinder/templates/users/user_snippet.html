@@ -15,6 +15,18 @@
             </form>
         </div>
     </div>
+    <div class="row">
+        <div class="">
+            {% if repos|length == 0 %}
+                <h2>No Repos. yoh</h2>
+            {% else %}
+                <h2>List of repos</h2>
+                {% for repo in repos %}
+                    <p>{{ repo }}</p>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
 </div>
 {% endwith %}
 {% endblock content %}
