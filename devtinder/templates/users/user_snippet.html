@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ object.username }}{% endblock %}
+
+{% block content %}
+{% with github=object.get_github_account %}
+<div class="container">
+    <div class="row">
+        <div class="center-form-container">
+            <h2>Add your repo url</h2>
+            <form action="." method="post">
+                {{ form.as_p }}
+                <p><input type="submit" value="Add Repo" /></p>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="">
+            {% if repos|length == 0 %}
+                <h2>No Repos. yoh</h2>
+            {% else %}
+                <h2>List of repos</h2>
+                {% for repo in repos %}
+                    <p>{{ repo }}</p>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endwith %}
+{% endblock content %}
+
