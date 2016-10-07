@@ -32,7 +32,7 @@ def get_data(url):
                 startline = int(lines[1:])
                 endline = startline+maxlines
     except Exception, e:
-        print e.message
+        print e
 
     # limit lines of code
     file = "\n".join(file.split('\n')[startline:endline])
