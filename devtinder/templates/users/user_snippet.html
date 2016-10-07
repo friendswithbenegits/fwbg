@@ -28,9 +28,15 @@
             {% if snippets|length == 0 %}
                 <h2>Add a snippet, yeah? 😙</h2>
             {% else %}
-                <h2>List of snippets</h2>
+                <h2>Your snippets</h2>
                 {% for snippet in snippets %}
-                    <p>{{ snippet }}</p>
+                    <div class="pm-snippet">
+                        <pre><code class="python">{{ snippet.snippet }}</code></pre>
+                        <div class="pm-snippet-footer">
+                            <div class="pm-lang">Language: <strong>{{ snippet.lang }}</strong></div>
+                            <div class="pm-file">{{ snippet.name }}: L{{ snippet.lines }}</div>
+                        </div>
+                    </div>
                 {% endfor %}
             {% endif %}
         </div>
@@ -38,4 +44,16 @@
 </div>
 {% endwith %}
 {% endblock content %}
+
+{% block javascript %}
+{{ block.super }}
+<script>
+$(document).ready(function() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+    hljs.lineNumbersBlock(block);
+  });
+});
+</script>
+{% endblock %}
 
