@@ -7,6 +7,7 @@ __email__ = "andre@unbabel.com"
 import requests
 import base64
 
+
 def get_data(url):
     """Currently we need to return the following json"""
     message = "Okay"
@@ -21,24 +22,35 @@ def get_data(url):
     endline = startline+maxlines
 
     try:
+        print url
         if '#' in url:
             lines = url[url.find("#")+1:]
             if '-' in lines:
                 endline = int(lines[lines.find('-')+2:])
                 startline = int(lines[1:lines.find('-')])
+                if startline >= endline:
+                    startline = endline - 20
             else:
                 startline = int(lines[1:])
                 endline = startline+maxlines
-    except:
-        pass
+    except Exception, e:
+        print e
 
     # limit lines of code
     file = "\n".join(file.split('\n')[startline:endline])
+    if file == "":
+        startline = 0
+        endline = startline+maxlines
+        file = "\n".join(file.split('\n')[0:endline])
+    lines = 'L{}-L{}'.format(startline, endline)
+    print lines
+    print file
 
     return {
         'message': message,
         'name': response.json().get('name'),
         'stars': response.json().get('size'),
+        'lines': lines,
         'language': 0,
         'snippet': file
     }

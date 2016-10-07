@@ -6,6 +6,10 @@
 <div class="container">
     <div class="row">
         <div class="pm-container center-form-container">
+            {% if snippets|length >= 5 %}
+            <h2>You already have the maximum number of allowed snippets! 😮</h2>
+            <h6>Delete some if you want to replace them with better ones.</h6>
+            {% else %}
             <h2>Insert a code snippet of yours</h2>
             <p style="margin-bottom:0;">show them your <span class="git">gits</span> 😎</p>
             <img class="sn-gif img-fluid m-x-auto d-block" src="{% static 'images/getlines.gif' %}"/>
@@ -21,6 +25,7 @@
 
                 <input type="submit" class="btn btn-success btn-lg" value="Add Snippet" />
             </form>
+            {% endif %}
         </div>
     </div>
     <div class="row">
@@ -37,7 +42,7 @@
                         <pre><code class="python">{{ snippet.snippet }}</code></pre>
                         <div class="pm-snippet-footer">
                             <div class="pm-lang">Language: <strong>{{ snippet.lang }}</strong></div>
-                            <div class="pm-file">{{ snippet.name }}: L{{ snippet.lines }}</div>
+                            <div class="pm-file">{{ snippet.name }}: {{ snippet.lines }}</div>
                         </div>
                     </div>
                 {% endfor %}
