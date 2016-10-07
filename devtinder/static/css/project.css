@@ -13,6 +13,9 @@ a, a:hover, a:active, a:visited, h2 a {
   text-decoration: none;
   color: black;
 }
+pre {
+  margin-bottom: 0;
+}
 body {
   font-family: 'Raleway', sans-serif;
   color: black;
@@ -34,7 +37,7 @@ body {
     text-decoration: none;
 }
 .btn-auth:hover {
-  box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.50);
+  box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.50);
 }
 .btn-auth:before {
     content: "";
@@ -83,11 +86,88 @@ body {
     max-width: 350px;
     margin: 50px auto 0 auto;
 }
-.bigcenter {
+
+/* POSSIBLE MATCH */
+.pm-container {
   max-width: 600px !important;
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.30);
+  padding: 10px 12px;
 }
-
-
+.pm-user {
+  text-align: left;
+}
+.pm-name {
+  font-weight: bold;
+  display: inline-block;
+  font-size: 2em;
+  vertical-align: middle;
+}
+.pm-reponame {
+  font-weight: lighter;
+  display: inline-block;
+  font-size: 2em;
+  vertical-align: middle;
+  margin-left: 10px;
+  float: right;
+}
+.pm-stars {
+  vertical-align: middle;
+  font-size: 16px!important;
+  padding: 5px 5px;
+  font-weight: lighter!important;
+}
+.pm-pic {
+  max-width: 48px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.pm-snippet {
+  text-align: left;
+  margin: 20px 0 0 0;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 12px;
+}
+.pm-snippet-footer {
+  font-weight: bold;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  color: #767676;
+  background-color: #f7f7f7;
+  border-radius: 0 0 2px 2px;
+}
+.pm-lang {
+  display: inline-block;
+  font-weight: normal;
+}
+.pm-file {
+  float: right;
+}
+.pm-likedislike {
+  margin-top: 20px;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: left;
+}
+.pm-like {
+  float: left;
+}
+.pm-dislike {
+  float: right;
+}
+.hljs {
+  background-color: white!important;
+}
+.hljs-line-numbers {
+  text-align: right;
+  border-right: 1px solid #ddd;
+  color: #aaa;
+  background-color: #f7f7f7!important;
+  user-select: none;
+}
 
 /* PROFILE */
 .profilepic {
@@ -95,7 +175,6 @@ body {
   overflow: hidden;
   line-height: 1;
   vertical-align: middle;
-  border-radius: 3px;
   border-radius: 6px !important;
   width: 50%;
 }
@@ -116,6 +195,6 @@ body {
   font-weight: 600;
   line-height: 1;
   color: #666;
-  background-color: #eee;
+  background-color: #f7f7f7;
   border-radius: 20px;
 }

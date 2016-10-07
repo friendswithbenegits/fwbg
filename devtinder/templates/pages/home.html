@@ -7,14 +7,40 @@
         {% load account socialaccount %}
         <p><a class="btn-auth btn-github large" href="{% provider_login_url "github" %}">Sign in with <b>GitHub</b></a></p>
     {% else %}
-        <div class="bigcenter center-form-container">
-        <h1>Twitter handler: {{ pm.to_user.handler }}</h1>
-        <h2>Project name: {{ pm.repo.name }}</h2>
-        <pre class="snippet">{{ pm.repo.snippet }}</pre>
-        <a href="{% url 'users:action' 'dislike' 'pm.to_user.username' %}">Dislike</a>
-        <strong>OR</strong>
-        <a href="{% url 'users:action' 'like' 'pm.to_user.username' %}">Like</a>
+        <div class="pm-container center-form-container">
+
+            <div class="pm-user">
+                <img class="pm-pic" src="{{ pm.to_user.avatar }}"/>
+                <div class="pm-name">{{ pm.to_user.username }}</div><div class="pm-reponame">{{ pm.repo.name }} <div class="pm-stars counter"><i class="fa fa-star" aria-hidden="true"></i> {{ pm.repo.stars }}</div></div>
+            </div>
+            <div class="pm-snippet">
+                <pre><code class="python">{{ pm.repo.snippet.text }}</code></pre>
+                <div class="pm-snippet-footer">
+                    <div class="pm-lang">Language: <strong>{{ pm.repo.snippet.lang }}</strong></div>
+                    <div class="pm-file">{{ pm.repo.snippet.file }}: L{{ pm.repo.snippet.lines }}</div>
+                </div>
+            </div>
+            <div class="pm-likedislike">
+                <a href="{% url 'users:action' 'like' 'pm.to_user.username' %}" class="btn btn-success btn-lg pm-like"><i class="fa fa-heart" aria-hidden="true"></i> git add</a>
+
+                <a href="{% url 'users:action' 'dislike' 'pm.to_user.username' %}" class="btn btn-danger btn-lg pm-dislike"><i class="fa fa-times" aria-hidden="true"></i> git rm</a>
+
+                <div style="clear: both;"></div>
+            </div>
 {% endif %}
   </div>
 </div>
 {% endblock content %}
+
+
+{% block javascript %}
+{{ block.super }}
+<script>
+$(document).ready(function() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+    hljs.lineNumbersBlock(block);
+  });
+});
+</script>
+{% endblock %}

@@ -75,11 +75,26 @@ class User(AbstractUser):
         return {
             'to_user': {
                 'handler': '@andreffs18',
-                'username': 'andreffs18'
+                'username': 'andreffs18',
+                'avatar': 'https://avatars2.githubusercontent.com/u/5011530?v=3&s=400'
             },
             'repo': {
                 'name': 'Sucky project',
-                'snippet': "",
+                'stars': 50,
+                'snippet': {
+                    'text': """def store_person(person):
+    try:
+        p_repos = []
+        for repo in person.get_repos():
+        if repo.owner.name == person.name:
+            p_repos.append({
+                "repo_name" : repo.name,
+                "repo_url" : repo.html_url,
+                "repo_id" : repo.id""",
+                    'lang': 'python',
+                    'file': 'main.py',
+                    'lines': '10-15'
+                }
             },
         }
 
