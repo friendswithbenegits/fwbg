@@ -78,64 +78,33 @@ class User(AbstractUser):
         2º - From all users remove ones that I already gave like or dislike
         3º - and get all their repos that have the same language as I have.
         4º - order repo by stars and get first one"""
-        users = User.objects.exclude(id=self.id)
+        # users = User.objects.exclude(id=self.id)
         # likes = UserLike.objects.filter(
         #     from_user=self).values_list('to_user')
         # dislikes = UserDislike.objects.filter(
         #     from_user=self).values_list('to_user')
         # users.exclude(id__in=list(set(list(likes) + list(dislikes))))
-        #
-        # repositories = UserRepository.objects.filter(
-        #     owner__in=users, language__in=self.languages)
-        #
-        # repo = repositories.order_by('-stars').limit(1)
-        # if repo is None:
-        #     return {
-        #         'status': 400,
-        #         'message': "No More Matches",
-        #         'to_user': {},
-        #         'repo': {},
-        #     }
-        # else:
-        #     return {
-        #         'status': 200,
-        #         'message': "Hello",
-        #         'to_user': {
-        #             'handler': repo.owner.handler,
-        #             'username': repo.owner.username,
-        #         },
-        #         'repo': {
-        #             'name': repo.name,
-        #             'snippet': repo.get_snipper(),
-        #         },
-        #     }
+
+        snippet = RepositorySnippet.objects.order_by("?")[0]
         return {
+            'status': 200,
+            'message': "Hello",
             'to_user': {
-                'handler': '@andreffs18',
-                'username': 'andreffs18',
+                'handler': snippet.owner.handler,
+                'username': snippet.owner.username,
                 'location': 'Portugal',
                 'avatar': 'https://avatars2.githubusercontent.com/u/5011530?v=3&s=400'
             },
-            'repo': {
-                'name': 'Sucky project',
-                'stars': 50,
-                'snippet': {
-                    'text': """def store_person(person):
-    try:
-        p_repos = []
-        for repo in person.get_repos():
-        if repo.owner.name == person.name:
-            p_repos.append({
-                "repo_name" : repo.name,
-                "repo_url" : repo.html_url,
-                "repo_id" : repo.id""",
-                    'lang': 'python',
-                    'file': 'main.py',
-                    'lines': '10-15'
-                }
+            'snippet': {
+                'lang': "yolo",
+                'repository': snippet.repository,
+                'name': "sdaslkdsa.py",
+                'stars': snippet.stars,
+                'snippet': snippet.snippet,
+                'lines': 10,
             },
         }
-    # endregion
+        # endregion
 
 
 class UserMatch(models.Model):
@@ -202,7 +171,7 @@ class RepositorySnippet(models.Model):
     snippet = models.TextField()
 
     def __str__(self):
-        return ("<RepositorySnippet {}: Owner {} | Language {} | Stars {}>"
+        return ("{}: Owner {} | Language {} | Stars {}"
                 "").format(self.repository, self.owner, self.language,
                            self.stars)
 

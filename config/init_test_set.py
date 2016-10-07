@@ -18,7 +18,6 @@ MAX_LIKES_PER_USER = 10
 def init():
     """"""
     username = "test-username-"
-    import pdb; pdb.set_trace()
     for i in range(AMOUNT_USERS):
         username += str(User.objects.count())
         user = User.objects.create_user(username=username)

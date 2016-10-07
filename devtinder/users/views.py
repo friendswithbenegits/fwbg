@@ -94,7 +94,6 @@ class UserSelectSnippetView(LoginRequiredMixin, FormView):
             language = data.get('language')
             stars = data.get('stars')
             snippet = data.get('snippet')
-            import pdb; pdb.set_trace()
             rs = RepositorySnippet.create(self.user, repository, language,
                                           stars, snippet)
             rs.save()
