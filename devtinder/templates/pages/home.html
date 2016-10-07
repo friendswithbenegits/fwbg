@@ -2,8 +2,8 @@
 
 {% block content %}
 <div class="row">
-    <div class="center-form-container">
     {% if not request.user.is_authenticated %}
+        <div class="center-form-container">
         {% load account socialaccount %}
         <p><a class="btn-auth btn-github large" href="{% provider_login_url "github" %}">Sign in with <b>GitHub</b></a></p>
     {% else %}
