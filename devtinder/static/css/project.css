@@ -98,16 +98,23 @@ body {
 .pm-user {
   text-align: left;
 }
+.pm-nameloc {
+  display: inline-block;
+  vertical-align: middle;
+}
 .pm-name {
   font-weight: bold;
-  display: inline-block;
-  font-size: 2em;
-  vertical-align: middle;
+  font-size: 1.9em;
+  line-height: 1em;
+}
+.pm-location {
+  font-weight: normal;
+  font-size: 0.9em;
 }
 .pm-reponame {
   font-weight: lighter;
   display: inline-block;
-  font-size: 2em;
+  font-size: 1.3em;
   vertical-align: middle;
   margin-left: 10px;
   float: right;

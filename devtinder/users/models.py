@@ -76,6 +76,7 @@ class User(AbstractUser):
             'to_user': {
                 'handler': '@andreffs18',
                 'username': 'andreffs18',
+                'location': 'Portugal',
                 'avatar': 'https://avatars2.githubusercontent.com/u/5011530?v=3&s=400'
             },
             'repo': {
