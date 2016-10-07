@@ -210,7 +210,7 @@ body {
 .sn-example-url {
   font-size: 10px;
 }
-.sn-form #snippetHelp {
+.sn-form > #snippetHelp {
   text-align: left;
   font-size: 10px;
 }
