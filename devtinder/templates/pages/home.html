@@ -1,16 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div>
-{% if not request.user.is_authenticated %}
-    <h1>You need to login first</h1>
-{% else %}
-    <h1>Twitter handler: {{ pm.to_user.handler }}</h1>
-    <h2>Project name: {{ pm.repo.name }}</h2>
-    <pre class="snippet">{{ pm.repo.snippet }}</pre>
-    <a href="{% url 'users:action' 'dislike' 'pm.to_user.username' %}">Dislike</a>
-    <strong>OR</strong>
-    <a href="{% url 'users:action' 'like' 'pm.to_user.username' %}">Like</a>
-</div>
+<div class="row">
+    {% if not request.user.is_authenticated %}
+        <div class="center-form-container">
+        {% load account socialaccount %}
+        <p><a class="btn-auth btn-github large" href="{% provider_login_url "github" %}">Sign in with <b>GitHub</b></a></p>
+    {% else %}
+        <div class="bigcenter center-form-container">
+        <h1>Twitter handler: {{ pm.to_user.handler }}</h1>
+        <h2>Project name: {{ pm.repo.name }}</h2>
+        <pre class="snippet">{{ pm.repo.snippet }}</pre>
+        <a href="{% url 'users:action' 'dislike' 'pm.to_user.username' %}">Dislike</a>
+        <strong>OR</strong>
+        <a href="{% url 'users:action' 'like' 'pm.to_user.username' %}">Like</a>
 {% endif %}
+  </div>
+</div>
 {% endblock content %}
