@@ -8,8 +8,8 @@ from django.utils import timezone
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
 
-
 from allauth.socialaccount.models import SocialAccount
+
 
 @python_2_unicode_compatible
 class User(AbstractUser):
@@ -48,21 +48,22 @@ class User(AbstractUser):
         This will create a new UserLike"""
         like = UserLike.create(from_user=self, to_user=to_user)
         like.save()
-
         # check if there is any likes from the other way around
         like_back = UserLike.objects.filter(from_user=to_user, to_user=self)
         if like_back.count() != 0:
             # somene already like me, create UserMatch
             um = UserMatch.get_or_create(user1=self, user2=to_user)
             um.save()
-
+        print("{} just liked user {}".format(self, to_user))
         return like
 
     def give_dislike(self, to_user):
         """Method to give like to given user from "self" user.
         This will create a new UserLike"""
+
         dislike = UserDislike.create(from_user=self, to_user=to_user)
         dislike.save()
+        print("{} just disliked user {}".format(self, to_user))
         return dislike
     # endregion
 
@@ -72,38 +73,57 @@ class User(AbstractUser):
 
 
     # region Frontend Action Triggers
-    def get_possible_match(self):
+
+
+    def get_unseen_matches(self):
+        """"""
+        return {
+
+        }
+
+
+
+    def get_suggestions(self):
         """Return possible match for this user:
         1º - Get all users except myself.
         2º - From all users remove ones that I already gave like or dislike
         3º - and get all their repos that have the same language as I have.
         4º - order repo by stars and get first one"""
-        # users = User.objects.exclude(id=self.id)
-        # likes = UserLike.objects.filter(
-        #     from_user=self).values_list('to_user')
-        # dislikes = UserDislike.objects.filter(
-        #     from_user=self).values_list('to_user')
-        # users.exclude(id__in=list(set(list(likes) + list(dislikes))))
-
-        snippet = RepositorySnippet.objects.order_by("?")[0]
-        return {
-            'status': 200,
-            'message': "Hello",
-            'to_user': {
-                'handler': snippet.owner.handler,
-                'username': snippet.owner.username,
-                'location': 'Portugal',
-                'avatar': 'https://avatars2.githubusercontent.com/u/5011530?v=3&s=400'
-            },
-            'snippet': {
-                'lang': "yolo",
-                'repository': snippet.repository,
-                'name': "sdaslkdsa.py",
-                'stars': snippet.stars,
-                'snippet': snippet.snippet,
-                'lines': 10,
-            },
-        }
+        users = User.objects.exclude(id=self.id)
+        likes = UserLike.objects.filter(
+             from_user=self).values_list('to_user')
+        dislikes = UserDislike.objects.filter(
+            from_user=self).values_list('to_user')
+        users.exclude(id__in=map(lambda x: x[0],
+                                 set(likes).union(set(dislikes))))
+        try:
+            snippet = RepositorySnippet.objects.filter(
+                owner__in=users).order_by("?")[0]
+            return {
+                'status': 200,
+                'message': "Hello",
+                'to_user': {
+                    'handler': snippet.owner.handler,
+                    'username': snippet.owner.username,
+                    'location': 'Portugal',
+                    'avatar': 'https://avatars2.githubusercontent.com/u/5011530?v=3&s=400'
+                },
+                'snippet': {
+                    'lang': "yolo",
+                    'repository': snippet.repository,
+                    'name': "sdaslkdsa.py",
+                    'stars': snippet.stars,
+                    'snippet': snippet.snippet,
+                    'lines': 10,
+                },
+            }
+        except IndexError, e:
+            return {
+                'status': 400,
+                'message': "No snippets currently available!",
+                'to_user': {},
+                'snippet': {},
+            }
         # endregion
 
 
@@ -116,7 +136,7 @@ class UserMatch(models.Model):
     def get_or_create(cls, user1, user2):
         """"""
         um = cls.objects.filter(user1=user1, user2=user2).first()
-        if um is not None:
+        if um is None:
             um = cls.objects.create(user1=user1, user2=user2)
             um.save()
         return um
@@ -128,6 +148,10 @@ class UserLike(models.Model):
     to_user = models.ForeignKey(User, related_name="user_like_to_user")
     create_date = models.DateTimeField(_('creation date'),
                                        default=timezone.now)
+
+    meta = {
+        'indexes': ['from_user'],
+    }
 
     @classmethod
     def create(cls, from_user, to_user):
@@ -148,6 +172,9 @@ class UserDislike(models.Model):
     to_user = models.ForeignKey(User, related_name="user_dislike_to_user")
     create_date = models.DateTimeField(_('creation date'),
                                        default=timezone.now)
+    meta = {
+        'indexes': ['from_user'],
+    }
 
     @classmethod
     def create(cls, from_user, to_user):
@@ -169,6 +196,10 @@ class RepositorySnippet(models.Model):
     language = models.CharField(max_length=124)
     stars = models.IntegerField(default=0)
     snippet = models.TextField()
+
+    meta = {
+        'indexes': ['owner'],
+    }
 
     def __str__(self):
         return ("{}: Owner {} | Language {} | Stars {}"

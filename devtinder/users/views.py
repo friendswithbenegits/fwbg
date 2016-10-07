@@ -65,8 +65,15 @@ class UserActionView(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         from_user = request.user
         action = kwargs.get('action')
-        to_user = kwargs.get('to_user')
-        logger.info("User {} {} user {}.".format(from_user, action, to_user))
+        to_user = User.objects.get(username=kwargs.get('to_user'))
+        print("User {} {} user {}.".format(from_user, action, to_user))
+
+        if action == 'like':
+            from_user.give_like(to_user)
+        elif action == 'dislike':
+            from_user.give_dislike(to_user)
+        else:
+            pass
         return redirect(reverse('home'))
 
 
