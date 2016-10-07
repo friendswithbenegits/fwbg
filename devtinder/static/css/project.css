@@ -141,6 +141,18 @@ body {
   border-radius: 3px;
   font-size: 12px;
 }
+.pm-snippet-header {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-radius: 0 0 2px 2px;
+}
+.pm-snippet-header a {
+  color: #fd5c63;
+}
+.pm-snippet-header a:hover {
+  text-decoration: underline;
+}
 .pm-snippet-footer {
   font-weight: bold;
   border-top: 1px solid #ddd;

@@ -14,7 +14,7 @@
 
             <form action="." method="post" class="sn-form">
                 <div class="form-group">
-                    <label for="snippet">Snippet URL</label>
+                    <label for="snippet">Snippet URL (truncated to max 20 LoC)</label>
                     <input type="url" name="url" class="form-control" id="snippet" aria-describedby="snippetHelp" placeholder="Don't forget to highlight lines!">
                     <small id="snippetHelp" class="form-text text-muted">Example snippet: https://github.com/stiv15/arka/blob/master/component/Validador/Sql.class.php#L28-L33</small>
                 </div>
@@ -31,6 +31,9 @@
                 <h2>Your snippets</h2>
                 {% for snippet in snippets %}
                     <div class="pm-snippet">
+                        <div class="pm-snippet-header">
+                            <a href="#">Delete snippet</a>
+                        </div>
                         <pre><code class="python">{{ snippet.snippet }}</code></pre>
                         <div class="pm-snippet-footer">
                             <div class="pm-lang">Language: <strong>{{ snippet.lang }}</strong></div>

@@ -16,6 +16,9 @@ def get_data(url):
         raise Exception("Repository is not public.")
     file = base64.b64decode(response.json().get('content'))
 
+    # limit lines of code
+    file = "\n".join(file.split('\n')[0:20])
+
     return {
         'message': message,
         'name': response.json().get('name'),
