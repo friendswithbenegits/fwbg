@@ -22,8 +22,13 @@ class UserDetailView(LoginRequiredMixin, DetailView):
     slug_field = 'username'
     slug_url_kwarg = 'username'
 
+    def dispatch(self, request, *args, **kwargs):
+        self.user = self.request.user
+        return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
+
     def get_context_data(self, **kwargs):
         context = super(UserDetailView, self).get_context_data(**kwargs)
+        context['snippets'] = RepositorySnippet.objects.filter(owner=self.user)
         return context
 
 
@@ -97,7 +102,7 @@ class UserSelectSnippetView(LoginRequiredMixin, FormView):
     def form_valid(self, form):
         url = form.cleaned_data['url']
         try:
-            data = get_data(url)
+            data = get_data(url, self.user)
             repository = data.get('name')
             language = data.get('language')
             stars = data.get('stars')

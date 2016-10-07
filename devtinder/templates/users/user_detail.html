@@ -7,26 +7,40 @@
 {% with github=object.get_github_account %}
 <div class="container">
     <div class="row">
-        <div class="center-form-container">
-            <h2><a href="{{ github.html_url }}">{{ object.username }}</a></h2>
-            <br />
-            <p><a href="{{ github.html_url }}"><img class="profilepic img-fluid" src="{{ github.avatar_url }}"/></a></p>
-            
-            <br />
+        <div class="col-xs-6">
+            <div class="center-form-container">
+                <h2><a href="{{ github.html_url }}">{{ object.username }}</a></h2>
+                <br />
+                <p><a href="{{ github.html_url }}"><img class="profilepic img-fluid" src="{{ github.avatar_url }}"/></a></p>
+                
+                <br />
 
-            <a href="{{ github.html_url }}?tab=following"><div class="profilestat" style="padding-left:0;">Following</div> <div class="counter">{% if github.following %}{{ github.following }}{% else %}0{% endif %}</div></a>
+                <a href="{{ github.html_url }}?tab=following"><div class="profilestat" style="padding-left:0;">Following</div> <div class="counter">{% if github.following %}{{ github.following }}{% else %}0{% endif %}</div></a>
 
-            <a href="{{ github.html_url }}?tab=followers"><div class="profilestat">Followers</div> <div class="counter">{% if github.followers %}{{ github.followers }}{% else %}0{% endif %}</div></a>
+                <a href="{{ github.html_url }}?tab=followers"><div class="profilestat">Followers</div> <div class="counter">{% if github.followers %}{{ github.followers }}{% else %}0{% endif %}</div></a>
 
-            <a href="{{ github.html_url }}?tab=repositories"><div class="profilestat">Repos</div> <div class="counter">{% if github.public_repos %}{{ github.public_repos }}{% else %}0{% endif %}</div></a>
+                <a href="{{ github.html_url }}?tab=repositories"><div class="profilestat">Repos</div> <div class="counter">{% if github.public_repos %}{{ github.public_repos }}{% else %}0{% endif %}</div></a>
 
-            <br /><br />
-            {% if github.location %}
-            <p><i class="fa fa-map-marker" aria-hidden="true"></i> {{ github.location }}</p>
-            {% endif %}
-            {% if github.company %}
-            <p><strong>Company:</strong> {{ github.company }}</p>
-            {% endif %}
+                <br /><br />
+                {% if github.location %}
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i> {{ github.location }}</p>
+                {% endif %}
+                {% if github.company %}
+                <p><strong>Company:</strong> {{ github.company }}</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="center-form-container">
+                <h2>list of snippets</h2>
+                {% if snippets|length == 0 %}
+                    <p>You have added no snippets yet...</p>
+                {% else %}
+                    {% for snippet in snippets %}
+                        <p>{{ snippet }}</p>
+                    {% endfor %}
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>

@@ -1,4 +1,4 @@
-from github_interface import *
+from github import *
 from code_parser import Parser
 
 langs = {
@@ -39,7 +39,7 @@ def get_repo_snippet(repo, username, password):
 	file = max(f, key=lambda x: len(x["content"]))
 	snippet, snippet_line = get_snippet(file["content"], repo["language"])
 
-	snippet_url = file["html_url"]+'#L{0}'.format(snippet_line)
+	snippet_url = file["html_url"]+'#L{0}-{1}'.format(snippet_line, snippet_line+4)
 
 	return snippet, snippet_url
 
@@ -58,6 +58,5 @@ def get_user_repos(user_login_name, username, password):
 				"repo_snippet" : snippet
 			}
 			user_snippets.append(repo_dict)
-			print repo_dict
 
 	return user_snippets
