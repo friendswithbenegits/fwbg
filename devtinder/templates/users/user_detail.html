@@ -31,16 +31,25 @@
             </div>
         </div>
         <div class="col-xs-6">
-            <div class="center-form-container">
-                <h2>list of snippets</h2>
-                {% if snippets|length == 0 %}
-                    <p>You have added no snippets yet...</p>
-                {% else %}
-                    {% for snippet in snippets %}
-                        <p>{{ snippet }}</p>
-                    {% endfor %}
-                {% endif %}
-            </div>
+            <div class="pm-container center-form-container" style="margin-top: 30px;">
+            {% if snippets|length == 0 %}
+                <h2>Add a snippet, yeah? 😙</h2>
+            {% else %}
+                <h2>Your snippets</h2>
+                {% for snippet in snippets %}
+                    <div class="pm-snippet">
+                        <div class="pm-snippet-header">
+                            <i class="fa fa-trash" aria-hidden="true"></i> <a href="{% url 'users:snippet-action' 'delete' snippet.id %}">Delete snippet</a>
+                        </div>
+                        <pre><code class="python">{{ snippet.snippet }}</code></pre>
+                        <div class="pm-snippet-footer">
+                            <div class="pm-lang">Language: <strong>{{ snippet.language }}</strong></div>
+                            <div class="pm-file">{{ snippet.name }}: {{ snippet.lines }}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
         </div>
     </div>
 </div>
