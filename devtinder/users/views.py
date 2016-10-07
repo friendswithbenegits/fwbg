@@ -76,6 +76,24 @@ class UserActionView(LoginRequiredMixin, View):
             pass
         return redirect(reverse('home'))
 
+class UserSnippetActionView(LoginRequiredMixin, View):
+
+    def get(self, request, *args, **kwargs):
+        from_user = request.user
+        action = kwargs.get('action')
+        snippet = kwargs.get('snippet_id')
+        print("User \"{}\" performed action \"{}\" on snippet \"{}\".".format(
+            from_user, action, snippet))
+
+        if action == 'delete':
+            rs = RepositorySnippet.objects.filter(
+                id=snippet, owner=from_user).first()
+            rs.delete()
+        else:
+            pass
+        return redirect(reverse('users:add-snippet'))
+
+
 
 class UserSelectSnippetView(LoginRequiredMixin, FormView):
     template_name = "users/user_snippet.html"
