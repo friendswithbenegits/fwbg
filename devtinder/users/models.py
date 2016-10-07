@@ -28,7 +28,8 @@ class User(AbstractUser):
     def languages(self):
         """property that returns list of languages from all repos that this
         user has"""
-        return UserRepository.objects.filter(owner=self).distinct('language')
+        return RepositorySnippet.objects.filter(
+            owner=self).distinct('language')
 
     def __str__(self):
         return self.username
@@ -67,9 +68,7 @@ class User(AbstractUser):
 
     def get_all_snippets(self):
         """Get all snippets for each repo from given user"""
-        repos = UserRepository.objects.filter(user=self)
-        snippets = RepositorySnippet.objects.filter(repository=repos)
-        return snippets
+        return RepositorySnippet.objects.filter(owner=self)
 
 
     # region Frontend Action Triggers
@@ -194,51 +193,24 @@ class UserDislike(models.Model):
         return cls.objects.filter(from_user=user)
 
 
-class UserRepository(models.Model):
-    """"""
-    owner = models.ForeignKey(User)
-    name = models.CharField(max_length=124)
-    language = models.CharField(max_length=124)
-    stars = models.IntegerField(default=0)
-
-    def __str__(self):
-        return "<UserRepository {}: Owner {} | Language {}>".format(
-            self.name, self.owner, self.language)
-
-
-    @classmethod
-    def get_or_create(cls, owner, language, stars=0):
-        """"""
-        repo = cls.objects.filter(owner=owner, language=language).first()
-        if repo is None:
-            repo = cls.create(owner, language, stars)
-            repo.save()
-        return repo
-
-    @classmethod
-    def create(cls, owner, language, stars=0):
-        """"""
-        ur = cls.objects.create(owner=owner, language=language, stars=stars)
-        ur.save()
-        return ur
-
-    def get_snipper(self):
-        """Get random snippet from this repository"""
-        snippet = RepositorySnippet.objects.filter(repository=self)
-        snippet = snippet.order_by('-rating').limit(1)
-        return snippet
-
-
 class RepositorySnippet(models.Model):
     """"""
-    repository = models.ForeignKey(UserRepository)
+    owner = models.ForeignKey(User)
+    repository = models.CharField(max_length=124)
+    language = models.CharField(max_length=124)
+    stars = models.IntegerField(default=0)
     snippet = models.TextField()
-    rating = models.IntegerField(default=0)
+
+    def __str__(self):
+        return ("<RepositorySnippet {}: Owner {} | Language {} | Stars {}>"
+                "").format(self.repository, self.owner, self.language,
+                           self.stars)
 
     @classmethod
-    def create(cls, repository, snippet, rating=0):
+    def create(cls, owner, repository, language, stars, snippet):
         """"""
-        rs = cls.objects.create(repository=repository, snippet=snippet,
-                                rating=rating)
+        rs = cls.objects.create(owner=owner, repository=repository,
+                                language=language, stars=stars,
+                                snippet=snippet)
         rs.save()
         return rs

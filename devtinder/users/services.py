@@ -9,10 +9,17 @@ import base64
 
 def get_data(url):
     """Currently we need to return the following json"""
+    message = "Okay"
     api_url = convert_github_html_url_to_api_url(url)
-    file = get_file_from_api_url(api_url)
+    response = requests.get(api_url)
+    if response.status_code != 200:
+        raise Exception("Repository is not public.")
+    file = base64.b64decode(response.json().get('content'))
+
     return {
-        'stars': 0,
+        'message': message,
+        'name': response.json().get('name'),
+        'stars': response.json().get('size'),
         'language': 0,
         'snippet': file
     }
@@ -30,11 +37,3 @@ def convert_github_html_url_to_api_url(url):
     # create valid github api url
     github_url = ("https://api.github.com/repos/{}/{}/contents/{}?ref={}").format(handler, repo, contents, branch)
     return github_url
-
-
-def get_file_from_api_url(url):
-    response = requests.get(url)
-    if response.status_code != 200:
-        raise
-    file = base64.b64decode(response.json().get('content'))
-    return file
