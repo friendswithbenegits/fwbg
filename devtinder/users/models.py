@@ -23,7 +23,7 @@ class User(AbstractUser):
     def languages(self):
         """property that returns list of languages from all repos that this
         user has"""
-        return UserRepository.objects.filter(user=self).distinct('language')
+        return UserRepository.objects.filter(owner=self).distinct('language')
 
     def __str__(self):
         return self.username
@@ -63,9 +63,9 @@ class User(AbstractUser):
     # region Frontend Action Triggers
     def get_possible_match(self):
         """Return possible match for this user"""
-        users = User.objects.filter(user__ne=self)
+        users = User.objects.exclude(id=self.id)
         repositories = UserRepository.objects.filter(
-            user__in=users, language__in=self.languages)
+            owner__in=users, language__in=self.languages)
 
         UserLike.objects.filter()
         UserDislike.objects.filter()
