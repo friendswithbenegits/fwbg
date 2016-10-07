@@ -52,18 +52,22 @@
                   <a class="nav-link" href="{% url 'users:add-snippet' %}">Add your <span class="git">gits</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'about' %}">About</a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{{ request.user.username }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'account_logout' %}">sign out</a>
+                  <form method="post" action="{% url 'account_logout' %}">
+                    {% csrf_token %}
+                    {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+                    {% endif %}
+                    <button class="nav-link directsignout" href="{% url 'account_logout' %}" type="submit">sign out</button>
+                  </form>
+                  
                 </li>
               {% else %}
-                <li class="nav-item">
+                <!--<li class="nav-item">
                   <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
-                </li>
+                </li>-->
               {% endif %}
             </ul>
           </div>
