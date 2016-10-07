@@ -6,6 +6,10 @@
 <div class="container">
     <div class="row">
         <div class="pm-container center-form-container">
+            {% if snippets|length >= 5 %}
+            <h2>You already have the maximum number of allowed snippets! 😮</h2>
+            <h6>Delete some if you want to replace them with better ones.</h6>
+            {% else %}
             <h2>Insert a code snippet of yours</h2>
             <p style="margin-bottom:0;">show them your <span class="git">gits</span> 😎</p>
             <img class="sn-gif img-fluid m-x-auto d-block" src="{% static 'images/getlines.gif' %}"/>
@@ -14,13 +18,14 @@
 
             <form action="." method="post" class="sn-form">
                 <div class="form-group">
-                    <label for="snippet">Snippet URL</label>
+                    <label for="snippet">Snippet URL (truncated to max 20 LoC)</label>
                     <input type="url" name="url" class="form-control" id="snippet" aria-describedby="snippetHelp" placeholder="Don't forget to highlight lines!">
                     <small id="snippetHelp" class="form-text text-muted">Example snippet: https://github.com/stiv15/arka/blob/master/component/Validador/Sql.class.php#L28-L33</small>
                 </div>
 
                 <input type="submit" class="btn btn-success btn-lg" value="Add Snippet" />
             </form>
+            {% endif %}
         </div>
     </div>
     <div class="row">
@@ -28,9 +33,18 @@
             {% if snippets|length == 0 %}
                 <h2>Add a snippet, yeah? 😙</h2>
             {% else %}
-                <h2>List of snippets</h2>
+                <h2>Your snippets</h2>
                 {% for snippet in snippets %}
-                    <p>{{ snippet }}</p>
+                    <div class="pm-snippet">
+                        <div class="pm-snippet-header">
+                            <i class="fa fa-trash" aria-hidden="true"></i> <a href="{% url 'users:snippet-action' 'delete' snippet.id %}">Delete snippet</a>
+                        </div>
+                        <pre><code class="python">{{ snippet.snippet }}</code></pre>
+                        <div class="pm-snippet-footer">
+                            <div class="pm-lang">Language: <strong>{{ snippet.lang }}</strong></div>
+                            <div class="pm-file">{{ snippet.name }}: {{ snippet.lines }}</div>
+                        </div>
+                    </div>
                 {% endfor %}
             {% endif %}
         </div>
@@ -38,4 +52,16 @@
 </div>
 {% endwith %}
 {% endblock content %}
+
+{% block javascript %}
+{{ block.super }}
+<script>
+$(document).ready(function() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+    hljs.lineNumbersBlock(block);
+  });
+});
+</script>
+{% endblock %}
 

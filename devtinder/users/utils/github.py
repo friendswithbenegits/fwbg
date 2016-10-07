@@ -1,7 +1,6 @@
 import requests
 import json
 
-
 exclude_keywords = ["log", "test", "setup", "config", "dot_git", "lib", "image", "images", "graphics", ".png", ".gif", ".pdf", ".jpg", ".ini", ".md"]
 
 def exclude_paths(path):
@@ -14,11 +13,11 @@ def exclude_paths(path):
 	return False
 
 def get_repos(user, username, password):
-	r = requests.get('https://api.github.com/users/{0}/repos'.format(user), auth=(username, password))
+	r = requests.get('https://api.github.com/users/{0}/repos'.format(user), auth=("friendwithnobenegits", "pixeldevtinder1"))
 	return json.loads(r._content)
 
 def get_contents(path, repo, username, password): #when called on a file returns a json that includes the encoded content
-	r = requests.get("https://api.github.com/repos/{0}/{1}/contents/{2}".format(repo["owner"]["login"], repo["name"], path), auth=(username, password))
+	r = requests.get("https://api.github.com/repos/{0}/{1}/contents/{2}".format(repo["owner"]["login"], repo["name"], path), auth=("friendwithnobenegits", "pixeldevtinder1"))
 	return json.loads(r._content)
 
 def crawl_repo_files(path, files, repo, ext, username, password):

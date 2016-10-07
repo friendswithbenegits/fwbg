@@ -208,6 +208,7 @@ class RepositorySnippet(models.Model):
     owner = models.ForeignKey(User)
     repository = models.CharField(max_length=124)
     language = models.CharField(max_length=124)
+    lines = models.CharField(max_length=124)
     stars = models.IntegerField(default=0)
     snippet = models.TextField()
 

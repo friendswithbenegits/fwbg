@@ -27,7 +27,10 @@ body {
   font-weight: bold;
   color: #fd5c63;
 }
-
+.directsignout {
+  background-color: transparent;
+  border: none;
+}
 .navbar-brand:active, .navbar-brand:hover, .navbar-brand:visited {
   color: black;
   text-decoration: none;
@@ -37,7 +40,7 @@ body {
     text-decoration: none;
 }
 .btn-auth:hover {
-  box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.50);
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.10);
 }
 .btn-auth:before {
     content: "";
@@ -138,6 +141,18 @@ body {
   border-radius: 3px;
   font-size: 12px;
 }
+.pm-snippet-header {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-radius: 0 0 2px 2px;
+}
+.pm-snippet-header a {
+  color: #fd5c63;
+}
+.pm-snippet-header a:hover {
+  text-decoration: underline;
+}
 .pm-snippet-footer {
   font-weight: bold;
   border-top: 1px solid #ddd;
@@ -159,11 +174,14 @@ body {
   font-weight: bold;
   text-align: left;
 }
+.pm-likedislike a {
+  color: white!important
+}
 .pm-like {
-  float: left;
+  float: right;
 }
 .pm-dislike {
-  float: right;
+  float: left;
 }
 .hljs {
   background-color: white!important;
@@ -210,7 +228,7 @@ body {
 .sn-example-url {
   font-size: 10px;
 }
-.sn-form #snippetHelp {
+.sn-form > div > small#snippetHelp {
   text-align: left;
   font-size: 10px;
 }

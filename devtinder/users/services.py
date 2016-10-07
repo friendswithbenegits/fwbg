@@ -6,6 +6,7 @@ __email__ = "andre@unbabel.com"
 
 import requests
 import base64
+import json
 
 def get_data(url, user):
     """Currently we need to return the following json"""
@@ -15,17 +16,51 @@ def get_data(url, user):
     if handler != user.username:
         raise Exception("User doesn't own repo")
 
-    response = requests.get(api_url)
+    response = requests.get(api_url, auth=("friendwithnobenegits", "pixeldevtinder1"))
     if response.status_code != 200:
         raise Exception("Repository is not public.")
     file = base64.b64decode(response.json().get('content'))
 
+    maxlines = 20
+    startline = 0
+    endline = startline+maxlines
+
+    try:
+        print url
+        if '#' in url:
+            lines = url[url.find("#")+1:]
+            if '-' in lines:
+                endline = int(lines[lines.find('-')+2:])
+                startline = int(lines[1:lines.find('-')])
+                if startline >= endline:
+                    startline = endline - 20
+            else:
+                startline = int(lines[1:])
+                endline = startline+maxlines
+    except Exception, e:
+        print e
+
+    # limit lines of code
+    file = "\n".join(file.split('\n')[startline:endline])
+    if file == "":
+        startline = 0
+        endline = startline+maxlines
+        file = "\n".join(file.split('\n')[0:endline])
+    lines = 'L{}-L{}'.format(startline, endline)
+    print lines
+    print file
+
+
+    r = requests.get('https://api.github.com/repos/{0}/{1}'.format(user.username, repo), auth=("friendwithnobenegits", "pixeldevtinder1"))
+    repository = json.loads(r._content)
+
     return {
         'message': message,
         'name': repo,
-        'file_name' : response.json().get('name')
+        'file_name' : response.json().get('name'),
         'stars': response.json().get('size'),
-        'language': 0,
+        'lines': lines,
+        'language': repository["language"],
         'snippet': file
     }
 
