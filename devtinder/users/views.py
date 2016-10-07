@@ -120,8 +120,9 @@ class UserSelectSnippetView(LoginRequiredMixin, FormView):
             language = data.get('language')
             stars = data.get('stars')
             snippet = data.get('snippet')
+            lines = data.get('lines')
             rs = RepositorySnippet.create(self.user, repository, language,
-                                          stars, snippet)
+                                          stars, snippet, lines)
             rs.save()
         except Exception, e:
             messages.add_message(self.request, messages.WARNING, e.message)

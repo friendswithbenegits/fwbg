@@ -25,6 +25,16 @@ class User(AbstractUser):
         return "@{}".format(self.name)
 
     @property
+    def location(self):
+        """"""
+        return self.get_github_account().get('location')
+
+    @property
+    def avatar(self):
+        """"""
+        return self.get_github_account().get('avatar')
+
+    @property
     def languages(self):
         """property that returns list of languages from all repos that this
         user has"""
@@ -105,8 +115,8 @@ class User(AbstractUser):
                 'to_user': {
                     'handler': snippet.owner.handler,
                     'username': snippet.owner.username,
-                    'location': 'Portugal',
-                    'avatar': 'https://avatars2.githubusercontent.com/u/5011530?v=3&s=400'
+                    'location': snippet.owner.location,
+                    'avatar': snippet.owner.avata,
                 },
                 'snippet': {
                     'lang': "yolo",
@@ -208,10 +218,10 @@ class RepositorySnippet(models.Model):
                            self.stars)
 
     @classmethod
-    def create(cls, owner, repository, language, stars, snippet):
+    def create(cls, owner, repository, language, stars, snippet, lines):
         """"""
         rs = cls.objects.create(owner=owner, repository=repository,
                                 language=language, stars=stars,
-                                snippet=snippet)
+                                snippet=snippet, lines=lines)
         rs.save()
         return rs
