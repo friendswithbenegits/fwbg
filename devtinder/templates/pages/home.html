@@ -1,5 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>yohh</h1>
+<div>
+{% if not request.user.is_authenticated %}
+    <h1>You need to login first</h1>
+{% else %}
+    <h1>Twitter handler: {{ pm.to_user.handler }}</h1>
+    <h2>Project name: {{ pm.repo.name }}</h2>
+    <pre class="snippet">{{ pm.repo.snippet }}</pre>
+    <a href="{% url 'users:action' 'dislike' 'pm.to_user.username' %}">Dislike</a>
+    <strong>OR</strong>
+    <a href="{% url 'users:action' 'like' 'pm.to_user.username' %}">Like</a>
+</div>
+{% endif %}
 {% endblock content %}
