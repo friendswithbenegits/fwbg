@@ -52,6 +52,9 @@
                   <a class="nav-link" href="{% url 'users:add-snippet' %}">Add your <span class="git">gits</span></a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{{ request.user.username }}</a>
                 </li>
                 <li class="nav-item">

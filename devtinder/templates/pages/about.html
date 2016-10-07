@@ -1,2 +1,28 @@
 {% extends "base.html" %}
 
+{% load staticfiles %}
+
+{% block content %}
+<div class="row">
+
+<div class="pm-container center-form-container">
+    <h5>friendswithbene<span class="git">git</span>s is a way to connect developers</h5>
+    <h6>tinder-with-snippets-of-code instead of pictures</h6>
+    <br />
+
+    <h3>It works by showing you this:</h3>
+    <div class="pm-snippet">
+        <pre><code class="python">fac=lambda(n):reduce(int.__mul__,range(1,n+1),1)</code></pre>
+        <div class="pm-snippet-footer">
+            <div class="pm-lang">Language: <strong>python</strong></div>
+            <div class="pm-file">main.py: L1</div>
+        </div>
+    </div>
+
+    <br />
+    <h3>Instead of this:</h3>
+    <img class="img-rounded img-fluid" src="{% static 'images/tinder-pic.JPG' %}"/>
+</div>
+
+</div>
+{% endblock %}
