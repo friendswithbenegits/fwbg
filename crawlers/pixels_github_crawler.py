@@ -1,42 +1,59 @@
 from github import *
 import json
 import traceback
+from repo_snippet_fetcher import *
 
-def store_person(person, f_people): #nome, avatar, email, empresa, location, repos, n_followers, url
-	p_repos = []
-	for repo in person.get_repos():
-		if repo.owner.name == person.name:
-			p_repos.append({
-				"repo_name" : repo.name,
-				"repo_url" : repo.html_url
-			})
+def store_person(person): #nome, avatar, email, empresa, location, repos, n_followers, url, id
+	try:
+		p_dict = {
+			"name" : person.name,
+			"avatar_url" : person.avatar_url,
+			"url" : person.html_url,
+			"email" : person.email,
+			"company" : person.company,
+			"location" : person.location,
+			"repos" : get_user_repos(person.id),
+			"num_followers" : person.followers,
+			"id" : person.id
+		}
 
-	p_dict = {
-		"name" : person.name,
-		"avatar_url" : person.avatar_url,
-		"url" : person.html_url,
-		"email" : person.email,
-		"company" : person.company,
-		"location" : person.location,
-		"repos" : p_repos,
-		"num_followers" : person.followers
-	}
+		f_people = open('people.json','a')
+		try:
+			f_people.write(json.dumps(p_dict)+"\n")
+		finally:
+			f_people.close()
+		
+		print u"Stored person: {0}".format(person.name)
+	
+	except:
+		print u"Failed to store person: {0}".format(person.name)
 
-	f_people.write(json.dumps(p_dict)+"\n")
-	print "Stored person: {0}".format(p_dict["name"])
 	return
 
-def store_repo(repo, f_repos): #nome, n_contribuidores, linguagens, stars, url
-	langs = repo.get_languages()
+def store_repo(repo): #nome, n_contribuidores, linguagens, stars, url, id
+	try:	
+		langs = repo.get_languages()
 
-	r_dict = {
-		"name" : repo.name,
-		"url" : repo.html_url,
-		"languages" : langs,
-		"stats" : repo.stargazers_count
-	}
-	print "Stored repo: {0}".format(r_dict["name"])
-	f_repos.write(json.dumps(r_dict)+"\n")
+		r_dict = {
+			"name" : repo.name,
+			"url" : repo.html_url,
+			"languages" : langs,
+			"stats" : repo.stargazers_count,
+			"id" : repo.id
+			"snippet" : get_repo_snippet(repo.id)
+		}
+
+		f_repos = open('repos.json','a')
+		try:
+			f_repos.write(json.dumps(r_dict)+"\n")
+		finally:
+			f_repos.close()
+
+		print u"Stored repo: {0}".format(repo.name)
+	
+	except:
+		print u"Failed to store repo: {0}".format(repo.name)
+	
 	return
 
 with open("login.key", "r") as f:
@@ -46,28 +63,9 @@ g = Github(lines[0], lines[1])
 pixels = g.get_organization("PixelsCamp")
 pixel_repos = pixels.get_repos()
 
-for repo in pixel_repos:
-	try:
-		for person in repo.get_contributors():
-			f_people = open('people.json','a')
-			try:
-				store_person(person, f_people)
-				for rep in person.get_repos():
-					if repo.owner.name == person.name:
-						f_repos = open('repos.json', 'a')
-						try:
-							store_repo(rep, f_repos)
-						except:
-							print "failed to store repo of {0}".format(person.name)
-							traceback.print_exc()
-						finally:
-							f_repos.close()
-
-			except:
-				print "failed to store person and its repos"
-				traceback.print_exc()
-			finally:
-				f_people.close()
-	except:
-		print "failed to store pixels camp repo {0} and its contributors".format(repo)
-		traceback.print_exc()
+for repo in pixel_repos: #all repos in PixelsCamp' GitHub organization...
+	for person in repo.get_contributors(): #all contributores in each of those repos...
+		store_person(person)
+		for rep in person.get_repos(): #each repo owned by each of those contributors...
+			for pers in rep.get_contributors(): #each contributor on each of those repos...
+				store_person(pers)
