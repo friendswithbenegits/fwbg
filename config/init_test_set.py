@@ -5,8 +5,7 @@ __author__ = "andresilva"
 __email__ = "andre@unbabel.com"
 import uuid
 import random
-from devtinder.users.models import (User, UserRepository, UserLike,
-                                    RepositorySnippet)
+from devtinder.users.models import (User, UserLike, RepositorySnippet)
 from allauth.socialaccount.models import SocialAccount
 
 AMOUNT_USERS = 10
@@ -14,7 +13,6 @@ AMOUNT_REPOS = 10
 
 MIN_LIKES_PER_USER = 1
 MAX_LIKES_PER_USER = 10
-
 
 
 def init():
@@ -30,20 +28,15 @@ def init():
                                           extra_data=get_extra_data())
         sa.save()
 
-    reponame = 'test-repo-'
+    repository = 'test-repo-'
     for i in range(AMOUNT_REPOS):
-        reponame += str(UserRepository.objects.count())
+        repository += str(RepositorySnippet.objects.count())
         owner = User.objects.order_by("?").limit(1)
         language = random.choice(get_languages())
         stars = random.randint(0, 200)
-
-        ur = UserRepository.create(owner, language, stars)
+        snippet = get_snippets(language)
+        ur = RepositorySnippet.create(owner, repository, language, stars, snippet)
         ur.save()
-
-        rating = random.randint(0, 10)
-        rs = RepositorySnippet.create(ur, get_snippets(language), rating)
-        rs.save()
-
 
     for u in User.objects.all():
         for _ in random.randint(MIN_LIKES_PER_USER, MAX_LIKES_PER_USER):

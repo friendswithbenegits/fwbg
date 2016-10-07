@@ -6,8 +6,9 @@ from django.core.urlresolvers import reverse
 from django.views.generic import (DetailView, ListView, RedirectView,
                                   UpdateView, View, FormView)
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib import messages
 
-from .models import User, RepositorySnippet, UserRepository
+from .models import User, RepositorySnippet
 from .forms import RepoUrlInputFrom
 from .services import get_data
 
@@ -74,29 +75,31 @@ class UserSelectSnippetView(LoginRequiredMixin, FormView):
     form_class = RepoUrlInputFrom
     success_url = "."
 
-    # def dispatch(self, request, *args, **kwargs):
-    #     self.user = self.request.user
-    #     return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
+    def dispatch(self, request, *args, **kwargs):
+        self.user = self.request.user
+        return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
 
-    # def get_context_data(self, **kwargs):
-    #     ctx = super(UserSelectSnippetView, self).get_context_data(**kwargs)
-    #     ctx['repos'] = UserRepository.objects.filter(owner=self.user)
-    #     return ctx
+    def get_context_data(self, **kwargs):
+        ctx = super(UserSelectSnippetView, self).get_context_data(**kwargs)
+        ctx['snippets'] = RepositorySnippet.objects.filter(owner=self.user)
+        return ctx
 
-    # def form_invalid(self, form):
-    #     return super(UserSelectSnippetView, self).form_invalid(form)
+    def form_invalid(self, form):
+        return super(UserSelectSnippetView, self).form_invalid(form)
 
-    # def form_valid(self, form):
-    #     url = form.cleaned_data['url']
-    #     data = get_data(url)
+    def form_valid(self, form):
+        url = form.cleaned_data['url']
+        try:
+            data = get_data(url)
+            repository = data.get('name')
+            language = data.get('language')
+            stars = data.get('stars')
+            snippet = data.get('snippet')
+            import pdb; pdb.set_trace()
+            rs = RepositorySnippet.create(self.user, repository, language,
+                                          stars, snippet)
+            rs.save()
+        except Exception, e:
+            messages.add_message(self.request, messages.WARNING, e.message)
+        return super(UserSelectSnippetView, self).form_valid(form)
 
-    #     language = data.get('language')
-    #     stars = data.get('stars')
-    #     snippet = data.get('snippet')
-
-    #     repo = UserRepository.get_or_create(self.user, language, stars)
-    #     repo.save()
-
-    #     snippet = RepositorySnippet.create(repo, snippet)
-    #     snippet.save()
-    #     return super(UserSelectSnippetView, self).form_valid(form)

@@ -25,12 +25,12 @@
     </div>
     <div class="row">
         <div class="pm-container center-form-container" style="margin-top: 30px;">
-            {% if repos|length == 0 %}
+            {% if snippets|length == 0 %}
                 <h2>Add a snippet, yeah? 😙</h2>
             {% else %}
-                <h2>List of repos</h2>
-                {% for repo in repos %}
-                    <p>{{ repo }}</p>
+                <h2>List of snippets</h2>
+                {% for snippet in snippets %}
+                    <p>{{ snippet }}</p>
                 {% endfor %}
             {% endif %}
         </div>
