@@ -28,6 +28,8 @@ def get_data(url):
             if '-' in lines:
                 endline = int(lines[lines.find('-')+2:])
                 startline = int(lines[1:lines.find('-')])
+                if startline >= endline:
+                    startline = endline - 20
             else:
                 startline = int(lines[1:])
                 endline = startline+maxlines
@@ -36,6 +38,10 @@ def get_data(url):
 
     # limit lines of code
     file = "\n".join(file.split('\n')[startline:endline])
+    if file == "":
+        startline = 0
+        endline = startline+maxlines
+        file = "\n".join(file.split('\n')[0:endline])
     lines = 'L{}-L{}'.format(startline, endline)
     print lines
     print file
