@@ -6,13 +6,17 @@ __email__ = "andre@unbabel.com"
 
 import requests
 import base64
+import json
 
-
-def get_data(url):
+def get_data(url, user):
     """Currently we need to return the following json"""
     message = "Okay"
-    api_url = convert_github_html_url_to_api_url(url)
-    response = requests.get(api_url)
+    api_url,repo,handler = convert_github_html_url_to_api_url(url)
+
+    if handler != user.username:
+        raise Exception("User doesn't own repo")
+
+    response = requests.get(api_url, auth=("friendwithnobenegits", "pixeldevtinder1"))
     if response.status_code != 200:
         raise Exception("Repository is not public.")
     file = base64.b64decode(response.json().get('content'))
@@ -46,12 +50,17 @@ def get_data(url):
     print lines
     print file
 
+
+    r = requests.get('https://api.github.com/repos/{0}/{1}'.format(user.username, repo), auth=("friendwithnobenegits", "pixeldevtinder1"))
+    repository = json.loads(r._content)
+
     return {
         'message': message,
-        'name': response.json().get('name'),
+        'name': repo,
+        'file_name' : response.json().get('name'),
         'stars': response.json().get('size'),
         'lines': lines,
-        'language': 0,
+        'language': repository["language"],
         'snippet': file
     }
 
@@ -67,4 +76,4 @@ def convert_github_html_url_to_api_url(url):
     line = contents.split("#")[-1]
     # create valid github api url
     github_url = ("https://api.github.com/repos/{}/{}/contents/{}?ref={}").format(handler, repo, contents, branch)
-    return github_url
+    return github_url,repo,handler

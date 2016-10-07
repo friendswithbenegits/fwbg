@@ -87,9 +87,21 @@ class User(AbstractUser):
 
     def get_unseen_matches(self):
         """"""
-        return {
-
-        }
+        matches = UserMatch.objects.filter(user1=self)
+        matches = matches.exclude(user1_has_seen=True)
+        
+        if len(matches) > 0:
+            return {
+                "status" : 200,
+                "matches" : matches,
+                "message" : "here you have some matches!"
+            }
+        else:   
+            return {
+                "status" : 400,
+                "matches" : [],
+                "message" : "no matches for you."
+            }
 
 
 
@@ -141,6 +153,8 @@ class UserMatch(models.Model):
     """"""
     user1 = models.ForeignKey(User, related_name="user_match_user1")
     user2 = models.ForeignKey(User, related_name="user_match_user2")
+    user1_has_seen = models.BooleanField(default=False)
+    user2_has_seen = models.BooleanField(default=False)
 
     @classmethod
     def get_or_create(cls, user1, user2):
