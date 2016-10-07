@@ -4,10 +4,11 @@ from __future__ import absolute_import, unicode_literals
 from django.shortcuts import redirect
 from django.core.urlresolvers import reverse
 from django.views.generic import (DetailView, ListView, RedirectView,
-                                  UpdateView, View)
+                                  UpdateView, View, FormView)
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import User
+from .forms import RepoUrlInputFrom
 
 import logging
 logger = logging.getLogger(__name__)
@@ -64,3 +65,21 @@ class UserActionView(LoginRequiredMixin, View):
         to_user = kwargs.get('to_user')
         logger.info("User {} {} user {}.".format(from_user, action, to_user))
         return redirect(reverse('home'))
+
+
+
+class UserSelectSnippetView(LoginRequiredMixin, FormView):
+    template_name = "users/user_snippet.html"
+    form_class = RepoUrlInputFrom
+
+    def get_context_data(self, **kwargs):
+        context = super(UserSelectSnippetView, self).get_context_data(**kwargs)
+        return context
+
+    def form_invalid(self, form):
+        return super(UserSelectSnippetView, self).form_invalid(form)
+
+    def form_valid(self, form):
+        url = form.cleaned_data['url']
+
+        return super(UserSelectSnippetView, self).form_valid(form)

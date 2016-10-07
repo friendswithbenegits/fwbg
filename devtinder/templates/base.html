@@ -16,6 +16,8 @@
     {% block css %}
     <!-- Latest compiled and minified Bootstrap 4 Alpha 4 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/github.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" >
 
     <!-- Your stuff: Third-party CSS libraries go here -->
     {% compress css %}
@@ -40,17 +42,17 @@
           <div class="collapse navbar-toggleable-xs" id="bs-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}">Finding you <strong>code</strong>mate</a>
+                <!--<a class="nav-link" href="{% url 'home' %}">Finding you <strong>code</strong>mate</a>-->
               </li>
             </ul>
 
             <ul class="nav navbar-nav pull-xs-right">
               {% if request.user.is_authenticated %}
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>
+                  <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{{ request.user.username }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
+                  <a class="nav-link" href="{% url 'account_logout' %}">sign out</a>
                 </li>
               {% else %}
                 <li class="nav-item">
@@ -86,6 +88,8 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+      <script src="{{ STATIC_URL }}/js/highlightjs-line-numbers.min.js"></script>
 
       <!-- Your stuff: Third-party javascript libraries go here -->
 

@@ -12,4 +12,5 @@ urlpatterns = [
     url(regex=r'^~update/$', view=views.UserUpdateView.as_view(), name='update'),
     # user actions
     url(regex=r'^action/(?P<action>[a-zA-Z0-9-]+)/(?P<to_user>[a-zA-Z0-9-+_.]+)$', view=views.UserActionView.as_view(), name='action'),
+    url(regex=r'^(?P<username>[\w.@+-]+)/add-snippet/$', view=views.UserSelectSnippetView.as_view(), name='add-snippet'),
 ]
