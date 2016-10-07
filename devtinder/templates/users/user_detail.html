@@ -8,11 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="center-form-container">
-            <h2><a href="{{ github.html_url }}">{{ object.username }}</a></h2>
-            <br />
-            <p><a href="{{ github.html_url }}"><img class="profilepic img-fluid" src="{{ github.avatar_url }}"/></a></p>
-            
-            <br />
+            <h1><a href="{{ github.html_url }}">{{ object.username }}</a></h1>
 
             <a href="{{ github.html_url }}?tab=following"><div class="profilestat" style="padding-left:0;">Following</div> <div class="counter">{% if github.following %}{{ github.following }}{% else %}0{% endif %}</div></a>
 
@@ -21,6 +17,8 @@
             <a href="{{ github.html_url }}?tab=repositories"><div class="profilestat">Repos</div> <div class="counter">{% if github.public_repos %}{{ github.public_repos }}{% else %}0{% endif %}</div></a>
 
             <br /><br />
+            <p><a href="{{ github.html_url }}"><img class="profilepic img-fluid" src="{{ github.avatar_url }}"/></a></p>
+
             {% if github.location %}
             <p><i class="fa fa-map-marker" aria-hidden="true"></i> {{ github.location }}</p>
             {% endif %}

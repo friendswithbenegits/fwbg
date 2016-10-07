@@ -30,8 +30,9 @@
                     </div>
                 </div>
                 <div class="pm-likedislike">
-                    <a href="{% url 'users:action' 'like' pm.to_user.username %}" class="btn btn-success btn-lg pm-like"><i class="fa fa-heart" aria-hidden="true"></i> git add</a>
                     <a href="{% url 'users:action' 'dislike' pm.to_user.username %}" class="btn btn-danger btn-lg pm-dislike"><i class="fa fa-times" aria-hidden="true"></i> git rm</a>
+
+                    <a href="{% url 'users:action' 'like' pm.to_user.username %}" class="btn btn-success btn-lg pm-like"><i class="fa fa-heart" aria-hidden="true"></i> git add</a>
                     <div style="clear: both;"></div>
                 </div>
             </div>
