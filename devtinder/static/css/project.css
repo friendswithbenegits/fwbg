@@ -1,38 +1,82 @@
 /* These styles are generated from project.scss. */
-
-.alert-debug {
-  color: black;
-  background-color: white;
-  border-color: #d6e9c6;
-}
-
-.alert-error {
-  color: #b94a48;
-  background-color: #f2dede;
-  border-color: #eed3d7;
-}
-
-/* This is a fix for the bootstrap4 alpha release */
+.alert-debug { color: black; background-color: white; border-color: #d6e9c6; }
+.alert-error { color: #b94a48; background-color: #f2dede; border-color: #eed3d7; }
 @media (max-width: 47.9em) {
-  .navbar-nav .nav-item {
-    float: none;
-    width: 100%;
-    display: inline-block;
-  }
+  .navbar-nav .nav-item { float: none; width: 100%; display: inline-block; }
+  .navbar-nav .nav-item + .nav-item { margin-left: 0; }
+  .nav.navbar-nav.pull-xs-right { float: none !important;}
+}
+[hidden][style="display: block;"] {  display: block !important; }
 
-  .navbar-nav .nav-item + .nav-item {
-    margin-left: 0;
-  }
-
-  .nav.navbar-nav.pull-xs-right {
-    float: none !important;
-  }
+/* CUSTOM STYLES */
+body {
+  font-family: 'Raleway', sans-serif;
+  color: black;
+}
+.navbar-brand {
+  font-weight: lighter;
+}
+.git {
+  font-weight: bold;
+  color: #fd5c63;
 }
 
-/* Display django-debug-toolbar.
-   See https://github.com/django-debug-toolbar/django-debug-toolbar/issues/742
-   and https://github.com/pydanny/cookiecutter-django/issues/317
-*/
-[hidden][style="display: block;"] {
-  display: block !important;
+.navbar-brand:active, .navbar-brand:hover, .navbar-brand:visited {
+  color: black;
+  text-decoration: none;
+}
+.btn-auth:hover, .btn-auth:focus, .btn-auth:active {
+    color: #222;
+    text-decoration: none;
+}
+.btn-auth:hover {
+  box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.50);
+}
+.btn-auth:before {
+    content: "";
+    float: left;
+    width: 22px;
+    height: 22px;
+    background: url(https://s3.amazonaws.com/devtindertest/static/images/auth-icons.png) no-repeat 99px 99px;
+}
+.btn-auth, .btn-auth:visited {
+  position: relative;
+  display: inline-block;
+  height: 22px;
+  padding: 0.2em 0.3em 0.2em 0.1em;
+  border: 1px solid #999;
+  border-radius: 2px;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 22px;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #222;
+  background: #fff;
+  box-sizing: content-box;
+}
+.btn-auth.large {
+  height: 36px;
+  line-height: 36px;
+  font-size: 20px;
+}
+.btn-github.large:before {
+    background-position: -72px -22px;
+}
+.btn-auth.large:before {
+    width: 36px;
+    height: 36px;
+}
+.btn-github, .btn-github:visited {
+  border-color: #d4d4d4;
+  background: #ececec;
+  background-image: linear-gradient(#f4f4f4, #ececec);
+}
+.center-form-container {
+    text-align: center;
+    max-width: 330px;
+    margin: 50px auto 0 auto;
+    padding: 40px 40px 20px 40px;
 }
