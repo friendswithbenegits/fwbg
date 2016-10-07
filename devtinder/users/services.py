@@ -19,6 +19,7 @@ def get_data(url):
     maxlines = 20
     startline = 0
     endline = startline+maxlines
+    lines = 'L{}-L{}'.format(startline, endline)
 
     try:
         if '#' in url:
@@ -39,6 +40,7 @@ def get_data(url):
         'message': message,
         'name': response.json().get('name'),
         'stars': response.json().get('size'),
+        'lines': lines,
         'language': 0,
         'snippet': file
     }
