@@ -20,9 +20,9 @@ def get_data(url):
     maxlines = 20
     startline = 0
     endline = startline+maxlines
-    lines = 'L{}-L{}'.format(startline, endline)
 
     try:
+        print url
         if '#' in url:
             lines = url[url.find("#")+1:]
             if '-' in lines:
@@ -36,6 +36,9 @@ def get_data(url):
 
     # limit lines of code
     file = "\n".join(file.split('\n')[startline:endline])
+    lines = 'L{}-L{}'.format(startline, endline)
+    print lines
+    print file
 
     return {
         'message': message,
