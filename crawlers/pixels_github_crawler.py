@@ -1,19 +1,10 @@
 from github import *
 import json
 import traceback
+from repo_snippet_fetcher import *
 
 def store_person(person): #nome, avatar, email, empresa, location, repos, n_followers, url, id
 	try:
-		p_repos = []
-		for repo in person.get_repos():
-			if repo.owner.name == person.name:
-				p_repos.append({
-					"repo_name" : repo.name,
-					"repo_url" : repo.html_url,
-					"repo_id" : repo.id
-				})
-				store_repo(repo)
-
 		p_dict = {
 			"name" : person.name,
 			"avatar_url" : person.avatar_url,
@@ -21,7 +12,7 @@ def store_person(person): #nome, avatar, email, empresa, location, repos, n_foll
 			"email" : person.email,
 			"company" : person.company,
 			"location" : person.location,
-			"repos" : p_repos,
+			"repos" : get_user_repos(person.id),
 			"num_followers" : person.followers,
 			"id" : person.id
 		}
@@ -49,6 +40,7 @@ def store_repo(repo): #nome, n_contribuidores, linguagens, stars, url, id
 			"languages" : langs,
 			"stats" : repo.stargazers_count,
 			"id" : repo.id
+			"snippet" : get_repo_snippet(repo.id)
 		}
 
 		f_repos = open('repos.json','a')
@@ -64,14 +56,12 @@ def store_repo(repo): #nome, n_contribuidores, linguagens, stars, url, id
 	
 	return
 
-
 with open("login.key", "r") as f:
 	lines = f.read().splitlines()
 
 g = Github(lines[0], lines[1])
 pixels = g.get_organization("PixelsCamp")
 pixel_repos = pixels.get_repos()
-
 
 for repo in pixel_repos: #all repos in PixelsCamp' GitHub organization...
 	for person in repo.get_contributors(): #all contributores in each of those repos...
