@@ -20,6 +20,11 @@ class User(AbstractUser):
     has_signup = models.BooleanField(default=False)
 
     @property
+    def handler(self):
+        """return twitter handler"""
+        return "@{}".format(self.name)
+
+    @property
     def languages(self):
         """property that returns list of languages from all repos that this
         user has"""
@@ -60,32 +65,53 @@ class User(AbstractUser):
         return dislike
     # endregion
 
+    def get_all_snippets(self):
+        """Get all snippets for each repo from given user"""
+        repos = UserRepository.objects.filter(user=self)
+        snippets = RepositorySnippet.objects.filter(repository=repos)
+        return snippets
+
+
     # region Frontend Action Triggers
     def get_possible_match(self):
-        """Return possible match for this user"""
+        """Return possible match for this user:
+        1º - Get all users except myself.
+        2º - From all users remove ones that I already gave like or dislike
+        3º - and get all their repos that have the same language as I have.
+        4º - order repo by stars and get first one"""
         users = User.objects.exclude(id=self.id)
+        import pdb; pdb.set_trace()
+        likes = UserLike.objects.filter(
+            from_user=self).values_list('to_user')
+        dislikes = UserDislike.objects.filter(
+            from_user=self).values_list('to_user')
+        users.exclude(id__in=list(set(list(likes) + list(dislikes))))
+
         repositories = UserRepository.objects.filter(
             owner__in=users, language__in=self.languages)
 
-        UserLike.objects.filter()
-        UserDislike.objects.filter()
-        UserMatch.objects.filter()
-
-        repositories.exclude()
-        return {
-            'to_user': {
-                'handler': '@andreffs18',
-                'username': 'andreffs18'
-            },
-            'repo': {
-                'name': 'Sucky project',
-                'snippet': "",
-            },
-        }
-
-
+        repo = repositories.order_by('-stars').limit(1)
+        if repo is None:
+            return {
+                'status': 400,
+                'message': "No More Matches",
+                'to_user': {},
+                'repo': {},
+            }
+        else:
+            return {
+                'status': 200,
+                'message': "Hello",
+                'to_user': {
+                    'handler': repo.owner.handler,
+                    'username': repo.owner.username,
+                },
+                'repo': {
+                    'name': repo.name,
+                    'snippet': repo.get_snipper(),
+                },
+            }
     # endregion
-
 
 
 class UserMatch(models.Model):
@@ -146,24 +172,34 @@ class UserDislike(models.Model):
 class UserRepository(models.Model):
     """"""
     owner = models.ForeignKey(User)
+    name = models.CharField(max_length=124)
     language = models.CharField(max_length=124)
-    starts = models.IntegerField(default=0)
+    stars = models.IntegerField(default=0)
 
     @classmethod
-    def create(cls, owner, language):
+    def create(cls, owner, language, stars=0):
         """"""
-        ur = cls.objects.create(owner=owner, language=language)
+        ur = cls.objects.create(owner=owner, language=language, stars=stars)
         ur.save()
         return ur
+
+    def get_snipper(self):
+        """Get random snippet from this repository"""
+        snippet = RepositorySnippet.objects.filter(repository=self)
+        snippet = snippet.order_by('-rating').limit(1)
+        return snippet
 
 
 class RepositorySnippet(models.Model):
     """"""
+    repository = models.ForeignKey(UserRepository)
     snippet = models.TextField()
+    rating = models.IntegerField(default=0)
 
     @classmethod
-    def create(cls, snippet):
+    def create(cls, repository, snippet, rating=0):
         """"""
-        rs = cls.objects.create(snippet=snippet)
+        rs = cls.objects.create(repository=repository, snippet=snippet,
+                                rating=rating)
         rs.save()
         return rs
