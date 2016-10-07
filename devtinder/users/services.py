@@ -16,8 +16,24 @@ def get_data(url):
         raise Exception("Repository is not public.")
     file = base64.b64decode(response.json().get('content'))
 
+    maxlines = 20
+    startline = 0
+    endline = startline+maxlines
+
+    try:
+        if '#' in url:
+            lines = url[url.find("#")+1:]
+            if '-' in lines:
+                endline = int(lines[lines.find('-')+2:])
+                startline = int(lines[1:lines.find('-')])
+            else:
+                startline = int(lines[1:])
+                endline = startline+maxlines
+    except:
+        pass
+
     # limit lines of code
-    file = "\n".join(file.split('\n')[0:20])
+    file = "\n".join(file.split('\n')[startline:endline])
 
     return {
         'message': message,
