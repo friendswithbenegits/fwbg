@@ -242,3 +242,24 @@ body {
     padding: 0px 6px;
     border-radius: 17px;
 }
+
+/* MATCH DETAIL */
+.match-message {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.match-message img {
+  max-width: 32px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.match-message div {
+  display: inline-block;
+  padding: 6px 10px;
+  background-color: #f1f0f0;
+  border-radius: 1.3em;
+}
+.match-message div.from {
+  color: white;
+  background-color: rgb(250, 60, 76);
+}

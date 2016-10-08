@@ -10,10 +10,10 @@
                 <h1>No matches, yet! 😭</h1>
                 {% if me.get_all_snippets|length == 0 %}
                 <p>Start by adding your <span class="git">git</span>s</p>
-                {% else %}
-                <p>
                 {% endif %}
             {% else %}
+                <h1>It's a match! 😍</h1>
+                <img class="img-fluid img-rounded" style='height: 100%; width: 100%; object-fit: contain' src="{% static 'images/omgmatch4.gif' %}"/>
                 <ul>
                 {% for match in matches %}
                     <li class=""><a href="{% url 'users:match-detail' match.id %}">{{ me }} with {{ match.to_user }}</a></li>

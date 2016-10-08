@@ -4,57 +4,41 @@
 {% block content %}
 
 {% with github=object.get_github_account %}
-    <div class="container">
+    <div class="pm-container center-form-container">
+        <h2>You're a match with <strong>{{ from_user.username }}</strong> 😍</h2>
         <div class="row">
-            <div class="pm-container center-form-container">
-                <h2>You've got a match from <strong>{{ from_user.username }}</strong></h2>
-                <div class="row">
-                    <div class="col-xs-6">
-                        <img src="{{ to_user.avatar_url }}" class="img-fluid img-circle">
-                    </div>
-                    <div class="col-xs-6">
-                        <img src="{{ from_user.avatar_url }}" class="img-fluid img-circle">
-                    </div>
-                </div>
-                <div class="row">
-                    <p><a class="github-button" href="https://github.com/{{ from_user.username }}" data-style="mega" aria-label="Follow @{{ from_user.username }} on GitHub">Follow @{{ from_user.username }}</a></p>
-                    <p><a href="https://github.com/new">Create a new repository on GitHub, to start a project with {{ from_user.username }}!</a></p>
-                    <p>Shoot him an e-mail at: {{ from_user.email }}</p>
-                </div>
+            <div class="col-xs-6">
+                <img src="{{ to_user.avatar_url }}" class="img-fluid img-circle">
             </div>
+            <div class="col-xs-6">
+                <img src="{{ from_user.avatar_url }}" class="img-fluid img-circle">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <p><a class="github-button" href="https://github.com/{{ from_user.username }}" data-style="mega" aria-label="Follow @{{ from_user.username }} on GitHub">Follow @{{ from_user.username }}</a></p>
+            {# <p><a href="https://github.com/new">Create a new repository on GitHub, to start a project with {{ from_user.username }}!</a></p> #}
+            {% if from_user.email %}<p>Shoot him an e-mail at: {{ from_user.email }}</p>{% endif %}
         </div>
     </div>
 
-
-    <div class="container">
-        <div class="row">
-            <div class="pm-container center-form-container">
-                {% for message in msgs %}
-                <div class="row">
-                    {% if message.orientation == "left" %}
-                    <div class="pull-left">
-                        <div class="col-xs-2"><img src="{{ message.from_user.avatar_url }}" class="img-fluid img-circle"></div>
-                        <div class="col-xs-2"><img src="{{ message.to_user.avatar_url }}" class="img-fluid img-circle"></div>
-                    </div>
-                    <div>
-                        <small class="text-left">{{ message.creation_date }}</small>
-                        <p class="text-left">{{ message.content }}</p>
-                    </div>
-                    {% elif message.orientation == "right" %}
-                    <div>
-                        <small class="pull-right">{{ message.creation_date }}</small>
-                        <p class="pull-right">{{ message.content }}</p>
-                    </div>
-                    <div class="pull-right">
-                        <div class="col-xs-2"><img src="{{ message.from_user.avatar_url }}" class="img-fluid img-circle"></div>
-                        <div class="col-xs-2"><img src="{{ message.to_user.avatar_url }}" class="img-fluid img-circle"></div>
-                    </div>
-                    {% endif %}
-
-                </div>
-                {% endfor %}
+    <div class="pm-container center-form-container" style="margin-top:20px;">
+        {% for message in msgs %}
+            {% if message.from_user == request.user %}
+            <div class="pull-left match-message">
+                <img src="{{ message.from_user.avatar_url }}" class="img-fluid img-circle" />
+                <div class="text-left">{{ message.content }}</div><br>
+                <small class="text-left text-muted">{{ message.creation_date }}</small>
             </div>
-        </div>
+            {% else %}
+            <div class="pull-right match-message">
+                <div class="text-right from">{{ message.content }}</div><br>
+                <small class="text-right text-muted">{{ message.creation_date }}</small>
+                <img src="{{ message.from_user.avatar_url }}" class="img-fluid img-circle" />
+            </div>
+            {% endif %}
+            <div style="clear: both;"></div>
+        {% endfor %}
     </div>
 {% endwith %}
 {% endblock content %}
