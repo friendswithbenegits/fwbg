@@ -81,6 +81,7 @@ class UserActionView(LoginRequiredMixin, View):
             pass
         return redirect(reverse('home'))
 
+
 class UserSnippetActionView(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
@@ -142,7 +143,23 @@ class UserMatchesView(LoginRequiredMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         ctx = super(UserMatchesView, self).get_context_data(**kwargs)
-        ctx['matches'] = UserMatch.get_matches(self.user)
+        ctx['matches'] = list()
+
+        matches = UserMatch.get_matches(self.user)
+        for m in matches:
+            if self.user == m.user1:
+                ctx['matches'].append({
+                    'id': m.id,
+                    'to_user': m.user2
+                })
+            elif self.user ==  m.user2:
+                ctx['matches'].append({
+                    'id': m.id,
+                    'to_user': m.user1
+                })
+            else:
+                raise ValueError("User {} does not belong to this UserMatch"
+                   "".format(self.user))
         return ctx
 
 
@@ -167,7 +184,7 @@ class UserMatchDetailView(LoginRequiredMixin, TemplateView):
         if match.user1 == self.user:
             ctx["from_user"] = match.user2
         elif match.user2 == self.user:
-            ctx["from_user"] = match.user2
+            ctx["from_user"] = match.user1
         else:
             raise ValueError("User {} does not belong to this UserMatch"
                    "".format(self.user))

@@ -12,11 +12,7 @@
             {% else %}
                 <ul>
                 {% for match in matches %}
-                    {% if me == match.user1 %}
-                        <li class=""><a href="{% url 'users:match-detail' match.id %}">{{ match.user2 }} with {{ me }}</a></li>
-                    {% elif me == match.user2 %}
-                        <li><a href="{% url 'users:match-detail' match.id %}">{{ match.user2 }} with {{ me }}</a></li>
-                    {% endif %}
+                    <li class=""><a href="{% url 'users:match-detail' match.id %}">{{ me }} with {{ match.to_user }}</a></li>
                 {% endfor %}
                 </ul>
             {% endif %}
