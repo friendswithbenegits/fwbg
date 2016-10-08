@@ -165,7 +165,7 @@ class UserMatchesView(LoginRequiredMixin, TemplateView):
 
 
 class UserMatchDetailView(LoginRequiredMixin, FormView):
-    form_class = MessageInputForm#
+    form_class = MessageInputForm
     template_name = "users/user_match_detail.html"
     success_url = "."
 
@@ -177,8 +177,13 @@ class UserMatchDetailView(LoginRequiredMixin, FormView):
         ctx = super(UserMatchDetailView, self).get_context_data(**kwargs)
         match_id = self.kwargs.get("match_id")
         match = UserMatch.objects.get(id=match_id)
+
+        before_get_flag_status = match.get_has_seen(self.user)
         match.mark_as_seen_by(self.user)
         match.save()
+        after_get_flag_status = match.get_has_seen(self.user)
+        # need to store if this is the first time
+        ctx["first_time"] = before_get_flag_status != after_get_flag_status
 
         ctx["match"] = match
         ctx["from_user"] = self.user

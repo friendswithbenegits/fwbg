@@ -89,7 +89,6 @@ class User(AbstractUser):
 
 
     # region Frontend Action Triggers
-
     def get_unseen_matches(self):
         """"""
         matches = UserMatch.objects.filter(user1=self)
@@ -97,15 +96,15 @@ class User(AbstractUser):
         
         if len(matches) > 0:
             return {
-                "status" : 200,
-                "matches" : matches,
-                "message" : "here you have some matches!"
+                "status": 200,
+                "matches": matches,
+                "message": "here you have some matches!"
             }
         else:   
             return {
-                "status" : 400,
-                "matches" : [],
-                "message" : "no matches for you."
+                "status": 400,
+                "matches": [],
+                "message": "no matches for you."
             }
 
     def get_suggestions(self):
@@ -177,6 +176,16 @@ class UserMatch(models.Model):
             um = cls.objects.create(user1=user1, user2=user2)
             um.save()
         return um
+
+    def get_has_seen(self, user):
+        """"""
+        if self.user1 == user:
+            return self.user1_has_seen
+        elif self.user2 == user:
+            return self.user2_has_seen
+        else:
+            raise ValueError("User {} does not belong to this UserMatch"
+                             "".format(user))
 
     def mark_as_seen_by(self, user):
         """"""
