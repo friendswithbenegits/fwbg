@@ -259,10 +259,12 @@ body {
   display: inline-block;
   margin-right: 10px;
   height: 100%;
+  float: left;
 }
 .match-message-pic.from {
   margin-right: 0px;
   margin-left: 10px;
+  float: right;
 }
 .match-message img {
   max-width: 32px;
@@ -272,8 +274,16 @@ body {
   padding: 6px 10px;
   background-color: #f1f0f0;
   border-radius: 1.3em;
+  float: left;
+}
+.match-message small {
+  float: left;
 }
 .match-message .match-mtext.from {
   color: white;
   background-color: rgb(250, 60, 76);
+  float: right;
+}
+.match-message.from small {
+  float: right;
 }
