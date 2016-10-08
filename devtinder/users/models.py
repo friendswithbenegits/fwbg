@@ -49,8 +49,13 @@ class User(AbstractUser):
 
     def get_github_account(self):
         """Wrapper that gets content first oauth authentication"""
-        sa = SocialAccount.objects.get(user=self)
-        return sa.extra_data
+        try:
+            sa = SocialAccount.objects.get(user=self)
+            return sa.extra_data
+        except Exception, e:
+            print("This shouldn't happen but oh well. User \"{}\" "
+                  "doesnt have social account".format(self))
+            return {}
 
     # region Actions
     def give_like(self, to_user):
@@ -122,7 +127,7 @@ class User(AbstractUser):
         users = users.exclude(id__in=list(set(likes).union(set(dislikes))))
         try:
             snippet = RepositorySnippet.objects.filter(
-                owner__in=users, language__in=self.languages).order_by("?")[0]
+                owner__in=users).order_by("?")[0]
             return {
                 'status': 200,
                 'message': "Hello",

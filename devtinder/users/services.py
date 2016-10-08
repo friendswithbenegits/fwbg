@@ -10,8 +10,21 @@ import json
 
 def get_data(url, user):
     """Currently we need to return the following json"""
+    langs = {
+        '.c': 'C',
+        '.cpp': 'C++',
+        '.cs': 'C#',
+        '.css': 'CSS',
+        '.go': 'Go',
+        '.html': 'HTML',
+        '.java': 'Java',
+        '.js': 'JavaScript',
+        '.php': 'PHP',
+        '.py': 'Python',
+        '.rb': 'Ruby'
+    }
     message = "Okay"
-    api_url,repo,handler = convert_github_html_url_to_api_url(url)
+    api_url, repo, handler, contents = convert_github_html_url_to_api_url(url)
 
     if handler != user.username:
         raise Exception("You can't add a snippet of other people's code! 😓")
@@ -31,11 +44,11 @@ def get_data(url, user):
             lines = url[url.find("#")+1:]
             if '-' in lines:
                 endline = int(lines[lines.find('-')+2:])
-                startline = int(lines[1:lines.find('-')])
+                startline = int(lines[1:lines.find('-')]) - 1
                 if startline >= endline:
                     startline = endline - 20
             else:
-                startline = int(lines[1:])
+                startline = int(lines[1:]) - 1
                 endline = startline+maxlines
     except Exception, e:
         print e
@@ -50,9 +63,13 @@ def get_data(url, user):
     print lines
     print file
 
-
-    r = requests.get('https://api.github.com/repos/{0}/{1}'.format(user.username, repo), auth=("friendwithnobenegits", "pixeldevtinder1"))
-    repository = json.loads(r._content)
+    language = contents.split("#")[0].split(".")[-1]
+    language = langs.get('.{}'.format(language), None)
+    if not language:
+        print "Language \"{}\" does not exists. Query for repo language".format(contents.split("#")[0].split(".")[-1])
+        r = requests.get('https://api.github.com/repos/{0}/{1}'.format(user.username, repo), auth=("friendwithnobenegits", "pixeldevtinder1"))
+        repository = r.json()
+        language  = repository.get('language')
 
     return {
         'message': message,
@@ -60,7 +77,7 @@ def get_data(url, user):
         'file_name' : response.json().get('name'),
         'stars': response.json().get('size'),
         'lines': lines,
-        'language': repository["language"],
+        'language': language,
         'snippet': file
     }
 
@@ -76,4 +93,4 @@ def convert_github_html_url_to_api_url(url):
     line = contents.split("#")[-1]
     # create valid github api url
     github_url = ("https://api.github.com/repos/{}/{}/contents/{}?ref={}").format(handler, repo, contents, branch)
-    return github_url,repo,handler
+    return github_url, repo, handler, contents

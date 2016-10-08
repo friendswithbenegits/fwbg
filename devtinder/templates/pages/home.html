@@ -40,7 +40,7 @@
             {% if pm.status != 200 %}
                 <div class="pm-container center-form-container">
                     <h1>Oops! 😲</h1><br>
-                    <p>{{ pm.message|safe }}</p>
+                    <p class="home-msg">{{ pm.message|safe }}</p>
                     <img class="img-fluid img-rounded" style='height: 100%; width: 100%; object-fit: contain' src="{% static 'images/sad_no_matches.gif' %}"/>
                 </div>
             {% else %}
@@ -52,7 +52,7 @@
                             <div class="pm-location"><i class="fa fa-map-marker" aria-hidden="true"></i>{% if pm.to_user.location %} {{ pm.to_user.location }}{% else %}Unknown Location{% endif %}</div>
                         </div>
                         <div class="pm-reponame">{{ pm.snippet.repository }} <div class="pm-stars counter"><i class="fa fa-star" aria-hidden="true"></i> {{ pm.snippet.stars }}</div></div>
-                        <div class="clear:both;"></div>
+                        <div class="clearfix"></div>
                     </div>
                     <div class="pm-snippet">
                         <pre><code class="python">{{ pm.snippet.snippet }}</code></pre>
@@ -76,19 +76,24 @@
 
 {% block javascript %}
 {{ block.super }}
+<script src="{% static 'js/jquery.touchSwipe.min.js' %}"></script>
 <script>
 $(document).ready(function() {
   $('pre code').each(function(i, block) {
     hljs.highlightBlock(block);
     hljs.lineNumbersBlock(block);
   });
-
-  $(".center-form-container").on("swipeleft",function(){
-    $(".pm-dislike").click();
-  });
-  $(".center-form-container").on("swipeleft",function(){
-    $(".pm-like").click();
-  });
 });
+
+$(document).swipe({ fingers:'all', swipeLeft:swipefunc, swipeRight:swipefunc, allowPageScroll:"auto"} );
+
+function swipefunc(event, direction, distance, duration, fingerCount, fingerData) {
+    if (direction == 'left') {
+        document.getElementsByClassName("pm-dislike")[0].click();
+    }
+    else if (direction == 'right') {
+        document.getElementsByClassName("pm-like")[0].click();
+    }
+}
 </script>
 {% endblock %}
