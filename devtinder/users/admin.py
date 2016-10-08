@@ -5,7 +5,9 @@ from django import forms
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as AuthUserAdmin
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
-from .models import User
+from .models import *
+from django.apps import apps
+from django.contrib.admin.sites import AlreadyRegistered
 
 
 class MyUserChangeForm(UserChangeForm):
@@ -40,3 +42,10 @@ class MyUserAdmin(AuthUserAdmin):
     ) + AuthUserAdmin.fieldsets
     list_display = ('username', 'name', 'is_superuser')
     search_fields = ['name']
+
+
+for model in apps.get_app_config('users').models.values():
+    try:
+        admin.site.register(model)
+    except AlreadyRegistered:
+        pass
