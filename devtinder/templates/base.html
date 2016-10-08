@@ -49,11 +49,14 @@
             </ul>
             <ul class="nav navbar-nav pull-xs-right">
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'users:add-snippet' %}">Add your <span class="git">gits</span></a>
+                  <a class="nav-link" href="{% url 'home' %}" data-toggle="tooltip" data-placement="bottom" title="Find your codebuddy">Rate <span class="git">git</span>s</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'users:add-snippet' %}" data-toggle="tooltip" data-placement="bottom" title="Add your best snippets of code">Add <span class="git">git</span>s</a>
                 </li>
                 <li class="nav-item">
                   {% with matches=request.user.get_unseen_matches.matches %}
-                  <a class="nav-link" href="{% url 'users:matches' %}">
+                  <a class="nav-link" href="{% url 'users:matches' %}" data-toggle="tooltip" data-placement="bottom" title="Say hi to your matches">
                     Matches {% if matches|length > 0 %}<span class="git counter">{{ matches|length }}{% endif %}</span>
                   </a>
                   {% endwith %}
@@ -108,6 +111,12 @@
       {% compress js %}
       <script src="{% static 'js/project.js' %}"></script>
       {% endcompress %}
+
+      <script type="text/javascript">
+        $(document).ready(function(e){
+            $("li.nav-item > a").tooltip();
+        });
+      </script>
 
     {% endblock javascript %}
   </body>
