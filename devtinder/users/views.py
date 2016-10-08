@@ -4,11 +4,11 @@ from __future__ import absolute_import, unicode_literals
 from django.shortcuts import redirect
 from django.core.urlresolvers import reverse
 from django.views.generic import (DetailView, ListView, RedirectView,
-                                  UpdateView, View, FormView)
+                                  UpdateView, View, FormView, TemplateView)
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 
-from .models import User, RepositorySnippet
+from .models import User, RepositorySnippet, UserMatch
 from .forms import RepoUrlInputFrom
 from .services import get_data
 
@@ -99,7 +99,6 @@ class UserSnippetActionView(LoginRequiredMixin, View):
         return redirect(reverse('users:add-snippet'))
 
 
-
 class UserSelectSnippetView(LoginRequiredMixin, FormView):
     template_name = "users/user_snippet.html"
     form_class = RepoUrlInputFrom
@@ -107,7 +106,7 @@ class UserSelectSnippetView(LoginRequiredMixin, FormView):
 
     def dispatch(self, request, *args, **kwargs):
         self.user = self.request.user
-        return super(LoginRequiredMixin, self).dispatch(request, *args, **kwargs)
+        return super(UserSelectSnippetView, self).dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         ctx = super(UserSelectSnippetView, self).get_context_data(**kwargs)
@@ -133,3 +132,15 @@ class UserSelectSnippetView(LoginRequiredMixin, FormView):
             messages.add_message(self.request, messages.WARNING, e.message)
         return super(UserSelectSnippetView, self).form_valid(form)
 
+
+class UserMatchesView(LoginRequiredMixin, TemplateView):
+    template_name = "users/user_matches.html"
+
+    def dispatch(self, request, *args, **kwargs):
+        self.user = self.request.user
+        return super(UserMatchesView, self).dispatch(request, *args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        ctx = super(UserMatchesView, self).get_context_data(**kwargs)
+        ctx['matches'] = UserMatch.get_matches(self.user)
+        return ctx
