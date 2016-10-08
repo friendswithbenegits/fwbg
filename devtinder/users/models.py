@@ -131,7 +131,7 @@ class User(AbstractUser):
                     'handler': snippet.owner.handler,
                     'username': snippet.owner.username,
                     'location': snippet.owner.location,
-                    'avatar': snippet.owner.avatar,
+                    'avatar': snippet.owner.avatar_url,
                 },
                 'snippet': {
                     'lang': "yolo",
