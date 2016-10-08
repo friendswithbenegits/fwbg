@@ -193,7 +193,7 @@ class UserMatchDetailView(LoginRequiredMixin, TemplateView):
         now = datetime.now()
 
         msgs = Messages.objects.filter(match=match)
-        ctx["messages"] = []
+        ctx["msgs"] = []
 
         for msg in msgs:
             if msg.from_user = self.user:
@@ -201,7 +201,7 @@ class UserMatchDetailView(LoginRequiredMixin, TemplateView):
             else:
                 orientation = "left"
 
-            ctx["messages"].append({
+            ctx["msgs"].append({
                 'orientation': orientation, 
                 'from_user': msg.from_user, 
                 'to_user': msg.to_user, 
