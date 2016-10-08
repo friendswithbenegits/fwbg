@@ -75,6 +75,12 @@ class User(AbstractUser):
         dislike.save()
         print("{} just disliked user {}".format(self, to_user))
         return dislike
+
+    def get_matches_count(self):
+        """"""
+        query = (models.Q(user1=self, user1_has_seen=False) |
+                 models.Q(user2=self, user2_has_seen=False))
+        return UserMatch.objects.filter(query).count()
     # endregion
 
     def get_all_snippets(self):
@@ -83,7 +89,6 @@ class User(AbstractUser):
 
 
     # region Frontend Action Triggers
-
 
     def get_unseen_matches(self):
         """"""
@@ -102,8 +107,6 @@ class User(AbstractUser):
                 "matches" : [],
                 "message" : "no matches for you."
             }
-
-
 
     def get_suggestions(self):
         """Return possible match for this user:
@@ -155,6 +158,12 @@ class UserMatch(models.Model):
     user2 = models.ForeignKey(User, related_name="user_match_user2")
     user1_has_seen = models.BooleanField(default=False)
     user2_has_seen = models.BooleanField(default=False)
+
+    @classmethod
+    def get_matches(cls, user):
+        """"""
+        query = (models.Q(user1=user) | models.Q(user2=user))
+        return cls.objects.filter(query)
 
     @classmethod
     def get_or_create(cls, user1, user2):

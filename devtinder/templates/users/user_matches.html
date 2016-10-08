@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+{% with github=object.get_github_account %}
+<div class="container">
+    <div class="row">
+        <div class="pm-container center-form-container">
+            <ul>
+            {% for match in matches %}
+                <li>{{ match }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endwith %}
+{% endblock content %}
+
+{% block javascript %}
+{{ block.super }}
+<script>
+$(document).ready(function() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+    hljs.lineNumbersBlock(block);
+  });
+});
+</script>
+{% endblock %}
+
