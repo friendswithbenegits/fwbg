@@ -31,11 +31,11 @@ def get_data(url, user):
             lines = url[url.find("#")+1:]
             if '-' in lines:
                 endline = int(lines[lines.find('-')+2:])
-                startline = int(lines[1:lines.find('-')])
+                startline = int(lines[1:lines.find('-')]) - 1
                 if startline >= endline:
                     startline = endline - 20
             else:
-                startline = int(lines[1:])
+                startline = int(lines[1:]) - 1
                 endline = startline+maxlines
     except Exception, e:
         print e
@@ -52,7 +52,7 @@ def get_data(url, user):
 
 
     r = requests.get('https://api.github.com/repos/{0}/{1}'.format(user.username, repo), auth=("friendwithnobenegits", "pixeldevtinder1"))
-    repository = json.loads(r._content)
+    repository = r.json()
 
     return {
         'message': message,

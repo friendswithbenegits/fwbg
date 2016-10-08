@@ -5,6 +5,8 @@
   .navbar-nav .nav-item { float: none; width: 100%; display: inline-block; }
   .navbar-nav .nav-item + .nav-item { margin-left: 0; }
   .nav.navbar-nav.pull-xs-right { float: none !important;}
+  h1 {font-size: 1.5rem;}
+  h4 {font-size: 1.2rem;}
 }
 [hidden][style="display: block;"] {  display: block !important; }
 
@@ -234,6 +236,7 @@ body {
 }
 .sn-form > div > small#snippetHelp {
   text-align: left;
+  word-wrap: break-word;
   font-size: 10px;
 }
 .sn-gif {
@@ -306,4 +309,10 @@ body {
 }
 .msg-form {
   margin-top: 20px;
+}
+
+.home-msg{
+    width: 75%;
+    text-align: center;
+    margin: 0px auto 30px;
 }
