@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block content %}
-
 {% with github=object.get_github_account %}
     <div class="pm-container center-form-container">
         <h2><strong><a href="{% url 'users:detail' to_user.username %}">{{ to_user.username }}</a></strong> liked your <span class="git">git</span>s 😍</h2>
@@ -43,14 +42,14 @@
         </div>
 
         <div>
-            <form action="." method="post" class="form msg-form">
+            <form action="#" method="post" class="form msg-form">
                 <div class="form-group">
                     <input type="text" id="id_content" name="content" class="form-control" placeholder="Protip: Don't lead with I love you">
                     <input id="id_from_user" name="from_user" value="{{ request.user.id }}" type="hidden">
                     <input id="id_match" name="match" value="{{ match.id }}" type="hidden">
                 </div>
 
-                <input type="submit" class="btn-send-messsage btn btn-success" style="width: 100%;" value="git push" />
+                <input type="button" class="btn-send-messsage btn btn-success" style="width: 100%;" value="git push" />
             </form>
         </div>
     </div>
@@ -59,6 +58,45 @@
 
 {% block javascript %}
 {{ block.super }}
+<script>
+function refresh_messages() {
+    $.ajax({
+        url: "/users/all-match-messages/{{ match.id }}/",
+        success: function(data) {
+            document.getElementsByClassName("all-messages")[0].innerHTML = data;
+            $(".all-messages").animate({
+                scrollTop : $(".all-messages").prop("scrollHeight")
+            }, 500);
+        }, 
+        dataType: "html", 
+        complete: poll 
+    });
+}
+
+
+function poll(){
+   setTimeout(refresh_messages, 3000);
+}
+
+$('.btn-send-messsage').on('click', function(e){
+    e.preventDefault();
+    var content = $('#id_content').val();
+    var from_user = $('#id_from_user').val();
+    var match = $('#id_match').val();
+
+    $.ajax({
+        url : '.',
+        type : 'post',
+        data : "content="+content+"&from_user="+from_user+"&match="+match,
+        success : function (res){
+            refresh_messages();
+            $("#id_content").val("");
+        }
+    });
+});
+
+
+</script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <script>
 $(document).ready(function() {
@@ -66,6 +104,11 @@ $(document).ready(function() {
     hljs.highlightBlock(block);
     hljs.lineNumbersBlock(block);
   });
+  poll();
+  $(".all-messages").animate({
+       scrollTop : $(".all-messages").prop("scrollHeight")
+    }, 500);
+
 });
 </script>
 {% endblock %}

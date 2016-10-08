@@ -224,3 +224,38 @@ class UserMatchDetailView(LoginRequiredMixin, FormView):
         match_id = form.cleaned_data['match']
         form.execute(from_user, to_user, content, match_id)
         return super(UserMatchDetailView, self).form_valid(form)
+
+
+class AllMatchMessages(LoginRequiredMixin, TemplateView):
+    template_name = "users/all_messages.html"
+    success_url = "."
+
+    def dispatch(self, request, *args, **kwargs):
+        self.user = self.request.user
+        return super(AllMatchMessages, self).dispatch(request, *args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        ctx = super(AllMatchMessages, self).get_context_data(**kwargs)
+        match_id = self.kwargs.get("match_id")
+        match = UserMatch.objects.get(id=match_id)
+
+        ctx["from_user"] = self.user
+        if match.user1 == self.user:
+            ctx["to_user"] = match.user2
+        elif match.user2 == self.user:
+            ctx["to_user"] = match.user1
+        else:
+            raise ValueError("User {} does not belong to this UserMatch"
+                             "".format(self.user))
+
+        ctx["msgs"] = []
+        msgs = Message.objects.filter(match=match)
+        for msg in msgs:
+            ctx["msgs"].append({
+                'from_user': msg.from_user,
+                'to_user': msg.to_user,
+                'creation_date': msg.timestamp,
+                'content': msg.content
+        })
+
+        return ctx

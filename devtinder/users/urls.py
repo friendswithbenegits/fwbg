@@ -13,11 +13,10 @@ urlpatterns = [
     # matches urls
     url(regex=r'^matches/$', view=views.UserMatchesView.as_view(), name='matches'),
     url(regex=r'^match/(?P<match_id>[a-zA-Z0-9-+_.]+)/$', view=views.UserMatchDetailView.as_view(), name='match-detail'),
+    url(regex=r'^all-match-messages/(?P<match_id>[a-zA-Z0-9-+_.]+)/$', view=views.AllMatchMessages.as_view(), name='match-messages'),
     url(regex=r'^add-snippet/$', view=views.UserSelectSnippetView.as_view(), name='add-snippet'),
     url(regex=r'^~redirect/$', view=views.UserRedirectView.as_view(), name='redirect'),
     url(regex=r'add-snippet/$', view=views.UserSelectSnippetView.as_view(), name='add-snippet'),
     url(regex=r'^(?P<username>[\w.@+-]+)/$', view=views.UserDetailView.as_view(), name='detail'),
     url(regex=r'^~update/$', view=views.UserUpdateView.as_view(), name='update'),
-
-
 ]
