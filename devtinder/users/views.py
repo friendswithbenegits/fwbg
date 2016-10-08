@@ -144,3 +144,20 @@ class UserMatchesView(LoginRequiredMixin, TemplateView):
         ctx = super(UserMatchesView, self).get_context_data(**kwargs)
         ctx['matches'] = UserMatch.get_matches(self.user)
         return ctx
+
+
+class UserMatchDetailView(LoginRequiredMixin, TemplateView):
+    template_name = "users/user_match_detail.html"
+
+    def dispatch(self, request, *args, **kwargs):
+        self.user = self.request.user
+        return super(UserMatchDetailView, self).dispatch(request, *args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        ctx = super(UserMatchDetailView, self).get_context_data(**kwargs)
+        match_id = kwargs.get("match_id")
+
+        match = UserMatch.objects.get(id=match_id)
+
+        ctx["match"] = match
+        return ctx
