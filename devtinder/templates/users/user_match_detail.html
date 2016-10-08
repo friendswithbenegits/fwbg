@@ -62,14 +62,14 @@
 (function poll() {
    setTimeout(function() {
        $.ajax({
-            url: "/all-match-messages/{{ match.id }}", 
+            url: "/users/all-match-messages/{{ match.id }}/",
             success: function(data) {
-                $(".all-messages").html = data;
+                document.getElementsByClassName("all-messages")[0].innerHTML = data;
             }, 
             dataType: "html", 
             complete: poll 
         });
-    }, 30000);
+    }, 3000);
 })();
 </script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>

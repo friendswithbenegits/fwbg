@@ -229,7 +229,7 @@ class AllMatchMessages(LoginRequiredMixin, TemplateView):
         return super(AllMatchMessages, self).dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
-        ctx = super(UserMatchDetailView, self).get_context_data(**kwargs)
+        ctx = super(AllMatchMessages, self).get_context_data(**kwargs)
         match_id = self.kwargs.get("match_id")
         match = UserMatch.objects.get(id=match_id)
 

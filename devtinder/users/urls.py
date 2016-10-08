@@ -19,6 +19,4 @@ urlpatterns = [
     url(regex=r'add-snippet/$', view=views.UserSelectSnippetView.as_view(), name='add-snippet'),
     url(regex=r'^(?P<username>[\w.@+-]+)/$', view=views.UserDetailView.as_view(), name='detail'),
     url(regex=r'^~update/$', view=views.UserUpdateView.as_view(), name='update'),
-
-
 ]
