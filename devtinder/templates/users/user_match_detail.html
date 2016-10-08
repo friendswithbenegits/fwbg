@@ -5,9 +5,9 @@
 
 {% with github=object.get_github_account %}
     <div class="pm-container center-form-container">
-        <h2>You're a match with <strong>{{ to_user.username }}</strong> 😍</h2>
+        <h2>You're a match with <strong><a href="{% url 'users:detail' to_user.username %}">{{ to_user.username }}</a></strong> 😍</h2>
         <img src="{{ from_user.avatar_url }}" class="matchpic img-fluid img-circle">
-        <img src="{{ to_user.avatar_url }}" class="matchpic img-fluid img-circle">
+        <a href="{% url 'users:detail' to_user.username %}"><img src="{{ to_user.avatar_url }}" class="matchpic img-fluid img-circle"></a>
         <br><br>
         <div class="row">
             <p><a class="github-button" href="https://github.com/{{ to_user.username }}" data-style="mega" aria-label="Follow @{{ to_user.username }} on GitHub">Follow @{{ to_user.username }}</a></p>
@@ -17,7 +17,7 @@
     </div>
 
     <div class="pm-container center-form-container" style="margin-top:20px; padding: 20px 50px;">
-        <h3>Conversation with <strong>{{ to_user.username }}</strong></h3><br>
+        <h3>Conversation with <strong><a href="{% url 'users:detail' to_user.username %}">{{ to_user.username }}</a></strong></h3><br>
 
         <div class="all-messages">
             {% for message in msgs %}
