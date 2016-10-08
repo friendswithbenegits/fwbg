@@ -112,7 +112,8 @@ class UserSelectSnippetView(LoginRequiredMixin, FormView):
 
     def get_context_data(self, **kwargs):
         ctx = super(UserSelectSnippetView, self).get_context_data(**kwargs)
-        ctx['snippets'] = RepositorySnippet.objects.filter(owner=self.user)
+        ctx['snippets'] = RepositorySnippet.objects.filter(
+            owner=self.user).order_by("-id")
         return ctx
 
     def form_invalid(self, form):
