@@ -15,7 +15,7 @@
             {% else %}
                 <img class="img-fluid img-rounded" style='height: 100%; width: 100%; object-fit: contain' src="{% static 'images/omgmatch4.gif' %}"/>
                 <br>
-                <h1>Matches! 😍</h1>
+                <h4>These are the users that like your <span class="git">git</span>s! 😍</h4>
                 {% for match in matches %}
                     <p class="matchlistone"><img src="{{ match.to_user.avatar_url }}" class="matchlistpic img-fluid img-circle" /><a href="{% url 'users:match-detail' match.id %}"><strong>{{ match.to_user }}</strong></a></p>
                 {% endfor %}
