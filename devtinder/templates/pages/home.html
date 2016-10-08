@@ -89,10 +89,10 @@ $(document).swipe({ fingers:'all', swipeLeft:swipefunc, swipeRight:swipefunc, al
 
 function swipefunc(event, direction, distance, duration, fingerCount, fingerData) {
     if (direction == 'left') {
-        $(".pm-dislike").click();
+        document.getElementsByClassName("pm-dislike")[0].click();
     }
     else if (direction == 'right') {
-        $(".pm-like").click();
+        document.getElementsByClassName("pm-like")[0].click();
     }
 }
 </script>
