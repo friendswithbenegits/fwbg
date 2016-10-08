@@ -277,6 +277,7 @@ class Message(models.Model):
     from_user = models.ForeignKey(User)
     timestamp = models.DateTimeField(default=timezone.now)
     content = models.TextField()
+    match = models.ForeignKey(UserMatch)
 
     def __str__(self):
         return ("From:{} | To:{} | Timestamp:{} | Content:{}"
@@ -284,8 +285,8 @@ class Message(models.Model):
                 self.timestamp, self.content)
 
     @classmethod
-    def create(cls, to_user, from_user, content):
-        msg = cls.objects.create(to_user=to_user, from_user=from_user, content=content)
+    def create(cls, to_user, from_user, content, match):
+        msg = cls.objects.create(to_user=to_user, from_user=from_user, content=content, match=match)
         msg.save()
 
         return msg

@@ -191,11 +191,22 @@ class UserMatchDetailView(LoginRequiredMixin, TemplateView):
                    "".format(self.user))
 
         now = datetime.now()
-        ctx["messages"] = [
-            {'orientation': 'left', 'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=10), "content": "Olá", },
-            {'orientation': 'right', 'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=50), "content": "Tudo bem?", },
-            {'orientation': 'left', 'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=70), "content": "Está tudo. E Contigo?", },
-            {'orientation': 'right', 'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=100), "content": "Também. Okay.", },
-        ]
+
+        msgs = Messages.objects.filter(match=match)
+        ctx["messages"] = []
+
+        for msg in msgs:
+            if msg.from_user = self.user:
+                orientation = "right"
+            else:
+                orientation = "left"
+
+            ctx["messages"].append({
+                'orientation': orientation, 
+                'from_user': msg.from_user, 
+                'to_user': msg.to_user, 
+                'creation_date': msg.timestamp, 
+                "content": msg.content
+            })
 
         return ctx
