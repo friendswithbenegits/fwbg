@@ -54,11 +54,7 @@
                 <li class="nav-item">
                     {% with matches=request.user.get_matches_count %}
                     <a class="nav-link" href="{% url 'users:matches' %}">
-                        {% if matches != 0 %}
-                        Matches <span class="{% if matches != 0 %}badge{% endif %}">{{ matches }}</span>
-                        {% else %}
-                        No new Matches
-                        {% endif %}
+                        Matches <span class="counter">{{ matches }}</span>
                     </a>
                     {% endwith %}
                 </li>

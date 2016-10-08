@@ -114,7 +114,7 @@ class User(AbstractUser):
         2º - From all users remove ones that I already gave like or dislike
         3º - and get all their repos that have the same language as I have.
         4º - order repo by stars and get first one"""
-        pixelsadmin = User.objects.get(username="pixelsadmin").id
+        pixelsadmin = User.objects.get(username="pixeladmin").id
         users = User.objects.exclude(id__in=[self.id, pixelsadmin])
         likes = UserLike.objects.filter(
              from_user=self).values_list('to_user', flat=True)
@@ -145,7 +145,7 @@ class User(AbstractUser):
         except IndexError, e:
             return {
                 'status': 400,
-                'message': "No snippets currently available!",
+                'message': "Our <span class='git'>git</span> <strong>count-objects</strong> returned 0 for the amount of people you're able to <span class='git'>git</span> <strong>merge</strong> at the moment.",
                 'to_user': {},
                 'snippet': {},
             }
@@ -273,8 +273,8 @@ class RepositorySnippet(models.Model):
         return rs
 
 class Message(models.Model):
-    to_user = models.ForeignKey(User)
-    from_user = models.ForeignKey(User)
+    to_user = models.ForeignKey(User, related_name="user_message_to_user")
+    from_user = models.ForeignKey(User, related_name="user_message_from_user")
     timestamp = models.DateTimeField(default=timezone.now)
     content = models.TextField()
     match = models.ForeignKey(UserMatch)

@@ -14,7 +14,7 @@ def get_data(url, user):
     api_url,repo,handler = convert_github_html_url_to_api_url(url)
 
     if handler != user.username:
-        raise Exception("User doesn't own repo")
+        raise Exception("You can't add a snippet of other people's code! 😓")
 
     response = requests.get(api_url, auth=("friendwithnobenegits", "pixeldevtinder1"))
     if response.status_code != 200:

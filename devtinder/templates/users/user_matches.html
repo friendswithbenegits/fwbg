@@ -7,8 +7,12 @@
     <div class="row">
         <div class="pm-container center-form-container">
             {% if matches|length == 0 %}
-                <h1>No matches, yet!</h1>
-                <p>Start by adding your <strong>snippets</strong></p>
+                <h1>No matches, yet! 😭</h1>
+                {% if me.get_all_snippets|length == 0 %}
+                <p>Start by adding your <span class="git">git</span>s</p>
+                {% else %}
+                <p>
+                {% endif %}
             {% else %}
                 <ul>
                 {% for match in matches %}

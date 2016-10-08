@@ -40,8 +40,8 @@
         {% else %}
             {% if pm.status != 200 %}
                 <div class="pm-container center-form-container">
-                    <h1>Oops!</h1>
-                    <p>{{ pm.message }}</p>
+                    <h1>Oops! 😲</h1>
+                    <p>{{ pm.message|safe }}</p>
                 </div>
             {% else %}
                 <div class="pm-container center-form-container">
