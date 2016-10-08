@@ -138,9 +138,9 @@ class User(AbstractUser):
                     'avatar': snippet.owner.avatar_url,
                 },
                 'snippet': {
-                    'lang': "yolo",
+                    'lang': snippet.language,
                     'repository': snippet.repository,
-                    'name': "sdaslkdsa.py",
+                    'name': snippet.repository,
                     'stars': snippet.stars,
                     'snippet': snippet.snippet,
                     'lines': 10,
@@ -264,6 +264,7 @@ class RepositorySnippet(models.Model):
     owner = models.ForeignKey(User)
     repository = models.CharField(max_length=124)
     language = models.CharField(max_length=124)
+    filename = models.CharField(max_length=124)
     lines = models.CharField(max_length=124)
     stars = models.IntegerField(default=0)
     snippet = models.TextField()
@@ -278,11 +279,13 @@ class RepositorySnippet(models.Model):
                            self.stars)
 
     @classmethod
-    def create(cls, owner, repository, language, stars, snippet, lines):
+    def create(cls, owner, repository, language, stars, snippet, lines,
+               filename):
         """"""
         rs = cls.objects.create(owner=owner, repository=repository,
                                 language=language, stars=stars,
-                                snippet=snippet, lines=lines)
+                                filename=filename, snippet=snippet,
+                                lines=lines)
         rs.save()
         return rs
 
