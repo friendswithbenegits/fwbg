@@ -6,7 +6,7 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(regex=r'^$', view=views.UserListView.as_view(), name='list'),
+    # url(regex=r'^$', view=views.UserListView.as_view(), name='list'),
     # user actions urls
     url(regex=r'^action/(?P<action>[a-zA-Z0-9-]+)/(?P<to_user>[a-zA-Z0-9-+_.]+)$', view=views.UserActionView.as_view(), name='action'),
     url(regex=r'^snippet-action/(?P<action>[a-zA-Z0-9-]+)/(?P<snippet_id>[a-zA-Z0-9-+_.]+)$', view=views.UserSnippetActionView.as_view(), name='snippet-action'),

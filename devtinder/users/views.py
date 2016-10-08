@@ -5,7 +5,7 @@ from django.shortcuts import redirect
 from django.core.urlresolvers import reverse
 from django.views.generic import (DetailView, ListView, RedirectView,
                                   UpdateView, View, FormView, TemplateView)
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import AccessMixin, LoginRequiredMixin
 from django.contrib import messages
 
 from .models import User, RepositorySnippet, UserMatch, Message
