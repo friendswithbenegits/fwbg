@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block content %}
-
 {% with github=object.get_github_account %}
     <div class="pm-container center-form-container">
         <h2>You're a match with <strong>{{ to_user.username }}</strong> 😍</h2>
@@ -59,6 +58,20 @@
 
 {% block javascript %}
 {{ block.super }}
+<script>
+(function poll() {
+   setTimeout(function() {
+       $.ajax({
+            url: "/all-match-messages/{{ match.id }}", 
+            success: function(data) {
+                $(".all-messages").html = data;
+            }, 
+            dataType: "html", 
+            complete: poll 
+        });
+    }, 30000);
+})();
+</script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <script>
 $(document).ready(function() {
