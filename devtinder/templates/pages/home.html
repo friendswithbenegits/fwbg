@@ -52,6 +52,7 @@
                             <div class="pm-location"><i class="fa fa-map-marker" aria-hidden="true"></i>{% if pm.to_user.location %} {{ pm.to_user.location }}{% else %}Unknown Location{% endif %}</div>
                         </div>
                         <div class="pm-reponame">{{ pm.snippet.repository }} <div class="pm-stars counter"><i class="fa fa-star" aria-hidden="true"></i> {{ pm.snippet.stars }}</div></div>
+                        <div class="clear:both;"></div>
                     </div>
                     <div class="pm-snippet">
                         <pre><code class="python">{{ pm.snippet.snippet }}</code></pre>
