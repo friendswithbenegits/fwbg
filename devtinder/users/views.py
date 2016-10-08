@@ -9,7 +9,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 
 from .models import User, RepositorySnippet, UserMatch, Message
-from .forms import RepoUrlInputFrom
+from .forms import RepoUrlInputFrom, MessageInputForm
 from .services import get_data
 
 from datetime import datetime, timedelta
@@ -164,7 +164,8 @@ class UserMatchesView(LoginRequiredMixin, TemplateView):
         return ctx
 
 
-class UserMatchDetailView(LoginRequiredMixin, TemplateView):
+class UserMatchDetailView(LoginRequiredMixin, FormView):
+    form_class = MessageInputForm
     template_name = "users/user_match_detail.html"
 
     def dispatch(self, request, *args, **kwargs):
@@ -174,7 +175,7 @@ class UserMatchDetailView(LoginRequiredMixin, TemplateView):
     def get_context_data(self, **kwargs):
         ctx = super(UserMatchDetailView, self).get_context_data(**kwargs)
         match_id = kwargs.get("match_id")
-
+        import pdb; pdb.set_trace()
         match = UserMatch.objects.get(id=match_id)
         match.mark_as_seen_by(self.user)
         match.save()
@@ -211,3 +212,14 @@ class UserMatchDetailView(LoginRequiredMixin, TemplateView):
             })
 
         return ctx
+
+    def form_invalid(self, form):
+        return super(UserMatchDetailView, self).form_invalid(form)
+
+    def form_valid(self, form):
+        content = form.cleaned_data['content']
+        from_user = self.user
+        to_user = form.cleaned_data['to_user']
+        message = form.cleaned_data['message']
+        message = form.execute(from_user, to_user, message, content)
+        return super(UserMatchDetailView, self).form_valid(form)

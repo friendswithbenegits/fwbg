@@ -272,9 +272,15 @@ class RepositorySnippet(models.Model):
         rs.save()
         return rs
 
+
 class Message(models.Model):
+<<<<<<< Updated upstream
     to_user = models.ForeignKey(User, related_name="user_message_to_user")
     from_user = models.ForeignKey(User, related_name="user_message_from_user")
+=======
+    to_user = models.ForeignKey(User, related_name="message_user1")
+    from_user = models.ForeignKey(User, related_name="message_user2")
+>>>>>>> Stashed changes
     timestamp = models.DateTimeField(default=timezone.now)
     content = models.TextField()
     match = models.ForeignKey(UserMatch)
@@ -286,7 +292,8 @@ class Message(models.Model):
 
     @classmethod
     def create(cls, to_user, from_user, content, match):
-        msg = cls.objects.create(to_user=to_user, from_user=from_user, content=content, match=match)
+        msg = cls.objects.create(to_user=to_user, from_user=from_user,
+                                 content=content, match=match)
         msg.save()
 
         return msg
