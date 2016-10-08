@@ -29,20 +29,28 @@
     <div class="container">
         <div class="row">
             <div class="pm-container center-form-container">
-                {% for message in messages %}
+                {% for message in msgs %}
                 <div class="row">
-                    <div class="col-xs-2">
-                        <img src="{{ message.from_user.avatar_url }}" class="img-fluid img-circle">
-                    </div>
-                    <div class="col-xs-2">
-                        <img src="{{ message.to_user.avatar_url }}" class="img-fluid img-circle">
-                    </div>
-                    <div>
-                        <small>{{ message.creation_date }}</small>
+                    {% if message.orientation == "left" %}
+                    <div class="pull-left">
+                        <div class="col-xs-2"><img src="{{ message.from_user.avatar_url }}" class="img-fluid img-circle"></div>
+                        <div class="col-xs-2"><img src="{{ message.to_user.avatar_url }}" class="img-fluid img-circle"></div>
                     </div>
                     <div>
-                        <p>{{ message.content }}</p>
+                        <small class="text-left">{{ message.creation_date }}</small>
+                        <p class="text-left">{{ message.content }}</p>
                     </div>
+                    {% elif message.orientation == "right" %}
+                    <div>
+                        <small class="pull-right">{{ message.creation_date }}</small>
+                        <p class="pull-right">{{ message.content }}</p>
+                    </div>
+                    <div class="pull-right">
+                        <div class="col-xs-2"><img src="{{ message.from_user.avatar_url }}" class="img-fluid img-circle"></div>
+                        <div class="col-xs-2"><img src="{{ message.to_user.avatar_url }}" class="img-fluid img-circle"></div>
+                    </div>
+                    {% endif %}
+
                 </div>
                 {% endfor %}
             </div>

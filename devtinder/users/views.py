@@ -191,7 +191,7 @@ class UserMatchDetailView(LoginRequiredMixin, TemplateView):
                    "".format(self.user))
 
         now = datetime.now()
-        ctx["messages"] = [
+        ctx["msgs"] = [
             {'orientation': 'left', 'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=10), "content": "Olá", },
             {'orientation': 'right', 'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=50), "content": "Tudo bem?", },
             {'orientation': 'left', 'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=70), "content": "Está tudo. E Contigo?", },
