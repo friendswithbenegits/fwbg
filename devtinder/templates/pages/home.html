@@ -81,14 +81,14 @@ $(document).ready(function() {
     hljs.highlightBlock(block);
     hljs.lineNumbersBlock(block);
   });
-});
-$(document).on("swipeleft",function(){
+  $(document).on("swipeleft", function(){
     $(".pm-dislike").click();
     alert("LEFT");
-});
-$(document).on("swiperight",function(){
+  });
+  $(document).on("swiperight", function(){
     $(".pm-like").click();
     alert("RIGHT");
+  });
 });
 </script>
 {% endblock %}
