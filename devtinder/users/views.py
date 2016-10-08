@@ -12,6 +12,7 @@ from .models import User, RepositorySnippet, UserMatch
 from .forms import RepoUrlInputFrom
 from .services import get_data
 
+from datetime import datetime, timedelta
 import logging
 logger = logging.getLogger(__name__)
 
@@ -188,5 +189,13 @@ class UserMatchDetailView(LoginRequiredMixin, TemplateView):
         else:
             raise ValueError("User {} does not belong to this UserMatch"
                    "".format(self.user))
-        
+
+        now = datetime.now()
+        ctx["messages"] = [
+            {'orientation': 'left', 'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=10), "content": "Olá", },
+            {'orientation': 'right', 'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=50), "content": "Tudo bem?", },
+            {'orientation': 'left', 'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=70), "content": "Está tudo. E Contigo?", },
+            {'orientation': 'right', 'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=100), "content": "Também. Okay.", },
+        ]
+
         return ctx
