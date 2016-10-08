@@ -193,8 +193,12 @@ class UserMatchDetailView(LoginRequiredMixin, TemplateView):
         now = datetime.now()
         ctx["msgs"] = [
             {'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=10), "content": "Olá", },
+            {'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=10), "content": "Olá", },
             {'from_user': ctx['to_user'], 'to_user': ctx['from_user'], 'creation_date': now - timedelta(seconds=50), "content": "Tudo bem?", },
-            {'from_user': ctx['to_user'], 'to_user': ctx['from_user'], 'creation_date': now - timedelta(seconds=70), "content": "Está tudo. E Contigo?", },
+            {'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=10), "content": "Olá", },
+            {'from_user': ctx['to_user'], 'to_user': ctx['from_user'], 'creation_date': now - timedelta(seconds=70), "content": "Está tudo. E Contigo? Hey isto é um teste de um texto muito maior para ver o que o CSS faz a esta coisa. Ai mãe que eu não sei o que esperar!!", },
+            {'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=100), "content": "Também. Okay.", },
+            {'from_user': ctx['to_user'], 'to_user': ctx['from_user'], 'creation_date': now - timedelta(seconds=70), "content": "Está tudo. E Contigo? Hey isto é um teste de um texto muito maior para ver o que o CSS faz a esta coisa. Ai mãe que eu não sei o que esperar!!", },
             {'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=100), "content": "Também. Okay.", },
         ]
         msgs = Message.objects.filter(match=match)

@@ -6,35 +6,30 @@
 {% with github=object.get_github_account %}
     <div class="pm-container center-form-container">
         <h2>You're a match with <strong>{{ from_user.username }}</strong> 😍</h2>
-        <div class="row">
-            <div class="col-xs-6">
-                <img src="{{ to_user.avatar_url }}" class="img-fluid img-circle">
-            </div>
-            <div class="col-xs-6">
-                <img src="{{ from_user.avatar_url }}" class="img-fluid img-circle">
-            </div>
-        </div>
-        <br>
+        <img src="{{ to_user.avatar_url }}" class="matchpic img-fluid img-circle">
+        <img src="{{ from_user.avatar_url }}" class="matchpic img-fluid img-circle">
+        <br><br>
         <div class="row">
             <p><a class="github-button" href="https://github.com/{{ from_user.username }}" data-style="mega" aria-label="Follow @{{ from_user.username }} on GitHub">Follow @{{ from_user.username }}</a></p>
             {# <p><a href="https://github.com/new">Create a new repository on GitHub, to start a project with {{ from_user.username }}!</a></p> #}
-            {% if from_user.email %}<p>Shoot him an e-mail at: {{ from_user.email }}</p>{% endif %}
+            {% if from_user.email %}<p>Shoot him an e-mail at: <a href="maito:{{ from_user.email }}">{{ from_user.email }}</a></p>{% endif %}
         </div>
     </div>
 
-    <div class="pm-container center-form-container" style="margin-top:20px;">
+    <div class="pm-container center-form-container" style="margin-top:20px; padding: 20px 50px;">
+        <h3>Conversation with <strong>{{ from_user.username }}</strong></h3><br>
         {% for message in msgs %}
             {% if message.from_user == request.user %}
             <div class="pull-left match-message">
-                <img src="{{ message.from_user.avatar_url }}" class="img-fluid img-circle" />
-                <div class="text-left">{{ message.content }}</div><br>
+                <div class="match-message-pic"><img src="{{ message.from_user.avatar_url }}" class="img-fluid img-circle" /></div>
+                <div class="text-left match-mtext">{{ message.content }}</div><br>
                 <small class="text-left text-muted">{{ message.creation_date }}</small>
             </div>
             {% else %}
-            <div class="pull-right match-message">
-                <div class="text-right from">{{ message.content }}</div><br>
+            <div class="pull-right match-message from">
+                <div class="match-message-pic pull-right from"><img src="{{ message.from_user.avatar_url }}" class="img-fluid img-circle from" /></div>
+                <div class="text-right match-mtext from">{{ message.content }}</div><br>
                 <small class="text-right text-muted">{{ message.creation_date }}</small>
-                <img src="{{ message.from_user.avatar_url }}" class="img-fluid img-circle" />
             </div>
             {% endif %}
             <div style="clear: both;"></div>
