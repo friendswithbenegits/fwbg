@@ -9,7 +9,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 
 from .models import User, RepositorySnippet, UserMatch, Message
-from .forms import RepoUrlInputFrom
+from .forms import RepoUrlInputFrom, MessageInputForm
 from .services import get_data
 
 from datetime import datetime, timedelta
@@ -164,8 +164,10 @@ class UserMatchesView(LoginRequiredMixin, TemplateView):
         return ctx
 
 
-class UserMatchDetailView(LoginRequiredMixin, TemplateView):
+class UserMatchDetailView(LoginRequiredMixin, FormView):
+    form_class = MessageInputForm#
     template_name = "users/user_match_detail.html"
+    success_url = "."
 
     def dispatch(self, request, *args, **kwargs):
         self.user = self.request.user
@@ -173,41 +175,40 @@ class UserMatchDetailView(LoginRequiredMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         ctx = super(UserMatchDetailView, self).get_context_data(**kwargs)
-        match_id = kwargs.get("match_id")
-
+        match_id = self.kwargs.get("match_id")
         match = UserMatch.objects.get(id=match_id)
         match.mark_as_seen_by(self.user)
         match.save()
 
         ctx["match"] = match
-        ctx["to_user"] = self.user
-
+        ctx["from_user"] = self.user
         if match.user1 == self.user:
-            ctx["from_user"] = match.user2
+            ctx["to_user"] = match.user2
         elif match.user2 == self.user:
-            ctx["from_user"] = match.user1
+            ctx["to_user"] = match.user1
         else:
             raise ValueError("User {} does not belong to this UserMatch"
-                   "".format(self.user))
+                             "".format(self.user))
 
-        now = datetime.now()
-        ctx["msgs"] = [
-            {'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=10), "content": "Olá", },
-            {'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=10), "content": "Olá", },
-            {'from_user': ctx['to_user'], 'to_user': ctx['from_user'], 'creation_date': now - timedelta(seconds=50), "content": "Tudo bem?", },
-            {'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=10), "content": "Olá", },
-            {'from_user': ctx['to_user'], 'to_user': ctx['from_user'], 'creation_date': now - timedelta(seconds=70), "content": "Está tudo. E Contigo? Hey isto é um teste de um texto muito maior para ver o que o CSS faz a esta coisa. Ai mãe que eu não sei o que esperar!!", },
-            {'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=100), "content": "Também. Okay.", },
-            {'from_user': ctx['to_user'], 'to_user': ctx['from_user'], 'creation_date': now - timedelta(seconds=70), "content": "Está tudo. E Contigo? Hey isto é um teste de um texto muito maior para ver o que o CSS faz a esta coisa. Ai mãe que eu não sei o que esperar!!", },
-            {'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=100), "content": "Também. Okay.", },
-        ]
+        ctx["msgs"] = []
         msgs = Message.objects.filter(match=match)
         for msg in msgs:
             ctx["msgs"].append({
                 'from_user': msg.from_user,
                 'to_user': msg.to_user,
                 'creation_date': msg.timestamp,
-                "content": msg.content
+                'content': msg.content
             })
 
         return ctx
+
+    def form_invalid(self, form):
+        return super(UserMatchDetailView, self).form_invalid(form)
+
+    def form_valid(self, form):
+        content = form.cleaned_data['content']
+        from_user  = form.cleaned_data['from_user']
+        to_user = self.user
+        match_id = form.cleaned_data['match']
+        form.execute(from_user, to_user, content, match_id)
+        return super(UserMatchDetailView, self).form_valid(form)

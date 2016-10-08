@@ -2,6 +2,8 @@
 from __future__ import unicode_literals, absolute_import
 from django import forms
 
+from .models import User, UserMatch, Message
+
 class RepoUrlInputFrom(forms.Form):
     url = forms.URLField()
 
@@ -13,8 +15,8 @@ class RepoUrlInputFrom(forms.Form):
 
 
 class MessageInputForm(forms.Form):
-    content = forms.TextInput()
-    to_user = forms.CharField(widget=forms.HiddenInput())
+    content = forms.CharField(widget=forms.Textarea)
+    from_user = forms.CharField(widget=forms.HiddenInput())
     match = forms.CharField(widget=forms.HiddenInput())
 
     def clean_content(self):
@@ -23,20 +25,19 @@ class MessageInputForm(forms.Form):
             raise forms.ValidationError("Ooohh, that is not a valid message.")
         return content
 
-    def clean_to_user(self):
-        username = self.cleaned_data['to_user']
+    def clean_from_user(self):
+        username_id = self.cleaned_data['from_user']
         try:
-            User.objects.get(username=username)
+            User.objects.get(id=username_id)
         except Exception, e:
             raise forms.ValidationError("User {} does not exist.".format(
-                username))
-        return username
+                username_id))
+        return username_id
 
     def execute(self, from_user, to_user, content, match_id):
         """"""
-        from_user = User.objects.get(username=from_user)
-        to_user = User.objects.get(username=to_user)
+        from_user = User.objects.get(id=from_user)
         match = UserMatch.objects.get(id=match_id)
-        msg = Message.create(to_user, from_user, content, match)
+        msg = Message.create(from_user, to_user, content, match)
         msg.save()
         return msg
