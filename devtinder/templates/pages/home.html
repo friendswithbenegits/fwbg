@@ -82,6 +82,13 @@ $(document).ready(function() {
     hljs.highlightBlock(block);
     hljs.lineNumbersBlock(block);
   });
+
+  $(".center-form-container").on("swipeleft",function(){
+    $(".pm-dislike").click();
+  });
+  $(".center-form-container").on("swipeleft",function(){
+    $(".pm-like").click();
+  });
 });
 </script>
 {% endblock %}
