@@ -54,7 +54,7 @@
                 <li class="nav-item">
                     {% with matches=request.user.get_unseen_matches.matches %}
                     <a class="nav-link" href="{% url 'users:matches' %}">
-                        Matches {% if matches|length > 0 %}<span class="counter">{{ matches }}{% endif %}</span>
+                        Matches {% if matches|length > 0 %}<span class="git counter">{{ matches|length }}{% endif %}</span>
                     </a>
                     {% endwith %}
                 </li>

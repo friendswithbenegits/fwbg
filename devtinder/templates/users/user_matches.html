@@ -12,13 +12,12 @@
                 <p>Start by adding your <span class="git">git</span>s</p>
                 {% endif %}
             {% else %}
-                <h1>It's a match! 😍</h1>
                 <img class="img-fluid img-rounded" style='height: 100%; width: 100%; object-fit: contain' src="{% static 'images/omgmatch4.gif' %}"/>
-                <ul>
+                <br>
+                <h1>Matches! 😍</h1>
                 {% for match in matches %}
-                    <li class=""><a href="{% url 'users:match-detail' match.id %}">{{ me }} with {{ match.to_user }}</a></li>
+                    <p class="matchlistone"><img src="{{ match.to_user.avatar_url }}" class="matchlistpic img-fluid img-circle" /><a href="{% url 'users:match-detail' match.id %}"><strong>{{ match.to_user }}</strong></a></p>
                 {% endfor %}
-                </ul>
             {% endif %}
         </div>
     </div>
