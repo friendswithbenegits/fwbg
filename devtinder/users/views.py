@@ -8,7 +8,7 @@ from django.views.generic import (DetailView, ListView, RedirectView,
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 
-from .models import User, RepositorySnippet, UserMatch
+from .models import User, RepositorySnippet, UserMatch, Message
 from .forms import RepoUrlInputFrom
 from .services import get_data
 
@@ -197,5 +197,19 @@ class UserMatchDetailView(LoginRequiredMixin, TemplateView):
             {'orientation': 'left', 'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=70), "content": "Está tudo. E Contigo?", },
             {'orientation': 'right', 'from_user': ctx['from_user'], 'to_user': ctx['to_user'], 'creation_date': now - timedelta(seconds=100), "content": "Também. Okay.", },
         ]
+        msgs = Message.objects.filter(match=match)
+        for msg in msgs:
+            if msg.from_user == self.user:
+                orientation = "right"
+            else:
+                orientation = "left"
+
+            ctx["msgs"].append({
+                'orientation': orientation, 
+                'from_user': msg.from_user, 
+                'to_user': msg.to_user, 
+                'creation_date': msg.timestamp, 
+                "content": msg.content
+            })
 
         return ctx

@@ -271,3 +271,22 @@ class RepositorySnippet(models.Model):
                                 snippet=snippet, lines=lines)
         rs.save()
         return rs
+
+class Message(models.Model):
+    to_user = models.ForeignKey(User)
+    from_user = models.ForeignKey(User)
+    timestamp = models.DateTimeField(default=timezone.now)
+    content = models.TextField()
+    match = models.ForeignKey(UserMatch)
+
+    def __str__(self):
+        return ("From:{} | To:{} | Timestamp:{} | Content:{}"
+                "").format(self.from_user.username, self.to_user.username, 
+                self.timestamp, self.content)
+
+    @classmethod
+    def create(cls, to_user, from_user, content, match):
+        msg = cls.objects.create(to_user=to_user, from_user=from_user, content=content, match=match)
+        msg.save()
+
+        return msg
