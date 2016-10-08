@@ -75,6 +75,11 @@ class UserActionView(LoginRequiredMixin, View):
         print("User {} {} user {}.".format(from_user, action, to_user))
 
         if action == 'like':
+            messages.add_message(self.request, messages.SUCCESS, "You just liked {}'s snippet 😍".format(to_user))
+        elif action == 'dislike':
+            messages.add_message(self.request, messages.ERROR, "You just disliked {}'s snippet 😱".format(to_user))
+
+        if action == 'like':
             from_user.give_like(to_user)
         elif action == 'dislike':
             from_user.give_dislike(to_user)
