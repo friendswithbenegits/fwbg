@@ -74,7 +74,7 @@ def get_data(url, user):
     return {
         'message': message,
         'name': repo,
-        'file_name' : response.json().get('name'),
+        'filename' : response.json().get('name'),
         'stars': response.json().get('size'),
         'lines': lines,
         'language': language,

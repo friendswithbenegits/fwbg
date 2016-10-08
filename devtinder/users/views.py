@@ -129,12 +129,13 @@ class UserSelectSnippetView(LoginRequiredMixin, FormView):
         try:
             data = get_data(url, self.user)
             repository = data.get('name')
+            filename = data.get('filename')
             language = data.get('language')
             stars = data.get('stars')
             snippet = data.get('snippet')
             lines = data.get('lines')
             rs = RepositorySnippet.create(self.user, repository, language,
-                                          stars, snippet, lines)
+                                          stars, snippet, lines, filename)
             rs.save()
         except Exception, e:
             messages.add_message(self.request, messages.WARNING, e.message)

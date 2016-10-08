@@ -1,9 +1,22 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}Page Not found{% endblock %}
 
 {% block content %}
-<h1>Page Not found</h1>
+<div class="container-fluid">
 
-<p>This is not the page you were looking for.</p>
+
+</div>
 {% endblock content %}
+
+{% block javascript %}
+{{ block.super }}
+<script>
+$(document).ready(function() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+    hljs.lineNumbersBlock(block);
+  });
+});
+</script>
+{% endblock %}
