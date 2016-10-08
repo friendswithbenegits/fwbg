@@ -6,15 +6,20 @@
 <div class="container">
     <div class="row">
         <div class="pm-container center-form-container">
-            <ul>
-            {% for match in matches %}
-                {% if me == match.user1 %}
-                    <li class=""><a href="{{ users:match-detail match.id }}">{{ match.user2 }} with {{ me }}</a></li>
-                {% elif me == match.user2 %}
-                    <li><a href="{{ users:match-detail match.id }}">{{ match.user2 }} with {{ me }}</a></li>
-                {% endif %}
-            {% endfor %}
-            </ul>
+            {% if matches|length == 0 %}
+                <h1>No matches, yet!</h1>
+                <p>Start by adding your <strong>snippets</strong></p>
+            {% else %}
+                <ul>
+                {% for match in matches %}
+                    {% if me == match.user1 %}
+                        <li class=""><a href="{% url 'users:match-detail' match.id %}">{{ match.user2 }} with {{ me }}</a></li>
+                    {% elif me == match.user2 %}
+                        <li><a href="{% url 'users:match-detail' match.id %}">{{ match.user2 }} with {{ me }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            {% endif %}
         </div>
     </div>
 </div>

@@ -30,16 +30,16 @@ class User(AbstractUser):
         return self.get_github_account().get('location')
 
     @property
-    def avatar(self):
+    def avatar_url(self):
         """"""
-        return self.get_github_account().get('avatar')
+        return self.get_github_account().get('avatar_url')
 
     @property
     def languages(self):
         """property that returns list of languages from all repos that this
         user has"""
-        return RepositorySnippet.objects.filter(
-            owner=self).distinct('language')
+        return list(RepositorySnippet.objects.filter(owner=self).distinct(
+            'language').values_list('language', flat=True))
 
     def __str__(self):
         return self.username
@@ -114,16 +114,16 @@ class User(AbstractUser):
         2º - From all users remove ones that I already gave like or dislike
         3º - and get all their repos that have the same language as I have.
         4º - order repo by stars and get first one"""
-        users = User.objects.exclude(id=self.id)
+        pixelsadmin = User.objects.get(username="pixelsadmin").id
+        users = User.objects.exclude(id__in=[self.id, pixelsadmin])
         likes = UserLike.objects.filter(
-             from_user=self).values_list('to_user')
+             from_user=self).values_list('to_user', flat=True)
         dislikes = UserDislike.objects.filter(
-            from_user=self).values_list('to_user')
-        users.exclude(id__in=map(lambda x: x[0],
-                                 set(likes).union(set(dislikes))))
+            from_user=self).values_list('to_user', flat=True)
+        users = users.exclude(id__in=list(set(likes).union(set(dislikes))))
         try:
             snippet = RepositorySnippet.objects.filter(
-                owner__in=users).order_by("?")[0]
+                owner__in=users, language__in=self.languages).order_by("?")[0]
             return {
                 'status': 200,
                 'message': "Hello",
@@ -159,6 +159,10 @@ class UserMatch(models.Model):
     user1_has_seen = models.BooleanField(default=False)
     user2_has_seen = models.BooleanField(default=False)
 
+    def __str__(self):
+        """"""
+        return "{} & {}".format(self.user1, self.user2)
+
     @classmethod
     def get_matches(cls, user):
         """"""
@@ -174,6 +178,17 @@ class UserMatch(models.Model):
             um.save()
         return um
 
+    def mark_as_seen_by(self, user):
+        """"""
+        if self.user1 == user:
+            self.user1_has_seen = True
+        elif self.user2 == user:
+            self.user2_has_seen = True
+        else:
+            raise ValueError("User {} does not belong to this UserMatch"
+                             "".format(user))
+        self.save()
+
 
 class UserLike(models.Model):
     """"""
@@ -185,6 +200,10 @@ class UserLike(models.Model):
     meta = {
         'indexes': ['from_user'],
     }
+
+    def __str__(self):
+        """"""
+        return "{} likes {}".format(self.from_user, self.to_user)
 
     @classmethod
     def create(cls, from_user, to_user):
@@ -208,6 +227,10 @@ class UserDislike(models.Model):
     meta = {
         'indexes': ['from_user'],
     }
+
+    def __str__(self):
+        """"""
+        return "{} dislikes {}".format(self.from_user, self.to_user)
 
     @classmethod
     def create(cls, from_user, to_user):

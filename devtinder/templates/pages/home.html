@@ -46,7 +46,7 @@
             {% else %}
                 <div class="pm-container center-form-container">
                     <div class="pm-user">
-                        <img class="pm-pic img-fluid" src="{{ pm.to_user.avatar }}"/>
+                        <img class="pm-pic img-fluid" src="{{ pm.to_user.avatar_url }}"/>
                         <div class="pm-nameloc">
                             <div class="pm-name">{{ pm.to_user.username }}</div>
                             <div class="pm-location"><i class="fa fa-map-marker" aria-hidden="true"></i>{% if pm.to_user.location %} {{ pm.to_user.location }}{% else %}Unknown Location{% endif %}</div>

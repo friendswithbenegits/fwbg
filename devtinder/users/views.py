@@ -158,6 +158,8 @@ class UserMatchDetailView(LoginRequiredMixin, TemplateView):
         match_id = kwargs.get("match_id")
 
         match = UserMatch.objects.get(id=match_id)
+        match.mark_as_seen_by(self.user)
+        match.save()
 
         ctx["match"] = match
         return ctx

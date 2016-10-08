@@ -52,12 +52,18 @@
                   <a class="nav-link" href="{% url 'users:add-snippet' %}">Add your <span class="git">gits</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{{ request.user.username }}</a>
-                </li>
-                <li class="nav-item">
                     {% with matches=request.user.get_matches_count %}
-                    <a class="nav-link" href="{% url 'users:matches' %}">Matches <span class="{% if matches != 0 %}badge{% endif %}">{{ matches }}</span></a>
+                    <a class="nav-link" href="{% url 'users:matches' %}">
+                        {% if matches != 0 %}
+                        Matches <span class="{% if matches != 0 %}badge{% endif %}">{{ matches }}</span>
+                        {% else %}
+                        No new Matches
+                        {% endif %}
+                    </a>
                     {% endwith %}
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{{ request.user.username }}</a>
                 </li>
                 <li class="nav-item">
                   <form method="post" action="{% url 'account_logout' %}">

@@ -12,7 +12,7 @@ urlpatterns = [
     url(regex=r'^snippet-action/(?P<action>[a-zA-Z0-9-]+)/(?P<snippet_id>[a-zA-Z0-9-+_.]+)$', view=views.UserSnippetActionView.as_view(), name='snippet-action'),
     # matches urls
     url(regex=r'^matches/$', view=views.UserMatchesView.as_view(), name='matches'),
-    url(regex=r'^match/(?P<match_id>[a-zA-Z0-9-+_.]+)/$', view=views.UserMatchesDetailView.as_view(), name='match-detail'),
+    url(regex=r'^match/(?P<match_id>[a-zA-Z0-9-+_.]+)/$', view=views.UserMatchDetailView.as_view(), name='match-detail'),
     url(regex=r'^add-snippet/$', view=views.UserSelectSnippetView.as_view(), name='add-snippet'),
     url(regex=r'^~redirect/$', view=views.UserRedirectView.as_view(), name='redirect'),
     url(regex=r'add-snippet/$', view=views.UserSelectSnippetView.as_view(), name='add-snippet'),
