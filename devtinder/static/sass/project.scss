@@ -43,6 +43,7 @@ $red: #b94a48;
   border-radius: 0px;
 }
 
+
 @media (max-width: 47.9em) {
   .navbar-nav .nav-item {
     display: inline-block;
@@ -56,6 +57,9 @@ $red: #b94a48;
 
   .nav.navbar-nav.pull-xs-right {
     float: none !important;
+  }
+  h1 {
+    font-size: 1.5rem;
   }
 }
 
