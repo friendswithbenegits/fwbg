@@ -85,16 +85,15 @@ $(document).ready(function() {
   });
 });
 
-$(document).swipe({
-    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-        $(this).text("You swiped " + direction );
-        if (direction == 'left') {
-            $(".pm-dislike").click();
-        }
-        else if (direction == 'right') {
-            $(".pm-like").click();
-        }
+$(document).swipe({ fingers:'all', swipeLeft:swipefunc, swipeRight:swipefunc, allowPageScroll:"auto"} );
+
+function swipefunc(event, direction, distance, duration, fingerCount, fingerData) {
+    if (direction == 'left') {
+        $(".pm-dislike").click();
     }
-});
+    else if (direction == 'right') {
+        $(".pm-like").click();
+    }
+}
 </script>
 {% endblock %}
