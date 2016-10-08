@@ -162,4 +162,14 @@ class UserMatchDetailView(LoginRequiredMixin, TemplateView):
         match.save()
 
         ctx["match"] = match
+        ctx["to_user"] = self.user
+
+        if match.user1 == self.user:
+            ctx["from_user"] = match.user2
+        elif match.user2 == self.user:
+            ctx["from_user"] = match.user2
+        else:
+            raise ValueError("User {} does not belong to this UserMatch"
+                   "".format(self.user))
+        
         return ctx

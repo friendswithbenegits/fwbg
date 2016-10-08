@@ -2,33 +2,29 @@
 {% load static %}
 
 {% block content %}
-{% if request.user == match.user1 %}
-    {% with from_user=request.user to_user=match.user2 github=object.get_github_account}
-{% else %}
-    {% with from_user=request.user to_user=match.user1 github=object.get_github_account}
+
+{% with github=object.get_github_account}
 
 <div class="container">
     <div class="row">
         <div class="pm-container center-form-container">
-            <h2>You've  got a match from {{ user2.name }}</h2>
+            <h2>You've  got a match from {{ from_user.name }}</h2>
             <div class="row">
                 <div class="col-xs-6">
-                    <img src="{{ user1.avatar_url }}" class="img-fluid img-circle">
+                    <img src="{{ to_user.avatar_url }}" class="img-fluid img-circle">
                 </div>
                 <div class="col-xs-6">
-                    <img src="{{ user2.avatar_url }}" class="img-fluid img-circle">
+                    <img src="{{ from_user.avatar_url }}" class="img-fluid img-circle">
                 </div>
             </div>
             <div class="row">
-                <p><a class="github-button" href="https://github.com/{{ user2.name }}" data-style="mega" aria-label="Follow @{{ user2.name }} on GitHub">Follow @{{ user2.name }}</a></p>
-                <p><a href="https://github.com/new">Create a new repository on GitHub, to start a project with {{ user2.name }}!</a></p>
-                <p>Shoot him an e-mail at: {{ user2.email }}</p>
+                <p><a class="github-button" href="https://github.com/{{ from_user.name }}" data-style="mega" aria-label="Follow @{{ from_user.name }} on GitHub">Follow @{{ from_user.name }}</a></p>
+                <p><a href="https://github.com/new">Create a new repository on GitHub, to start a project with {{ from_user.name }}!</a></p>
+                <p>Shoot him an e-mail at: {{ from_user.email }}</p>
             </div>
         </div>
     </div>
 </div>
-
-{% endif %}
 {% endwith %}
 {% endblock content %}
 
