@@ -52,29 +52,22 @@
                   <a class="nav-link" href="{% url 'users:add-snippet' %}">Add your <span class="git">gits</span></a>
                 </li>
                 <li class="nav-item">
-                    {% with matches=request.user.get_unseen_matches.matches %}
-                    <a class="nav-link" href="{% url 'users:matches' %}">
-                        Matches {% if matches|length > 0 %}<span class="counter">{{ matches }}{% endif %}</span>
-                    </a>
-                    {% endwith %}
+                  {% with matches=request.user.get_unseen_matches.matches %}
+                  <a class="nav-link" href="{% url 'users:matches' %}">
+                    Matches {% if matches|length > 0 %}<span class="git counter">{{ matches|length }}{% endif %}</span>
+                  </a>
+                  {% endwith %}
                 </li>
-                 <li class="nav-item">
+                <li class="nav-item">
                   <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{{ request.user.username }}</a>
                 </li>
                 <li class="nav-item">
                   <form method="post" action="{% url 'account_logout' %}">
                     {% csrf_token %}
-                    {% if redirect_field_value %}
-                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-                    {% endif %}
+                    {% if redirect_field_value %}<input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>{% endif %}
                     <button class="nav-link directsignout" href="{% url 'account_logout' %}" type="submit">sign out</button>
                   </form>
-                  
                 </li>
-              {% else %}
-                <!--<li class="nav-item">
-                  <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
-                </li>-->
               {% endif %}
             </ul>
           </div>

@@ -3,7 +3,6 @@
 {% load staticfiles %}
 
 {% block content %}
-<div class="row">
     {% if not request.user.is_authenticated %}
         {% load account socialaccount %}
         <div class="pm-container center-form-container">
@@ -27,7 +26,7 @@
 
             <br />
             <h3>Instead of this:</h3>
-            <img class="img-rounded img-fluid" src="{% static 'images/tinder-pic.JPG' %}"/>
+            <img class="img-rounded img-fluid" width="100%" src="{% static 'images/welcome_akward.gif' %}"/>
         </div>
     {% else %}
         {% if matches.status == 200%}
@@ -42,6 +41,7 @@
                 <div class="pm-container center-form-container">
                     <h1>Oops! 😲</h1><br>
                     <p>{{ pm.message|safe }}</p>
+                    <img class="img-fluid img-rounded" style='height: 100%; width: 100%; object-fit: contain' src="{% static 'images/sad_no_matches.gif' %}"/>
                 </div>
             {% else %}
                 <div class="pm-container center-form-container">
@@ -52,6 +52,7 @@
                             <div class="pm-location"><i class="fa fa-map-marker" aria-hidden="true"></i>{% if pm.to_user.location %} {{ pm.to_user.location }}{% else %}Unknown Location{% endif %}</div>
                         </div>
                         <div class="pm-reponame">{{ pm.snippet.repository }} <div class="pm-stars counter"><i class="fa fa-star" aria-hidden="true"></i> {{ pm.snippet.stars }}</div></div>
+                        <div class="clear:both;"></div>
                     </div>
                     <div class="pm-snippet">
                         <pre><code class="python">{{ pm.snippet.snippet }}</code></pre>
@@ -69,7 +70,7 @@
             {% endif %}
         {% endif %}
     {% endif %}
-</div>
+
 {% endblock content %}
 
 
@@ -80,6 +81,13 @@ $(document).ready(function() {
   $('pre code').each(function(i, block) {
     hljs.highlightBlock(block);
     hljs.lineNumbersBlock(block);
+  });
+
+  $(".center-form-container").on("swipeleft",function(){
+    $(".pm-dislike").click();
+  });
+  $(".center-form-container").on("swipeleft",function(){
+    $(".pm-like").click();
   });
 });
 </script>
