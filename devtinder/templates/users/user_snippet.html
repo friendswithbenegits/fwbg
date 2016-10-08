@@ -23,7 +23,7 @@
                     <small id="snippetHelp" class="form-text text-muted">Example snippet: https://github.com/stiv15/arka/blob/master/component/Validador/Sql.class.php#L28-L33</small>
                 </div>
 
-                <input type="submit" class="btn btn-success btn-lg" value="Add Snippet" />
+                <input type="submit" class="btn btn-success" style="width: 100%;" value="git push" />
             </form>
             {% endif %}
         </div>
@@ -39,7 +39,7 @@
                         <div class="pm-snippet-header">
                             <i class="fa fa-trash" aria-hidden="true"></i> <a href="{% url 'users:snippet-action' 'delete' snippet.id %}">Delete snippet</a>
                         </div>
-                        <pre><code class="python">{{ snippet.snippet }}</code></pre>
+                        <pre><code class="{{ snippet.language|lower }}">{{ snippet.snippet }}</code></pre>
                         <div class="pm-snippet-footer">
                             <div class="pm-lang">Language: <strong>{{ snippet.language }}</strong></div>
                             <div class="pm-file">{{ snippet.repository }}: {{ snippet.lines }}</div>

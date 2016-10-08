@@ -3,7 +3,6 @@
 {% load staticfiles %}
 
 {% block content %}
-<div class="row">
     {% if not request.user.is_authenticated %}
         {% load account socialaccount %}
         <div class="pm-container center-form-container">
@@ -69,7 +68,7 @@
             {% endif %}
         {% endif %}
     {% endif %}
-</div>
+
 {% endblock content %}
 
 
