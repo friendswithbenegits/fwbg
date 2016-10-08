@@ -287,3 +287,10 @@ body {
 .match-message.from small {
   float: right;
 }
+.all-messages {
+  max-height: 400px;
+  overflow: auto;
+}
+.msg-form {
+  margin-top: 20px;
+}

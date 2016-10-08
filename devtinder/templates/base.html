@@ -52,9 +52,9 @@
                   <a class="nav-link" href="{% url 'users:add-snippet' %}">Add your <span class="git">gits</span></a>
                 </li>
                 <li class="nav-item">
-                    {% with matches=request.user.get_matches_count %}
+                    {% with matches=request.user.get_unseen_matches.matches %}
                     <a class="nav-link" href="{% url 'users:matches' %}">
-                        Matches <span class="counter">{{ matches }}</span>
+                        Matches {% if matches|length > 0 %}<span class="counter">{{ matches }}{% endif %}</span>
                     </a>
                     {% endwith %}
                 </li>

@@ -39,7 +39,7 @@
                      </a> a snippet, yeah? 😙
                     </h2>
                 {% else %}
-                    <h2>Your snippets</h2>
+                    <h2>{% if request.user == object %}Your{% else %}{{ object.username }}'s{% endif %} snippets</h2>
                     {% for snippet in snippets %}
                         <div class="pm-snippet">
                             <div class="pm-snippet-header">

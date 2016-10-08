@@ -18,29 +18,39 @@
 
     <div class="pm-container center-form-container" style="margin-top:20px; padding: 20px 50px;">
         <h3>Conversation with <strong>{{ to_user.username }}</strong></h3><br>
-        {% for message in msgs %}
-            {% if message.from_user == request.user %}
-            <!--My messages -->
-            <div class="pull-right match-message from">
-                <div class="match-message-pic pull-right from"><img src="{{ message.from_user.avatar_url }}" class="img-fluid img-circle from" /></div>
-                <div class="text-right match-mtext from">{{ message.content }}</div><br>
-                <small class="text-right text-muted">{{ message.creation_date }}</small>
-            </div>
-            {% else %}
-            <!--The other dude messages -->
-            <div class="pull-left match-message">
-                <div class="match-message-pic"><img src="{{ message.from_user.avatar_url }}" class="img-fluid img-circle" /></div>
-                <div class="text-left match-mtext">{{ message.content }}</div><br>
-                <small class="text-left text-muted">{{ message.creation_date }}</small>
-            </div>
-            {% endif %}
-            <div style="clear: both;"></div>
-        {% endfor %}
+
+        <div class="all-messages">
+            {% for message in msgs %}
+                {% if message.from_user == request.user %}
+                <!--My messages -->
+                <div class="pull-right match-message from">
+                    <div class="match-message-pic pull-right from"><img src="{{ message.from_user.avatar_url }}" class="img-fluid img-circle from" /></div>
+                    <div class="text-right match-mtext from">{{ message.content }}</div><br>
+                    <small class="text-right text-muted">{{ message.creation_date }}</small>
+                </div>
+                {% else %}
+                <!--The other dude messages -->
+                <div class="pull-left match-message">
+                    <div class="match-message-pic"><img src="{{ message.from_user.avatar_url }}" class="img-fluid img-circle" /></div>
+                    <div class="text-left match-mtext">{{ message.content }}</div><br>
+                    <small class="text-left text-muted">{{ message.creation_date }}</small>
+                </div>
+                {% endif %}
+                <div style="clear: both;"></div>
+            {% empty %}
+            <small><span class="git">git</span> <strong>init</strong> this conversation. Don't be a stranger.</small>
+            {% endfor %}
+        </div>
 
         <div>
-            <form action="." method="post" class="msg-form">
-                {{ form.as_p }}
-                <input type="button" class="btn-send-messsage btn btn-success btn-lg" value="Ok!" />
+            <form action="." method="post" class="form msg-form">
+                <div class="form-group">
+                    <input type="text" id="id_content" name="content" class="form-control" placeholder="Protip: Don't lead with I love you">
+                    <input id="id_from_user" name="from_user" value="{{ request.user.id }}" type="hidden">
+                    <input id="id_match" name="match" value="{{ match.id }}" type="hidden">
+                </div>
+
+                <input type="submit" class="btn-send-messsage btn btn-success" style="width: 100%;" value="git push" />
             </form>
         </div>
     </div>
@@ -56,15 +66,6 @@ $(document).ready(function() {
     hljs.highlightBlock(block);
     hljs.lineNumbersBlock(block);
   });
-
-  $('input[type="button"].btn-send-messsage').on('click', function(e){
-        var form = $('form.msg-form');
-        form.find('#id_match').val("{{ match.id }}");
-        form.find('#id_from_user').val("{{ from_user.id }}");
-        form.submit();
-  });
-
-
 });
 </script>
 {% endblock %}
