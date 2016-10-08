@@ -24,6 +24,30 @@
             </div>
         </div>
     </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="pm-container center-form-container">
+                {% for message in messages %}
+                <div class="row">
+                    <div class="col-xs-2">
+                        <img src="{{ message.from_user.avatar_url }}" class="img-fluid img-circle">
+                    </div>
+                    <div class="col-xs-2">
+                        <img src="{{ message.to_user.avatar_url }}" class="img-fluid img-circle">
+                    </div>
+                    <div>
+                        <small>{{ message.creation_date }}</small>
+                    </div>
+                    <div>
+                        <p>{{ message.content }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 {% endwith %}
 {% endblock content %}
 
