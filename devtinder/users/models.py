@@ -158,7 +158,7 @@ class UserMatch(models.Model):
     user1_has_seen = models.BooleanField(default=False)
     user2_has_seen = models.BooleanField(default=False)
 
-    def __str__(self):
+    def __unicode__(self):
         """"""
         return "{} & {}".format(self.user1, self.user2)
 
@@ -210,7 +210,7 @@ class UserLike(models.Model):
         'indexes': ['from_user'],
     }
 
-    def __str__(self):
+    def __unicode__(self):
         """"""
         return "{} likes {}".format(self.from_user, self.to_user)
 
@@ -237,7 +237,7 @@ class UserDislike(models.Model):
         'indexes': ['from_user'],
     }
 
-    def __str__(self):
+    def __unicode__(self):
         """"""
         return "{} dislikes {}".format(self.from_user, self.to_user)
 
@@ -267,7 +267,7 @@ class RepositorySnippet(models.Model):
         'indexes': ['owner'],
     }
 
-    def __str__(self):
+    def __unicode__(self):
         return ("{}: Owner {} | Language {} | Stars {}"
                 "").format(self.repository, self.owner, self.language,
                            self.stars)
@@ -288,7 +288,7 @@ class Message(models.Model):
     content = models.TextField()
     match = models.ForeignKey(UserMatch)
 
-    def __str__(self):
+    def __unicode__(self):
         return ("From:{} | To:{} | Timestamp:{} | Content:{}"
                 "").format(self.from_user.username, self.to_user.username, 
                 self.timestamp, self.content)
