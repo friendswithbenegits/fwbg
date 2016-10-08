@@ -76,20 +76,24 @@
 
 {% block javascript %}
 {{ block.super }}
+<script src="{% static 'js/jquery.touchSwipe.min.js' %}"></script>
 <script>
 $(document).ready(function() {
   $('pre code').each(function(i, block) {
     hljs.highlightBlock(block);
     hljs.lineNumbersBlock(block);
   });
-  $(document).on("swipeleft", function(){
-    $(".pm-dislike").click();
-    alert("LEFT");
-  });
-  $(document).on("swiperight", function(){
-    $(".pm-like").click();
-    alert("RIGHT");
-  });
 });
+
+$(document).swipe({ fingers:'all', swipeLeft:swipefunc, swipeRight:swipefunc, allowPageScroll:"auto"} );
+
+function swipefunc(event, direction, distance, duration, fingerCount, fingerData) {
+    if (direction == 'left') {
+        document.getElementsByClassName("pm-dislike")[0].click();
+    }
+    else if (direction == 'right') {
+        document.getElementsByClassName("pm-like")[0].click();
+    }
+}
 </script>
 {% endblock %}
