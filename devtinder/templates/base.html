@@ -55,7 +55,9 @@
                   <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{{ request.user.username }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'users:matches' %}">Matches <span class="badge">{{ request.user.get_matches_count }}</span></a>
+                    {% with matches=request.user.get_matches_count %}
+                    <a class="nav-link" href="{% url 'users:matches' %}">Matches <span class="{% if matches != 0 %}badge{% endif %}">{{ matches }}</span></a>
+                    {% endwith %}
                 </li>
                 <li class="nav-item">
                   <form method="post" action="{% url 'account_logout' %}">

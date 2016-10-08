@@ -235,3 +235,9 @@ body {
 .sn-gif {
   margin: 10px 0 5px 0;
 }
+
+.badge{
+    background-color: #fd5c63;
+    padding: 0px 6px;
+    border-radius: 17px;
+}

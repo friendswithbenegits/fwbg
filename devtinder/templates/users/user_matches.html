@@ -2,13 +2,17 @@
 {% load static %}
 
 {% block content %}
-{% with github=object.get_github_account %}
+{% with github=object.get_github_account me=request.user%}
 <div class="container">
     <div class="row">
         <div class="pm-container center-form-container">
             <ul>
             {% for match in matches %}
-                <li>{{ match }}</li>
+                {% if me == match.user1 %}
+                    <li class=""><a href="{{ users:match-detail match.id }}">{{ match.user2 }} with {{ me }}</a></li>
+                {% elif me == match.user2 %}
+                    <li><a href="{{ users:match-detail match.id }}">{{ match.user2 }} with {{ me }}</a></li>
+                {% endif %}
             {% endfor %}
             </ul>
         </div>
