@@ -27,6 +27,10 @@ body {
   font-weight: bold;
   color: #fd5c63;
 }
+.counter.git {
+  background-color: #fd5c63!important;
+  color: white!important;
+}
 .directsignout {
   background-color: transparent;
   border: none;
@@ -241,7 +245,16 @@ body {
     padding: 0px 6px;
     border-radius: 17px;
 }
-
+/* MATCH LIST */
+.matchlistpic {
+  display: inline-block;
+  max-width: 32px;
+  margin: 0 10px 0 -15px;
+}
+.matchlistone {
+  margin-top: 20px;
+  font-size: 20px;
+}
 /* MATCH DETAIL */
 .matchpic {
   display: inline-block;
