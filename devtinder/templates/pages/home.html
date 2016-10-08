@@ -27,7 +27,7 @@
 
             <br />
             <h3>Instead of this:</h3>
-            <img class="img-rounded img-fluid" src="{% static 'images/tinder-pic.JPG' %}"/>
+            <img class="img-rounded img-fluid" width="100%" src="{% static 'images/welcome_akward.gif' %}"/>
         </div>
     {% else %}
         {% if matches.status == 200%}
@@ -42,6 +42,7 @@
                 <div class="pm-container center-form-container">
                     <h1>Oops! 😲</h1><br>
                     <p>{{ pm.message|safe }}</p>
+                    <img class="img-fluid img-rounded" style='height: 100%; width: 100%; object-fit: contain' src="{% static 'images/sad_no_matches.gif' %}"/>
                 </div>
             {% else %}
                 <div class="pm-container center-form-container">
