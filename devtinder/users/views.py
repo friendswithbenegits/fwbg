@@ -29,7 +29,11 @@ class UserDetailView(LoginRequiredMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(UserDetailView, self).get_context_data(**kwargs)
-        context['snippets'] = RepositorySnippet.objects.filter(owner=self.user)
+
+        snippet_username = self.kwargs.get("username") 
+        snippet_user = User.objects.get(username=snippet_username)
+        
+        context['snippets'] = RepositorySnippet.objects.filter(owner=snippet_user)
         return context
 
 
